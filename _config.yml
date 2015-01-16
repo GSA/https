@@ -31,22 +31,22 @@ navigation:
   url: index.html
   internal: true
 - text: Background
-  url: example_page.html
+  url: /pages/background
   internal: true
 - text: Definitions
-  url: https://github.com/cfpb/DOCter
+  url: /pages/definitions
   internal: false
 - text: Guidance
-  url: index.html
+  url: /pages/guidance
   internal: true
 - text: Tools
-  url: example_page.html
+  url: /pages/tools
   internal: true
 - text: Resources
-  url: https://github.com/cfpb/DOCter
+  url: /pages/resources
   internal: false
 - text: Case Studies
-  url: index.html
+  url: /pages/case_studies
   internal: true
 
 
