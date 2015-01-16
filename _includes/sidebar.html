@@ -10,6 +10,8 @@
           <li><a href="{{ link.url }}">{{ link.text }}</a></li>
         {% endif %}
       {% endfor %}
+       <li>{% include edit_link.html %}</li>
+
     </ul>
   </nav>
 </aside>
