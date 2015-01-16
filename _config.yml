@@ -31,22 +31,22 @@ navigation:
   url: index.html
   internal: true
 - text: Background
-  url: /pages/background
+  url: pages/background
   internal: true
 - text: Definitions
-  url: /pages/definitions
+  url: pages/definitions
   internal: false
 - text: Guidance
-  url: /pages/guidance
+  url: pages/guidance
   internal: true
 - text: Tools
-  url: /pages/tools
+  url: pages/tools
   internal: true
 - text: Resources
-  url: /pages/resources
+  url: pages/resources
   internal: false
 - text: Case Studies
-  url: /pages/case_studies
+  url: pages/case_studies
   internal: true
 
 
