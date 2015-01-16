@@ -30,12 +30,25 @@ navigation:
 - text: Home
   url: index.html
   internal: true
-- text: Example Page
+- text: Background
   url: example_page.html
   internal: true
-- text: DOCter Repo
+- text: Definitions
   url: https://github.com/cfpb/DOCter
   internal: false
+- text: Guidance
+  url: index.html
+  internal: true
+- text: Tools
+  url: example_page.html
+  internal: true
+- text: Resources
+  url: https://github.com/cfpb/DOCter
+  internal: false
+- text: Case Studies
+  url: index.html
+  internal: true
+
 
 # Repo list
 # List repos that you would like to appear on the homepage here
