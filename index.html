@@ -3,36 +3,18 @@ layout: default
 title: DOCter
 ---
 
-{% capture index %}{% include index.md %}{% endcapture %}
-{{ index | markdownify }}
 
-{% if site.repos %}
-<section id="repositories">
-  <h2>Repositories</h2>
-  <ul class="repo-list group">
-    <li class="list-icon">
-      <img src="assets/img/octocat.png" width="25px" alt="">
-    </li>
-    {% for repo in site.repos %}
-      <li>
-        <a href="{{ repo.url }}">
-          <h4>{{ repo.name }}</h4>
-          <p>{{ repo.description }}</p>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+## Background
+* [Related News](https://github.com/GSA/https/blob/master/resources/news.md) 
+* Domain Analysis - [Dashboard](http://dotgov-browser.herokuapp.com/domains) - [Blog post](http://ben.balter.com/2014/07/07/analysis-of-federal-executive-domains-part-deux/)
 
-<div id="home">
-  <h2>Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date_to_string }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+## Resources
+* [18F's TLS Standards](https://github.com/18F/tls-standards)
+
+## Major Discussion Points 
+* [Should OMB mandate HTTPS for .gov website](https://github.com/GSA/https/issues/1)?
+* [What should be required vs. recommended (and on what timetable)](https://github.com/GSA/https/issues/5)?
+* [What are the benefits to agencies enabling HTTPS for their websites](https://github.com/GSA/https/issues/2)?  
+* [What are the costs to agencies enabling HTTPS for their websites](https://github.com/GSA/https/issues/4)?  
+* [What are ways to help agencies implement such a mandate](https://github.com/GSA/https/issues/3)?
+
