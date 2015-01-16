@@ -26,7 +26,7 @@ title: DOCter
 {% endif %}
 
 <div id="home">
-  <h2>Posts</h2>
+  <h2>Post</h2>
   <ul class="posts">
     {% for post in site.posts %}
       <li>
