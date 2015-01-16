@@ -9,7 +9,7 @@ partially copyrighted, partially public domain, and as a whole is protected by
 the copyrights of the non-government authors and must be released according to
 the terms of the original open-source license.
 
-For further details, please see the CFPB [Source Code Policy][policy].
+For further details, please see the 18F [Source Code Policy](https://github.com/18F/open-source-policy/blob/master/policy.md).
 
 
 ## CC0 1.0 Universal Summary
@@ -45,4 +45,3 @@ author or the affirmer.
 
 * [Respond.js](https://github.com/scottjehl/Respond) by Scott Jehl, licensed under the MIT license.
 * [The HTML5 Shiv](https://github.com/aFarkas/html5shiv), dual licensed under the MIT or GPL Version 2 licenses.
-* 
