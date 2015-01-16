@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DOCter
+title: Background
 ---
 
 {% capture index %}{% include index.md %}{% endcapture %}
