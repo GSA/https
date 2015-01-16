@@ -17,8 +17,8 @@ baseurl: '/https'
 
 # Author/Organization info to be displayed in the templates
 author:
-  name: Name
-  url: http://localhost:4000
+  name: 18F
+  url: https://18f.gsa.gov
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
 logourl:
@@ -53,9 +53,9 @@ navigation:
 # Repo list
 # List repos that you would like to appear on the homepage here
 repos:
-- name: DOCter
-  description: Jekyll template for docs
-  url: https://github.com/cfpb/DOCter
+- name: HTTPS
+  description: HTTPS resources
+  url: https://github.com/gsa/https
 
 # Style Variables
 brand_color: "#2cb34a"
