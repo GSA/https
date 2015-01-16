@@ -49,6 +49,14 @@ navigation:
   url: pages/case_studies
   internal: true
 
+#Edit Link info
+repo_name: https
+branch: gh-pages
+#GitHub organization name *or* username
+gh_org: GSA
+prose_url: http://github.com/
+site_url: https://gsa.github.io/https
+media: assets/img
 
 # Repo list
 # List repos that you would like to appear on the homepage here
