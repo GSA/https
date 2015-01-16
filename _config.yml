@@ -5,8 +5,8 @@ markdown: kramdown
 pygments: true
 
 # Title
-name: DOCter
-subtitle: A Jekyll template for project documentation
+name: HTTPS in Government
+subtitle: A resource for ensuring HTTPS on .gov websites
 
 # When using this template with a project page set the baseurl to '/project-name'
 # For user/organization pages set this to an empty string
