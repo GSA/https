@@ -3,6 +3,8 @@ layout: default
 title: Resources
 ---
 
+## Standards
+* [18F's TLS Standards](https://github.com/18F/tls-standards)
 
 ## Related Articles and Blogposts
 
