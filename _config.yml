@@ -44,7 +44,7 @@ navigation:
   internal: true
 - text: Definitions
   url: pages/definitions
-  internal: false
+  internal: true
 - text: Guidance
   url: pages/guidance
   internal: true
@@ -53,7 +53,7 @@ navigation:
   internal: true
 - text: Resources
   url: pages/resources
-  internal: false
+  internal: true
 - text: Case Studies
   url: pages/case_studies
   internal: true
