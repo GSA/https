@@ -1,0 +1,12 @@
+{% comment %}
+---------------------------------------------------------------------------
+
+Provide a generalized link for using prose.io to edit Jekyll content.
+This grabs the page path from Jekyll and other variables from _config.yml
+to build the edit URL.
+
+Note that this is all on one line so to avoid extra <br /> in rendering.
+There's probably an elegant way to do this, but it's late and I'm lazy.
+
+--------------------------------------------------------------------------
+{% endcomment %}{% capture edit_url %}{{ site.prose_url }}{{ site.gh_org }}/{{ site.repo_name }}/edit/{{ site.branch }}/{{ page.path }}{% endcapture %}<a href="{{ edit_url }}" target="_blank">Edit this page</a>
