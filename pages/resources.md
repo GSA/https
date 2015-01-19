@@ -5,6 +5,7 @@ title: Resources
 
 ## Standards
 * [18F's TLS Standards](https://github.com/18F/tls-standards)
+* [BetterCrypto](https://bettercrypto.org/static/applied-crypto-hardening.pdf)
 
 ## Related Articles and Blogposts
 
