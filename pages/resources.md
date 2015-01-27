@@ -13,3 +13,5 @@ title: Resources
 * [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
 * [Why you should care about HTTPS, even if you have nothing to hide](http://ben.balter.com/2015/01/06/https-all-the-things/)
 
+## Other News
+* [GSA Rolls Out Toolkit to Prevent New Social-Media Hacks](http://blogs.wsj.com/washwire/2015/01/27/gsa-rolls-out-toolkit-to-prevent-new-social-media-hacks/)
