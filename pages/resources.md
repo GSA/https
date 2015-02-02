@@ -15,3 +15,7 @@ title: Resources
 
 ## Other News
 * [GSA Rolls Out Toolkit to Prevent New Social-Media Hacks](http://blogs.wsj.com/washwire/2015/01/27/gsa-rolls-out-toolkit-to-prevent-new-social-media-hacks/)
+
+## Other Links
+* https://httpswatch.com
+* 
