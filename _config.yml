@@ -14,11 +14,8 @@ redcarpet:
   extensions:
   - with_toc_data
 
-permalink: /:title
-
 # Site metadata
 name: HTTPS in Government
-subtitle: A resource for ensuring HTTPS on .gov websites.
 description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
 
 
@@ -28,22 +25,20 @@ branch: gh-pages
 gh_org: GSA
 site_url: https://gsa.github.io/https
 
-media: assets/img
-
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
 - text: Home
-  url: /
+  url: ""
   internal: true
 - text: Definitions
-  url: /pages/definitions/
+  url: definitions
   internal: true
 - text: Tools
-  url: /pages/tools/
+  url: tools
   internal: true
 - text: Resources
-  url: /pages/resources/
+  url: resources
   internal: true
 
 # Style Variables

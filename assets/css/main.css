@@ -185,7 +185,7 @@ Navigation
 .sidebar-nav li:active,
 .sidebar-nav .sidebar-nav-active {
   color: #75787b;
-  border-left: 4px solid {{ site.brand_color }};
+  border-left: 4px solid #4383A9;
   background-color: transparent;
   border-bottom: 1px solid #babbbd;
   padding-left: 0;
@@ -237,7 +237,7 @@ section:before {
 
 header {
     width: 100%;
-    border-bottom: 4px solid {{ site.brand_color }};
+    border-bottom: 4px solid #4383A9;
     background-color: #fff;
     padding: 2em 0;
 }

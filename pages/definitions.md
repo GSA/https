@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Definitions
+permalink: /definitions/
 ---
 
 ### SSL - Secure Sockets Layer: a cryptographic protocol providing secure client-server communications. It precedes TLS and is no longer recommended for actual use due to insufficient security.
