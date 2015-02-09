@@ -6,5 +6,9 @@ permalink: /
 
 ## Introduction
 
-This is a manual and support system for deploying HTTPS in the US federal government. Most of it will be also be applicable outside the US government.
+HTTPS (`https://`) provides a secure, private connection across the public internet.
+
+In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how static.
+
+This website is a manual and support system for deploying HTTPS in the US federal government.
 

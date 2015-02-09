@@ -24,6 +24,7 @@ repo_name: https
 branch: gh-pages
 gh_org: GSA
 site_url: https://gsa.github.io/https
+enforce_https: gsa.github.io
 
 # Navigation
 # List links that should appear in the site sidebar here
