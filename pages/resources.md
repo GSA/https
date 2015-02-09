@@ -21,4 +21,4 @@ permalink: /resources/
 
 ## Other Links
 
-* https://httpswatch.com
+* [HTTPSWatch](https://httpswatch.com)
