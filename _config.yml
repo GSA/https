@@ -32,13 +32,13 @@ navigation:
   url: ""
   internal: true
 - text: Definitions
-  url: definitions
+  url: definitions/
   internal: true
 - text: Tools
-  url: tools
+  url: tools/
   internal: true
 - text: Resources
-  url: resources
+  url: resources/
   internal: true
 
 # Style Variables
