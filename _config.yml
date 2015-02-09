@@ -1,61 +1,49 @@
-# Base configuration
-permalink: /:title
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-markdown: kramdown
-pygments: true
-
-# Title
-name: HTTPS in Government
-subtitle: A resource for ensuring HTTPS on .gov websites
-
-#Edit Link info
-repo_name: https
-branch: gh-pages
-#GitHub organization name *or* username
-gh_org: GSA
-prose_url: http://github.com/
-site_url: https://gsa.github.io/https
-media: assets/img
-
-# When using this template with a project page set the baseurl to '/project-name'
-# For user/organization pages set this to an empty string
-# When working locally use jekyll serve --baseurl '' so that you can view everything at localhost:4000
-# See http://jekyllrb.com/docs/github-pages/ for more info
-#baseurl: ''
+# Override in development.
 baseurl: '/https'
 
-# Author/Organization info to be displayed in the templates
-author:
-  name: 18F
-  url: https://18f.gsa.gov
+exclude:
+- ".rbenv-version"
+- README.md
+- CONTRIBUTING.md
+- LICENSE.md
 
-# Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl:
-logoalt:
+# markdown
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - with_toc_data
+
+permalink: /:title
+
+# Site metadata
+name: HTTPS in Government
+subtitle: A resource for ensuring HTTPS on .gov websites.
+description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
+
+
+# GitHub information
+repo_name: https
+branch: gh-pages
+gh_org: GSA
+site_url: https://gsa.github.io/https
+
+media: assets/img
 
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
 - text: Home
-  url: index.html
-  internal: true
-- text: Background
-  url: pages/background
+  url: /
   internal: true
 - text: Definitions
-  url: pages/definitions
-  internal: true
-- text: Guidance
-  url: pages/guidance
+  url: /pages/definitions/
   internal: true
 - text: Tools
-  url: pages/tools
+  url: /pages/tools/
   internal: true
 - text: Resources
-  url: pages/resources
-  internal: true
-- text: Case Studies
-  url: pages/case_studies
+  url: /pages/resources/
   internal: true
 
 # Style Variables
