@@ -1,12 +1,10 @@
 ---
 layout: default
-title: HTTPS in government
+title: HTTPS in the government
+permalink: /
 ---
 
-## Major Discussion Points 
-* [Should HTTPS be required for .Govs](https://github.com/GSA/https/issues/1)?
-* [What should be required vs. recommended (and on what timetable)](https://github.com/GSA/https/issues/5)?
-* [What are the benefits to agencies enabling HTTPS for their websites](https://github.com/GSA/https/issues/2)?  
-* [What are the costs to agencies enabling HTTPS for their websites](https://github.com/GSA/https/issues/4)?  
-* [What are ways to help agencies implement such a mandate](https://github.com/GSA/https/issues/3)?
+## Introduction
+
+This is a manual and support system for deploying HTTPS in the US federal government. Most of it will be also be applicable outside the US government.
 
