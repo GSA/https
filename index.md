@@ -4,7 +4,7 @@ title: HTTPS in the government
 permalink: /
 ---
 
-HTTPS (`https://`) provides a secure, private connection across the public internet. Plain HTTP `http://` connections can be easily intercepted, manipulated, and impersonated.
+HTTPS (`https://`) provides a secure, private connection across the public internet. Plain HTTP (`http://`) connections can be easily intercepted, manipulated, and impersonated.
 
 In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how static.
 
