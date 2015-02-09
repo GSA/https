@@ -26,7 +26,7 @@ Over the last several years, it's become better understood that these properties
 * Internet service providers [modify unencrypted websites in transit](http://arstechnica.com/tech-policy/2014/09/why-comcasts-javascript-ad-injections-threaten-security-net-neutrality/) and [add tracking headers](https://www.eff.org/deeplinks/2014/11/verizon-x-uidh) to their customers' unencrypted web activity.
 * Newer versions of HTTP in modern browsers require encryption, and are [so blazing fast](https://www.httpvshttps.com/) that they may [reduce infrastructure costs](https://thethemefoundry.com/blog/why-we-dont-use-a-cdn-spdy-ssl/).
 
-The GSA's [18F](https://18f.gsa.gov) team wrote [why they use HTTPS for every .gov they make](https://www.gov.uk/service-manual):
+The GSA's [18F](https://18f.gsa.gov) team has written about [why they use HTTPS for every .gov they make](https://www.gov.uk/service-manual):
 
 > The `.gov` in government websites carries a lot of weight. Citizens expect government websites to be secure, trustworthy, and reliable. Citizens expect anything they read on a `.gov` website to be official, and they expect any information they submit to that website — especially if they're submitting personal information — to be sent safely and only to the government.
 >
