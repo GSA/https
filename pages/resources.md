@@ -4,6 +4,7 @@ title: Resources
 ---
 
 ## Standards
+
 * [18F's TLS Standards](https://github.com/18F/tls-standards)
 * [BetterCrypto](https://bettercrypto.org/static/applied-crypto-hardening.pdf)
 
@@ -14,8 +15,9 @@ title: Resources
 * [Why you should care about HTTPS, even if you have nothing to hide](http://ben.balter.com/2015/01/06/https-all-the-things/)
 
 ## Other News
+
 * [GSA Rolls Out Toolkit to Prevent New Social-Media Hacks](http://blogs.wsj.com/washwire/2015/01/27/gsa-rolls-out-toolkit-to-prevent-new-social-media-hacks/)
 
 ## Other Links
+
 * https://httpswatch.com
-* 

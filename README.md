@@ -5,6 +5,14 @@ This is a collection of resources, best practices, and case studies for HTTPS in
 Maintained by people from the [U.S. Digital Service](http://wh.gov/usds) and [18F](https://18f.gsa.gov). Please join us and help out!
 
 
+### Developing
+
+To run the site in development, use both config files:
+
+```
+jekyll serve --config _config.yml,_config-development.yml
+```
+
 ### Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):

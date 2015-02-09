@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  {% if page.title %}
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <script src="{{ site.baseurl }}/assets/js/respond.min.js"></script>
-    <![endif]-->
+    <meta property="og:title" content="{{ page.title | xml_escape }}" />
+  {% else %}
+    <title>{{ site.title }}</title>
+    <meta property="og:title" content="{{ site.title | xml_escape }}" />
+  {% endif %}
 
-  </head>
-  <body>
-    <div class="container">
-      <header role="banner">
-        <div class="wrap">
-          {% if site.logourl != null %}
-            <img class="logo" src="{{ site.logourl }}" alt="{{ site.logoalt }}">
-          {% endif %}
-          <h1 class="site-title"><a class="title-link" href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-        </div>
-      </header>
+  {% if page.description %}
+    <meta name="description" content="{{ page.description | xml_escape }}">
+    <meta property="og:description" content="{{ page.description | xml_escape }}" />
+  {% else %}
+    <meta name="description" content="{{ site.description | xml_escape }}">
+    <meta property="og:description" content="{{ site.description | xml_escape }}" />
+  {% endif %}
 
-      <div class="wrap content">
+</head>
+<body>
 
-        {% include sidebar.html %}
+<div class="container">
+  <header role="banner">
+    <div class="wrap">
+      <h1 class="site-title">
+        <a class="title-link" href="{{ site.baseurl }}/">
+          {{ site.name }}
+        </a>
+      </h1>
+    </div>
+  </header>
 
-        <section id="main" class="main-content" role="main">
-          {{ content }}
-        </section>
+  <div class="wrap content">
 
-      </div><!-- /.wrap content -->
+    {% include sidebar.html %}
 
-      <footer role="contentinfo">
-        <div class="wrap">
-          <p>This project is maintained by <a href="{{ site.author.url }}">{{ site.author.name }}</a>.</p>
+    <section id="main" class="main-content" role="main">
+      {{ content }}
+    </section>
 
-          <p>Hosted on <a href="https://github.com/GSA/https">GitHub Pages</a>.</p>
-        </div><!--/.wrap -->
-      </footer>
-    </div> <!-- /.container -->
-    </body>
+  </div>
+</div>
+
+</body>
 </html>
