@@ -16,6 +16,7 @@ permalink: /resources/
 * [Why you should care about HTTPS, even if you have nothing to hide](http://ben.balter.com/2015/01/06/https-all-the-things/)
 * [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
 * [Government agencies enable HTTP Strict Transport Security for public websites](http://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
+* [You Can Now Use HTTPS for Your Calls](https://github.com/InternationalTradeAdministration/developerportal/wiki/You-Can-Now-Use-HTTPS-for-Your-Calls)
 
 ## Other News
 
