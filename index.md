@@ -20,11 +20,9 @@ When properly configured, an HTTPS connection guarantees three things:
 
 These properties have been considered an absolute requirement for highly sensitive services (e.g. password login forms, or bank accounts) for many years.
 
-Over the last several years, it's become better understood that these properties should be the baseline for all web traffic.
+## Why HTTPS everywhere?
 
-* HTTPS today has seen [monumental speed improvements](https://istlsfastyet.com/), and [is not computationally expensive anymore](https://www.imperialviolet.org/2010/06/25/overclocking-ssl.html).
-* Internet service providers [modify unencrypted websites in transit](http://arstechnica.com/tech-policy/2014/09/why-comcasts-javascript-ad-injections-threaten-security-net-neutrality/) and [add tracking headers](https://www.eff.org/deeplinks/2014/11/verizon-x-uidh) to their customers' unencrypted web activity.
-* Newer versions of HTTP in modern browsers require encryption, and are [so blazing fast](https://www.httpvshttps.com/) that they may [reduce infrastructure costs](https://thethemefoundry.com/blog/why-we-dont-use-a-cdn-spdy-ssl/).
+Over the last several years, the internet's standards bodies, web browsers, and community of practice have come to understand that these properties should be the baseline for all web traffic.
 
 The GSA's [18F](https://18f.gsa.gov) team has written about [why they use HTTPS for every .gov they make](https://www.gov.uk/service-manual):
 
@@ -32,7 +30,7 @@ The GSA's [18F](https://18f.gsa.gov) team has written about [why they use HTTPS 
 >
 > ...
 >
-> [Security, privacy, and speed are] useful for all of our applications, all of the time — not just when passwords or personal information are involved. By simply deploying HTTPS all of the time, we don't have to engineer a boundary around "sensitive" parts of the application, or judge where those lines should be drawn.
+> [Security, privacy, and speed] are useful for all of our applications, all of the time — not just when passwords or personal information are involved. By simply deploying HTTPS all of the time, we don't have to engineer a boundary around "sensitive" parts of the application, or judge where those lines should be drawn.
 
 Many major organizations have reached the same conclusion:
 
@@ -41,7 +39,7 @@ Many major organizations have reached the same conclusion:
 * The technical architecture group at the W3C (the web's standards body) has declared that [the web should move to HTTPS](https://w3ctag.github.io/web-https/).
 * Google [favors HTTPS websites in search rankings](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html), and the Chrome security team is working on [gradually marking plain HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
 
-Ultimately, the internet's goal is to establish encryption as the norm, and to phase out unencrypted connections entirely.
+Ultimately, the internet's goal is to establish encryption as the norm, and to phase out unencrypted connections.
 
 It's important to realize that investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate, improving the status quo, and contributing their improvements back to the public.
 
