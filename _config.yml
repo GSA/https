@@ -8,7 +8,7 @@ exclude:
 - LICENSE.md
 
 # markdown
-highlighter: pygments
+highlighter: rouge
 markdown: redcarpet
 redcarpet:
   extensions:
@@ -31,6 +31,9 @@ enforce_https: gsa.github.io
 navigation:
 - text: Home
   url: ""
+  internal: true
+- text: Strict Transport Security
+  url: hsts/
   internal: true
 - text: Definitions
   url: definitions/
