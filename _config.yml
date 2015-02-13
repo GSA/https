@@ -1,5 +1,3 @@
-# Override in development.
-baseurl: '/https'
 
 exclude:
 - ".rbenv-version"
