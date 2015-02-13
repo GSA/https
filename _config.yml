@@ -8,7 +8,7 @@ exclude:
 - LICENSE.md
 
 # markdown
-highlighter: rouge
+highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions:
