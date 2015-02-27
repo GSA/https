@@ -27,7 +27,7 @@ enforce_https: gsa.github.io
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: Home
+- text: HTTPS in .gov
   url: ""
   internal: true
 - text: FAQ

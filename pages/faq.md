@@ -4,7 +4,7 @@ title: FAQ
 permalink: /faq/
 ---
 
-## What does HTTPS do?
+### What does HTTPS do?
 
 When properly configured, an HTTPS connection guarantees three things:
 
