@@ -41,6 +41,7 @@ body {
     line-height: 1.466666667;
 }
 
+
 h1,
 h3,
 h4,
@@ -239,7 +240,7 @@ header {
     width: 100%;
     border-bottom: 4px solid #4383A9;
     background-color: #fff;
-    padding: 2em 0;
+    padding: 0em 0;
 }
 
 
@@ -426,12 +427,12 @@ Desktop Styles
     }
 
     aside {
-        width: 30%;
+        width: 25%;
         float: left;
     }
 
     .main-content {
-        width: 67%;
+        width: 72%;
         float: right;
         margin-bottom: 120px;
     }
@@ -514,3 +515,8 @@ Mobile Styles
     }
 
 }
+
+
+
+img {width: 700px;}
+h1 {padding-top: 0; margin-top: 0;}
