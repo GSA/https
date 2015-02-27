@@ -33,9 +33,6 @@ navigation:
 - text: Strict Transport Security
   url: hsts/
   internal: true
-- text: Definitions
-  url: definitions/
-  internal: true
 - text: Resources
   url: resources/
   internal: true
