@@ -27,11 +27,11 @@ enforce_https: gsa.github.io
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: FAQ
-  url: faq/
-  internal: true
 - text: Home
   url: ""
+  internal: true
+- text: FAQ
+  url: faq/
   internal: true
 - text: Strict Transport Security
   url: hsts/

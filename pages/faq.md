@@ -4,6 +4,15 @@ title: FAQ
 permalink: /faq/
 ---
 
+## What does HTTPS do?
+
+When properly configured, an HTTPS connection guarantees three things:
+
+* **Privacy.** The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.
+* **Authentication.** The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".
+* **Integrity.** The data sent between the visitor and the website has not been tampered with or modified.
+
+A plain HTTP connection can be easily monitored, modified, and impersonated.
 
 ### What information does HTTPS protect?
 
