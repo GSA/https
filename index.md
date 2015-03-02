@@ -10,7 +10,7 @@ Government web services should provide reliable content and be protected from im
 
 Plain HTTP (`http://`) connections are insecure, and allow an attacker to easily intercept traffic, track users, or impersonate the government.
 
-In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how sensitive.
+In today's internet, and today's browsers, HTTPS is an important baseline for _all_ government websites, no matter how small or how sensitive.
 
 ### Why HTTPS for everything?
 
