@@ -50,7 +50,7 @@ By contrast, plain HTTP connections can be easily intercepted and modified by an
 
 [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) attempts to guarantee that domain names are resolved to correct IP addresses.
 
-However, DNS resolution is just one aspect of securely communicating on the web. DNSSEC does not fully secure a domain:
+However, DNS resolution is just one aspect of securely communicating on the internet. DNSSEC does not fully secure a domain:
 
 * Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP.
 
