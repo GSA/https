@@ -6,9 +6,9 @@ permalink: /
 
 Government web services should provide reliable content over a secure connection. Users should feel confident that their interactions with government web services are handled in a private manner.
 
-**HTTPS** (`https://`) provides a private connection across the public internet, and ensures that information has not been modified in transit.
+**HTTPS** (`https://`) provides a private encrypted connection across the public internet, and ensures that information has not been modified in transit.
 
-Plain HTTP (`http://`) connections are insecure, and can be easily intercepted and manipulated.
+Plain HTTP (`http://`) connections are insecure, and allow an attacker to easily intercept traffic, track users, or impersonate the government.
 
 In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how sensitive.
 
