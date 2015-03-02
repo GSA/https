@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTTPS in .gov
+title: HTTPS for .gov
 permalink: /
 ---
 
