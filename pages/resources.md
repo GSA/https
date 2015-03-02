@@ -4,8 +4,6 @@ title: Resources
 permalink: /resources/
 ---
 
-Various supporting articles and descriptions of events.
-
 ### Articles
 
 * 18F: [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
@@ -21,11 +19,16 @@ Various supporting articles and descriptions of events.
 
 ### Industry movement
 
-* Google [gives a search ranking boost](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)  to HTTPS sites
-* Chrome plans to [mark HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure)
-* Chrome also plans to [restrict some features to HTTPS sites](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/2LXKVWYkOus), including geolocation
+* Google [gives a search ranking boost](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)  to HTTPS sites.
+* Chrome plans to [mark HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
+* Chrome also plans to [restrict some features to HTTPS sites](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/2LXKVWYkOus), including geolocation.
 
 ### Standards and tools
 
-* [SSL Labs](https://www.ssllabs.com/ssltest/) - HTTPS evaluation and grading tool
-* [BetterCrypto](https://bettercrypto.org/static/applied-crypto-hardening.pdf) - Low level configuration guide
+[SSL Labs](https://www.ssllabs.com/ssltest/) is a universally referenced HTTPS evaluation and grading tool.
+
+18F has also written [`https-scan`](https://github.com/18F/https-scan), a command line tool which runs one or more domains through several separate small tools:
+
+* [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the SSL Labs API. (See its [Terms of Use](https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs.md#terms-and-conditions).)
+* [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
+* [`site-inspector`](https://github.com/benbalter/site-inspector-ruby) - Scan a domain for various web/HTTP-related properties, including HTTPS support.

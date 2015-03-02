@@ -8,7 +8,7 @@ HTTPS (`https://`) provides a secure, private connection across the public inter
 
 In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how sensitive.
 
-Read [the FAQ](/faq/) for more commonly asked questions.
+Read [the FAQ](/faq/).
 
 ### Why HTTPS for everything?
 
