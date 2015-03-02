@@ -20,7 +20,7 @@ In other words, **protecting non-sensitive sites strengthens the protections of 
 
 Additionally, a policy of always using HTTPS means not having to engineer a boundary around "sensitive" parts of the application, or to judge where those lines should be drawn. This reduces room for error, and simplifies technical deployment.
 
-Finally, unencrypted traffic is subject to blanket monitoring and tracking across all websites a user visits, without user consent. These kinds of attacks are commonplace today across the world, and bring into question whether there is such a thing as "non-sensitive" traffic. These attacks are defeated by HTTPS, and so fare made infeasible by increasing the overall rate of encrypted traffic.
+Finally, unencrypted traffic is subject to blanket monitoring and tracking across all websites a user visits, without user consent. These kinds of attacks are commonplace today across the world, and bring into question whether there is such a thing as "non-sensitive" traffic. These attacks are defeated by HTTPS, and so are made infeasible by increasing the overall rate of encrypted traffic.
 
 ### HTTPS is the internet's next phase
 
