@@ -4,27 +4,39 @@ title: HTTPS in .gov
 permalink: /
 ---
 
-HTTPS (`https://`) provides a secure, private connection across the public internet. Plain HTTP (`http://`) connections are insecure, and can be easily intercepted, manipulated, and impersonated.
+**HTTPS** (`https://`) provides a secure and private encrypted connection across the public internet.
+
+Plain HTTP (`http://`) connections are insecure, and can be easily intercepted and manipulated.
 
 In today's internet, and today's browsers, HTTPS is a helpful baseline for _all_ government websites, no matter how small or how sensitive.
 
-Read [the FAQ](/faq/).
-
 ### Why HTTPS for everything?
 
-HTTPS makes sense for all websites, even smaller or more "non-sensitive" websites.
+HTTP has become central to our way of life. Originally invented just for websites, HTTP is now the primary protocol used by computers, tablets, smartphones, and many other devices to communicate over the vast public internet.
 
-As encrypted traffic becomes more widespread and more normal, web browsers and other clients can begin assuming HTTPS with more confidence. This means more new web functionality can require HTTPS to function, and that browsers can reduce the likelihood of phishing and user error by making failure modes more strict.
+As our dependency on the internet has grown, the risk to users' privacy and safety has grown along with it.
 
-In other words, **protecting non-sensitive sites strengthens the protections of sensitive sites**, by allowing browsers and clients to offer much stronger guarantees and warnings when those protections break down.
+Every unencrypted HTTP request reveals information about a user's behavior, and the interception and tracking of unencrypted browsing has become commonplace.
 
-Additionally, a policy of always using HTTPS means not having to engineer a boundary around "sensitive" parts of the application, or to judge where those lines should be drawn. This reduces room for error, and simplifies technical deployment.
+Today, **there is no such thing as insensitive web traffic**, and public services should not depend on the benevolence of public networks.
 
-Finally, unencrypted traffic is subject to blanket monitoring and tracking across all websites a user visits, without user consent. These kinds of attacks are commonplace today across the world, and bring into question whether there is such a thing as "non-sensitive" traffic. These attacks are defeated by HTTPS, and so are made infeasible by increasing the overall rate of encrypted traffic.
+When properly configured, HTTPS can provide a fast, secure connection that offers the level of privacy and reliability that users should expect from government web services.
+
+### Privacy by default
+
+By using private connections by default, changed expectations make everyone safer.
+
+By always using HTTPS, web services don't have to make a subjective judgment call about what's "sensitive". This leaves less room for error, and makes deployment simpler and more consistent.
+
+Widespread HTTPS uses also means that clients can begin assuming HTTPS with more confidence. Attacks designed to track large quantities of unencrypted traffic become less attractive.
+
+Web browsers can begin displaying HTTPS connections as normal, and HTTP connections as non-secure. HTTPS validation vailures can become more strict, reducing the effectiveness of phishing and user error.
+
+These changed expectations improve the security of HTTPS on every website. In other words, **protecting non-sensitive sites strengthens the protections of sensitive sites**.
 
 ### HTTPS is the internet's next phase
 
-Over the last several years, the internet's standards bodies, web browsers, major tech companies, and the internet community of practice have all come to understand that HTTPS should be the baseline for all web traffic.
+The internet's standards bodies, web browsers, major tech companies, and the internet community of practice have all come to understand that HTTPS should be the baseline for all web traffic.
 
 * The W3C's Technical Architecture Group has found that [the web should actively prefer secure connections](https://w3ctag.github.io/web-https/) and transition entirely to HTTPS.
 * The IETF has said that [pervasive monitoring is an attack](https://datatracker.ietf.org/doc/rfc7258/), and the Internet Architecture Board (the IETF's parent organization) recommends that [new protocols use encryption by default](http://www.internetsociety.org/news/internet-society-commends-internet-architecture-board-recommendation-encryption-default).
@@ -35,4 +47,3 @@ Ultimately, the internet's goal is to establish encryption as the norm, and to p
 Investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate, improving the status quo, and contributing their improvements back to the public.
 
 The more US government websites and services that join the transition to an encrypted internet, the smoother and faster it will be.
-
