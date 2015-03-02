@@ -13,7 +13,7 @@ redcarpet:
   - with_toc_data
 
 # Site metadata
-name: HTTPS in .gov
+name: HTTPS for .gov
 description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
 
 
@@ -27,7 +27,7 @@ enforce_https: gsa.github.io
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: HTTPS in .gov
+- text: HTTPS for .gov
   url: ""
   internal: true
 - text: FAQ
