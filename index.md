@@ -4,7 +4,7 @@ title: HTTPS in .gov
 permalink: /
 ---
 
-Government web services should provide reliable content over a secure connection. Users should feel confident that their interactions with government web services are handled in a private manner.
+Government web services should provide reliable content and be protected from impersonation. Users should feel confident that their interactions with government web services are handled in a private manner.
 
 **HTTPS** (`https://`) provides a private encrypted connection across the public internet, and ensures that information has not been modified in transit.
 
