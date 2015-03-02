@@ -48,21 +48,25 @@ By contrast, plain HTTP connections can be easily intercepted and modified by an
 
 ### Why isn't DNSSEC good enough?
 
-[DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) is designed to guarantee the authenticity of resolving domain names. DNSSEC doesn't encrypt anything, and so DNSSEC alone provides no privacy. HTTPS provides a private, encrypted connection.
+[DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) attempts to guarantee that domain names are resolved to correct IP addresses.
 
-As importantly, **no web browsers support DNSSEC today**. No web browsers inform users that DNSSEC validation has failed, which means that DNSSEC does not secure browsing activity in practice today. This situation may change, but it will take years, as there is no visible momentum in the web browser community to address this.
+However, DNS resolution is just one aspect of securely communicating on the web. DNSSEC does not fully secure a domain:
 
-By contrast, HTTPS is universally implemented and enforced in browsers, and in recent years has seen serious investment by the web and security community.
+* Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP.
+
+* No major web browsers currently inform the user when DNSSEC validation fails, limiting its strength and enforceability.
+
+HTTPS guarantees the privacy and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies.
 
 ### How does HTTPS protect against DNS spoofing?
 
-In practice, HTTPS can protect a domain even in the absence of DNSSEC support.
+In practice, HTTPS can protect communication with a domain even in the absence of DNSSEC support.
 
-A valid HTTPS certificate guarantees that the server has demonstrated ownership over the domain to a trusted certificate authority.
+A valid HTTPS certificate shows that the server has demonstrated ownership over the domain to a trusted certificate authority at the time of certificate issuance.
 
-To ensure that an attacker cannot use DNS spoofing to direct the user to a plain `http://` connection, websites can use [HTTP Strict Transport Security](/hsts/) (HSTS) to instruct browsers to require an HTTPS connection for their domain at all times.
+To ensure that an attacker cannot use DNS spoofing to direct the user to a plain `http://` connection where traffic can be intercepted, websites can use [HTTP Strict Transport Security](/hsts/) (HSTS) to instruct browsers to require an HTTPS connection for their domain at all times.
 
-This means that an attacker that successfully spoofs a DNS resolution must also create a valid HTTPS connection. This makes DNS spoofing as challenging as [attacking HTTPS](#).
+This means that an attacker that successfully spoofs a DNS resolution must also create a valid HTTPS connection. This makes DNS spoofing as challenging and expensive as [attacking HTTPS generally](#how-difficult-is-it-to-attack-an-https-connection?).
 
 HTTPS and HSTS work together to protect a domain against DNS spoofing.
 
