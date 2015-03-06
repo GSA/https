@@ -52,7 +52,7 @@ By contrast, plain HTTP connections can be easily intercepted and modified by an
 
 However, DNS resolution is just one aspect of securely communicating on the internet. DNSSEC does not fully secure a domain:
 
-* Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP.
+* Once DNS resolution is complete, DNSSEC does not ensure the confidentiality or integrity of communication between a client and the destination IP.
 
 * No major web browsers currently inform the user when DNSSEC validation fails, limiting its strength and enforceability.
 
