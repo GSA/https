@@ -66,7 +66,8 @@ A valid HTTPS certificate shows that the server has demonstrated ownership over 
 
 To ensure that an attacker cannot use DNS spoofing to direct the user to a plain `http://` connection where traffic can be intercepted, websites can use [HTTP Strict Transport Security](/hsts/) (HSTS) to instruct browsers to require an HTTPS connection for their domain at all times.
 
-This means that an attacker that successfully spoofs DNS resolution must also create a valid HTTPS connection. This makes DNS spoofing as challenging and expensive as [attacking HTTPS generally](#how-difficult-is-it-to-attack-an-https-connection?). If HTTPS is not compromised, users receive a notable warning message from their browser that will prevent them from visiting the possibly malicious site until they overtly confirm they want to disregard the warning.
+This means that an attacker that successfully spoofs DNS resolution must also create a valid HTTPS connection. This makes DNS spoofing as challenging and expensive as [attacking HTTPS generally](#how-difficult-is-it-to-attack-an-https-connection?).
+
+If the attacker spoofs DNS but doesn't compromise HTTPS, users will receive a notable warning message from their browser that will prevent them from visiting the possibly malicious site. If the site uses HSTS, there will be no option for the visitor to disregard and click through the warning.
 
 HTTPS and HSTS work together to protect a domain against DNS spoofing.
-
