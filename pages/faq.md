@@ -30,7 +30,7 @@ This is the same for all HTTP methods (GET, POST, PUT, etc.). The URL path and q
 
 ### What information does HTTPS _not_ protect?
 
-As shown above, the full domain or subdomain and the originating IP address remain unencrypted.
+While HTTPS encrypts the entire HTTP request and response, the DNS resolution and connection setup can reveal other information, such as the full domain or subdomain and the originating IP address, as shown above.
 
 Additionally, attackers can still analyze encrypted HTTPS traffic for "side channel" information. This can include the time spent on site, or the relative size of user input.
 
