@@ -54,7 +54,7 @@ However, DNS resolution is just one aspect of securely communicating on the inte
 
 * Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP.
 
-* No major web browsers currently inform the user when DNSSEC validation fails, limiting its strength and enforceability.
+* No major web browsers inform the user when DNSSEC validation fails, limiting its strength and enforceability.
 
 HTTPS guarantees the privacy and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies.
 
