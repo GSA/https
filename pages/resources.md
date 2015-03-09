@@ -10,6 +10,7 @@ permalink: /resources/
 * Ben Balter: [Why you should care about HTTPS, even if you have nothing to hide](http://ben.balter.com/2015/01/06/https-all-the-things/)
 * Washington Post: [Federal sites leaked the locations of people seeking AIDS services for years](http://www.washingtonpost.com/blogs/the-switch/wp/2014/11/07/federal-sites-leaked-the-locations-of-people-seeking-aids-services-for-years/)
 * Washington Post: [The federal government’s online privacy watchdog just made its Web site more secure](http://www.washingtonpost.com/blogs/the-switch/wp/2015/03/06/the-federal-governments-online-privacy-watchdog-just-made-its-web-site-more-secure/)
+* Washington Post: [Your browser may soon force you to connect securely to some U.S. government Web sites](http://www.washingtonpost.com/blogs/the-switch/wp/2015/02/11/your-browser-may-soon-force-you-to-connect-securely-to-some-u-s-government-web-sites/)
 * 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
 * FTC: [Government agencies enable HTTP Strict Transport Security for public websites](http://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
