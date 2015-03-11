@@ -30,9 +30,9 @@ By using private connections by default, changed expectations make everyone safe
 
 By always using HTTPS, web services don't have to make a subjective judgment call about what's "sensitive". This leaves less room for error, and makes deployment simpler and more consistent.
 
-Widespread HTTPS uses also means that clients can begin assuming HTTPS with more confidence. Attacks designed to track large quantities of unencrypted traffic become less attractive.
+Widespread use of HTTPS also means that clients can begin assuming HTTPS with more confidence. Attacks designed to track large quantities of unencrypted traffic become less attractive.
 
-Web browsers can begin displaying HTTPS connections as normal, and HTTP connections as non-secure. HTTPS validation vailures can become more strict, reducing the effectiveness of phishing and user error.
+Web browsers can begin displaying HTTPS connections as normal, and HTTP connections as non-secure. HTTPS validation failures can become more strict, reducing the effectiveness of phishing and user error.
 
 These changed expectations improve the security of HTTPS on every website. In other words, **protecting non-sensitive sites strengthens the protections of sensitive sites**.
 
