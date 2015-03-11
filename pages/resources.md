@@ -15,6 +15,7 @@ permalink: /resources/
 * 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
 * FTC: [Government agencies enable HTTP Strict Transport Security for public websites](http://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
+* Fast Company: [The Fight for HTTPS](http://www.fastcompany.com/3036430/the-fight-for-https)
 
 ### Internet standards movement
 
@@ -26,6 +27,7 @@ permalink: /resources/
 * Google [gives a search ranking boost](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)  to HTTPS sites.
 * Chrome plans to [mark HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
 * Chrome also plans to [restrict some features to HTTPS sites](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/2LXKVWYkOus), including geolocation.
+* Electronic Freedom Foundation's [HTTPS-Everywhere Project](https://www.eff.org/https-everywhere)
 
 ### Standards and tools
 
