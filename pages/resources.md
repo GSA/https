@@ -18,6 +18,9 @@ permalink: /resources/
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
 * Fast Company: [The Fight for HTTPS](http://www.fastcompany.com/3036430/the-fight-for-https)
 * E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](http://e-pluribusunum.com/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
+* Motherboard: [Whitehouse.gov Is Now Secure By Default, Signaling a Trend in Government](http://motherboard.vice.com/read/whitehouse-site-is-now-secure-by-default-signaling-a-trend-in-government)
+* NextGov: [WhiteHouse.gov Finally Gets Boosted Encryption](http://www.nextgov.com/cybersecurity/2015/03/white-house-dot-gov-website-use-https-encryption/107223/?oref=river)
+
 
 ### Internet standards movement
 
