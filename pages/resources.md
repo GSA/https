@@ -17,6 +17,7 @@ permalink: /resources/
 * FTC: [Government agencies enable HTTP Strict Transport Security for public websites](http://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
 * Fast Company: [The Fight for HTTPS](http://www.fastcompany.com/3036430/the-fight-for-https)
+* E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](http://e-pluribusunum.com/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
 
 ### Internet standards movement
 
