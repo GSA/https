@@ -26,7 +26,7 @@ When an `HTTP` website tries to migrate to `HTTPS`, these can often become a sou
 
 ### Strategies for dealing with mixed content
 
-The easiest approach is to use relative URLS (e.g. `<img src="/media/my-picture.png" />`) for links which are on your domain. These will work with both `HTTP` and `HTTPS` websites. For external resources you can simply always use `https://`.
+The easiest approach is to use relative URLS (e.g. `<img src="/media/my-picture.png" />`) for links which are on your domain. These will work with both `HTTP` and `HTTPS` websites. For external resources you can simply always use `https://`. Ocasionally you will find that some media you wish to hotlink is on a third-party which doesn't support HTTPS. This is a great opportunity to improve your website's privacy and to lessen your dependency on third parties by hosting that media on your own server instead (you can also encourage the host for that media to begin offering `https://` support on their website).
 
 In order to locate mixed content, the easiest way to start is to load your website in a browser over `https://` and see if it looks ok. Both Chrome and Firefox will log any mixed content to the console. This gives a quick way to get a sense of how large the problem is.
 
