@@ -39,6 +39,9 @@ navigation:
 - text: Mixed Content
   url: mixed-content/
   internal: true
+- text: Technical Concepts
+  url: technical-concepts/
+  internal: true
 - text: Resources
   url: resources/
   internal: true
