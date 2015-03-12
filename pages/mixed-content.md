@@ -26,7 +26,7 @@ When an `HTTP` website tries to migrate to `HTTPS`, these can often become a sou
 
 ### Strategies for dealing with mixed content
 
-The easiest approaches are to use relative URLS (e.g. `<img src="/media/my-picture.png" />`) or protocol-relative URLs (e.g. `<img src="//other-website.com/their-picture.png" />`). These will work with both `HTTP` and `HTTPS` websites. `https://` can also be safely used from both `HTTP` and `HTTPS` pages (however these are often more difficult for local development).
+The easiest approach is to use relative URLS (e.g. `<img src="/media/my-picture.png" />`) for links which are on your domain. These will work with both `HTTP` and `HTTPS` websites. For external resources you can simply always use `https://`.
 
 In order to locate mixed content, the easiest way to start is to load your website in a browser over `https://` and see if it looks ok. Both Chrome and Firefox will log any mixed content to the console. This gives a quick way to get a sense of how large the problem is.
 
