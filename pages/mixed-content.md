@@ -14,7 +14,7 @@ When browsers encounter active mixed content they will block it, this often resu
 
 ### Why is mixed content a problem?
 
-Mixed content is a problem because, were browsers to allow it, an attacker would be able to conduct a MITM attack against it the same way they could the main page. Even where browsers do allow it, as with images, attackers can manipulate what the page looks like, and the yellow-lock icon reduces user confidence.
+Mixed content is a problem because, were browsers to allow it, an attacker would be able to conduct a MITM attack against it the same way they could the main page. Even where browsers do allow it, as with images, attackers can manipulate what the page looks like, and the yellow-lock icon reduces user confidence. In addition, an attacker will be able to read any cookies for that domain which do have the `Secure` flag, and set cookies.
 
 Because when a website is `HTTP`-only loading other `HTTP` sub-resources does not generate any sort of warning, websites often accumulate lots of these sub-resources. When a website tries to migrate to being available over `HTTPS` these can often become a source of difficulty.
 
