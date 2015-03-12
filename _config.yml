@@ -36,6 +36,9 @@ navigation:
 - text: Strict Transport Security
   url: hsts/
   internal: true
+- text: Technical Concepts
+  url: technical-concepts/
+  internal: true
 - text: Resources
   url: resources/
   internal: true
