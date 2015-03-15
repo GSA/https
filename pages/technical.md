@@ -22,9 +22,13 @@ Due to the serious flaw in RC4 and the fact that the BEAST attack has been mitig
 
 ### Protocols: SSLv2, SSLv3, and TLSv1.0+
 
-HTTPS is protected by a collection of protocols generally referred to as SSL or TLS. These protocols are SSLv2, SSLv3, TLSv1.0, TLSv1.1, and TLSv1.2 (confusingly, TLSv1.0 comes after SSLv3), each of which is a refinment of the older protocols.
+HTTPS is protected by a collection of protocols generally referred to as SSL or TLS. These protocols are SSLv2, SSLv3, TLSv1.0, TLSv1.1, and TLSv1.2 (confusingly, TLSv1.0 comes after SSLv3), each of which is a refinement of the older protocols.
 
 SSLv2.0 has been known to be insecure since 1995 and SSLv3.0 has been known to be insecure since 2014 due to the [POODLE](https://www.openssl.org/~bodo/ssl-poodle.pdf) attack. The nature of TLS is that an active MITM attacker can downgrade a client to the minimum supported protocol that is supported by both the client and the server. This makes it critically important that the minimum TLS version that is enabled is TLSv1.0.
+
+Both SSL and TLS contain a mechanism for negotiating a shared protocol version, in order to allow clients and servers to support a range of versions. Unfortunately, because of fragility in many networks, browsers introduced their own version negotiation mechanism. This browser-based negotiation is vulnerable to downgrade attacks, allowing an attacker to force a connection to use the weakest protocol that a client supports.
+
+To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feature, which prevents such "downgrade attacks". This is enabled by default for servers in the most recent version of OpenSSL and should be used on all servers, with no known downsides.
 
 
 ### Session Tickets and Session IDs
