@@ -20,7 +20,7 @@ As our dependency on the internet has grown, the risk to users' privacy and safe
 
 Every unencrypted HTTP request reveals information about a user's behavior, and the interception and tracking of unencrypted browsing has become commonplace.
 
-Today, **there is no such thing as insensitive web traffic**, and public services should not depend on the benevolence of public networks.
+Today, **there is no such thing as insensitive web traffic**, and public services should not depend on the benevolence of network operators.
 
 When properly configured, HTTPS can provide a fast, secure connection that offers the level of privacy and reliability that users should expect from government web services.
 
