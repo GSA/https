@@ -1,16 +1,15 @@
+# markdown
+highlighter: rouge
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - with_toc_data
 
 exclude:
 - ".rbenv-version"
 - README.md
 - CONTRIBUTING.md
 - LICENSE.md
-
-# markdown
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions:
-  - with_toc_data
 
 # Site metadata
 name: HTTPS for .gov
