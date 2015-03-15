@@ -20,8 +20,7 @@ description: "Resources, best practices, and case studies for deploying HTTPS in
 repo_name: https
 branch: gh-pages
 gh_org: GSA
-url: https://gsa.github.io/https
-enforce_https: gsa.github.io
+url: https://https.cio.gov
 
 # Navigation
 # List links that should appear in the site sidebar here

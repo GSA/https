@@ -32,16 +32,6 @@
     <meta property="og:description" content="{{ site.description | xml_escape }}" />
   {% endif %}
 
-    <!--
-    redirect users to the https version of the website.
-    but: only check when on the production domain, as set in _config.yml.
-   -->
-  <script type="text/javascript">
-    var enforce = "{{ site.enforce_https }}";
-    if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-      window.location.protocol = "https";
-  </script>
-
 </head>
 <body>
 
