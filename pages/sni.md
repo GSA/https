@@ -22,7 +22,7 @@ However, in many cases, such as [content distribution networks (CDNs)](https://e
 
 Thus, it can be highly desirable for servers to depend on client SNI support. All modern browsers support SNI, but some older browsers on older OSes (notably IE6 and Android versions before Honeycomb). Depending on what clients are necessary to support, servers may or may not be able to depend on client SNI support.
 
-### Client support
+## Client support
 
 The most commonly used clients without support for SNI are:
 
