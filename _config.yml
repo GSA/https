@@ -6,7 +6,9 @@ redcarpet:
   - with_toc_data
 
 exclude:
-- ".rbenv-version"
+- ".ruby-version"
+- ".jekyll-metadata"
+- ".gitignore"
 - README.md
 - CONTRIBUTING.md
 - LICENSE.md
