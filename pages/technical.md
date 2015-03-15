@@ -26,7 +26,7 @@ HTTPS is protected by a collection of protocols generally referred to as SSL or 
 
 SSLv2.0 has been known to be insecure since 1995 and SSLv3.0 has been known to be insecure since 2014 due to the [POODLE](https://www.openssl.org/~bodo/ssl-poodle.pdf) attack. The nature of TLS is that an active MITM attacker can downgrade a client to the minimum supported protocol that is supported by both the client and the server. This makes it critically important that the minimum TLS version that is enabled is TLSv1.0.
 
-SSL and TLS contain a mechanism for negotiating a shared protocol version, in order to allow clients and servers to support a range of versions. Unfortunately, because of fragility in many networks, browsers introduced their own version negotiation mechanism which is insecure, and allows an attacker to force a connection to use the weakest protocol that a client supports. To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feature, which prevents such "downgrade attacks". This is enabled by default for servers in the most recent version of OpenSSL.
+Both SSL and TLS contain a mechanism for negotiating a shared protocol version, in order to allow clients and servers to support a range of versions. Unfortunately, because of fragility in many networks, browsers introduced their own version negotiation mechanism which is insecure, and allows an attacker to force a connection to use the weakest protocol that a client supports. To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feature, which prevents such "downgrade attacks". This is enabled by default for servers in the most recent version of OpenSSL.
 
 
 ### Session Tickets and Session IDs
