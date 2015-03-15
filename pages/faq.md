@@ -8,7 +8,7 @@ permalink: /faq/
 
 When properly configured, an HTTPS connection guarantees three things:
 
-* **Privacy.** The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.
+* **Confidentiality.** The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.
 * **Authentication.** The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".
 * **Integrity.** The data sent between the visitor and the website has not been tampered with or modified.
 
@@ -52,11 +52,11 @@ By contrast, plain HTTP connections can be easily intercepted and modified by an
 
 However, DNS resolution is just one aspect of securely communicating on the internet. DNSSEC does not fully secure a domain:
 
-* Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP.
+* Once DNS resolution is complete, DNSSEC does not ensure the confidentiality or integrity of communication between a client and the destination IP.
 
 * No major web browsers inform the user when DNSSEC validation fails, limiting its strength and enforceability.
 
-HTTPS guarantees the privacy and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies.
+HTTPS guarantees the confidentiality and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies.
 
 ### How does HTTPS protect against DNS spoofing?
 
