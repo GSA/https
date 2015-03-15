@@ -1,16 +1,17 @@
-
-exclude:
-- ".rbenv-version"
-- README.md
-- CONTRIBUTING.md
-- LICENSE.md
-
 # markdown
-highlighter: pygments
+highlighter: rouge
 markdown: redcarpet
 redcarpet:
   extensions:
   - with_toc_data
+
+exclude:
+- ".ruby-version"
+- ".jekyll-metadata"
+- ".gitignore"
+- README.md
+- CONTRIBUTING.md
+- LICENSE.md
 
 # Site metadata
 name: HTTPS for .gov
@@ -21,8 +22,7 @@ description: "Resources, best practices, and case studies for deploying HTTPS in
 repo_name: https
 branch: gh-pages
 gh_org: GSA
-url: https://gsa.github.io/https
-enforce_https: gsa.github.io
+url: https://https.cio.gov
 
 # Navigation
 # List links that should appear in the site sidebar here
@@ -38,6 +38,9 @@ navigation:
   internal: true
 - text: Strict Transport Security
   url: hsts/
+  internal: true
+- text: Mixed Content
+  url: mixed-content/
   internal: true
 - text: Technical Concepts
   url: technical-concepts/
