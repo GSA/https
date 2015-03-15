@@ -35,7 +35,7 @@ To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feat
 
 A key component of the TLS security model is X.509 certificates, which use cascading signatures. A root certificate authority's certificate (which is included with your OS) is used to sign an intermediary certificate, which is used to sign your website's certificate.
 
-A part of this signature process is computing the hash of the data included in the certificate. Right now the [web is in the process of migrating the recommended hashing algorithm](http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), from SHA-1 to SHA-256, as a result of increasingly advanced cryptanalysis of SHA-1.
+A part of this signature process is computing the hash of the data included in the certificate. Right now the [web is in the process of migrating the recommended hashing algorithm  from SHA-1 to SHA-256](http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), as a result of increasingly advanced cryptanalysis of SHA-1.
 
 Any new certificates you acquire will generate the "yellow lock" icon in Chrome if they, or any of the intermediary certificates in the chain, use SHA-1. Therefore when generating a new certificate it's important to check with your CA to make sure both your certificate, and their intermediates, use SHA-256.
 
