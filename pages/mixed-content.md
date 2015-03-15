@@ -12,7 +12,7 @@ When the main page is loaded over `HTTPS` and these sub-resources are loaded ove
 
 Mixed content comes in two varieties:
 
-**Active** mixed content includes resources that can greatly change the behavior of a website, such as JavaScript, CSS, fonts, and iframes. Browsers block active content, which often results in affected pages being completely unstyled or broken. Browsers treat these very aggressively because of the consequences if they were compromised, for example a single compromised Javascript file compromises the entire website, regardless of how other resources are loaded.
+**Active** mixed content includes resources that can greatly change the behavior of a website, such as JavaScript, CSS, fonts, and iframes. Browsers refuse to load active content, which often results in affected pages being completely unstyled or broken. Browsers treat these very aggressively because of the consequences if they were compromised, for example a single compromised Javascript file compromises the entire website, regardless of how other resources are loaded.
 
 **Passive** mixed content includes resources whose impact on the page's overall behavior is more minimal, such as images, audio, and video. Browsers will load passive mixed content, but will typically change the HTTPS indicator. For example, in Chrome this means that the "green lock" icon becomes a gray lock with a yellow triangle over it.
 
