@@ -31,6 +31,15 @@ Both SSL and TLS contain a mechanism for negotiating a shared protocol version, 
 To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feature, which prevents such "downgrade attacks". This is enabled by default for servers in the most recent version of OpenSSL and should be used on all servers, with no known downsides.
 
 
+### Certificate signature hashing algorithms (SHA-1, SHA-256)
+
+A key component of the TLS security model is X.509 certificates, which use cascading signatures. A root certificate authority's certificate (which is included with your OS) is used to sign an intermediary certificate, which is used to sign your website's certificate.
+
+A part of this signature process is computing the hash of the data included in the certificate. Right now the [web is in the process of migrating the recommended hashing algorithm  from SHA-1 to SHA-256](http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), as a result of increasingly advanced cryptanalysis of SHA-1.
+
+Any new certificates you acquire will generate the "yellow lock" icon in Chrome if they, or any of the intermediary certificates in the chain, use SHA-1. Therefore when generating a new certificate it's important to check with your CA to make sure both your certificate, and their intermediates, use SHA-256.
+
+
 ### Session Tickets and Session IDs
 
 Opening a TLS connection is a fairly expensive and slow process which includes several round trips of data and some fairly slow cryptography. It's not unusual for the handshake to take 300ms or more to fully complete. However TLS includes two different mechanisms which allow a client to reuse a previous handshake for a period of time to reduce the time it takes to establish a secure connection.
