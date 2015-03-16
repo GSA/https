@@ -10,7 +10,9 @@ We encourage your feedback and suggestions.
 
 ### We Want Your Feedback
 
-We encourage your feedback and suggestions on this proposal. Suggestions and discussions are welcome via [GitHub Issues](https://github.com/gsa/https/issues). You may also propose changes to the content directly by submitting a [pull request](https://help.github.com/articles/creating-a-pull-request "More Information on Submitting Pull Requests").
+We encourage your feedback and suggestions on this proposal.
+
+Concurrent with the public engagement of [Project Open Data](https://project-open-data.cio.gov) and the [U.S. Digital Service Playbook](https://playbook.cio.gov), suggestions and discussions are welcome via [GitHub Issues](https://github.com/gsa/https/issues). You may also propose changes to the content directly by submitting a [pull request](https://help.github.com/articles/creating-a-pull-request "More Information on Submitting Pull Requests").
 
 You don't need to install any software to suggest a change. To propose a change from your browser, [select the proposal](https://github.com/GSA/https/blob/master/pages/index.md "Link to the HTTPS proposal"). You can use GitHub's in-browser editor to edit files and submit a "pull request" for your changes to be merged into the document.
 
