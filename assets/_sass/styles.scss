@@ -64,7 +64,7 @@ h2, h3, h4, h5, h6 {
     line-height: 1.2em;
 }
 
-h2:before {
+h2:before, h3:before, h4:before, h5:before, h6:before {
   content: '';
   display: block; position: relative;
   width: 0; height: 4em;
