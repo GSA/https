@@ -154,6 +154,17 @@ header {
     background-color: $header;
     padding: 1.5em;
     color: $white;
+
+    h1 a,
+    h1 a:link,
+    h1 a:visited {
+      color: $white;
+      border-bottom: 0px;
+    }
+
+    h1 a:hover {
+      border-bottom: 1px solid #fff;
+    }
 }
 
 header h1 {
@@ -200,12 +211,20 @@ header h1 {
 }
 
 
+p > code, li > code {
+  padding: 2px 4px;
+  background-color: #eaeaff;
+  border: 1px solid #d5d5d5;
+  font-size: 10pt;
+  font-family: monospace;
+}
+
 pre {
-    max-width: 100%;
-    font-size: 0.875em;
-    overflow-y: scroll;
-    background-color: #f1f2f2;
-    padding: 10px;
+  max-width: 100%;
+  font-size: 0.875em;
+  overflow-y: scroll;
+  background-color: #f1f2f2;
+  padding: 10px;
 }
 
 
@@ -222,7 +241,7 @@ header {
 aside {
     width: 25%;
     left: 0%;
-    position: fixed;
+    position: absolute;
 }
 
 .main-content {
