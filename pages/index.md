@@ -87,7 +87,7 @@ In summation, the HTTPS-Only Standard will promote the secure transfer of user i
 
 Please use **[https.cio.gov](https://https.cio.gov)** for technical assistance and best practices to aid in the implementation of this proposed standard.
 
-Please visit **[provide feedback and suggestions](https://github.com/GSA/https/#we-want-your-feedback)** for this proposal and technical assistance materials.
+Please **[provide public feedback and suggestions](https://github.com/GSA/https/#we-want-your-feedback)** for this proposal and technical assistance materials, or email [`https@gsa.gov`](mailto:https@gsa.gov) to provide private comments.
 
 ## Footnotes
 
