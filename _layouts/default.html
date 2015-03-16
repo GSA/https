@@ -3,10 +3,14 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css?{{ site.time | date: "%Y%m%j%H%M%S" }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700|Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+
   <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="{{ site.baseurl }}/assets/js/respond.min.js"></script>
@@ -36,7 +40,11 @@
 <body>
 
 <div class="container">
-  <header role="banner"></header>
+  <header role="banner">
+    <h1>
+      <a href="/">{{ site.name }}</a>
+    </h1>
+  </header>
 
   <div class="wrap content">
 

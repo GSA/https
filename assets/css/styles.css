@@ -1,0 +1,240 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/** more normalize **/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+/*
+Typography
+==================================
+*/
+body {
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.9em; }
+
+header h1 {
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-weight: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Arial, sans-serif; }
+
+h1 {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+  font-size: 24pt; }
+
+h2, h3, h4, h5, h6 {
+  margin-top: 2em; }
+
+/* todo: errrr */
+img {
+  width: 700px; }
+
+/* Lists */
+.main-content ul {
+  padding-left: 1.1em; }
+
+.main-content li {
+  margin-bottom: 1em; }
+
+li h3,
+li h4 {
+  margin: 0; }
+
+li p {
+  margin-top: 0; }
+
+/* Navigation */
+aside p {
+  padding-left: 15px; }
+aside .sidebar-nav a {
+  display: block;
+  padding: 10px;
+  -webkit-transition: .4s;
+  transition: .4s; }
+aside .sidebar-nav a,
+aside .sidebar-nav a:link,
+aside .sidebar-nav a:visited {
+  border-bottom: none;
+  color: #75787b; }
+aside .sidebar-nav li:hover,
+aside .sidebar-nav .sidebar-nav-active {
+  color: #75787b;
+  border-left: 5px solid #153E56;
+  background-color: transparent;
+  border-bottom: 1px solid #babbbd;
+  padding-left: 0; }
+aside .sidebar-nav ul {
+  margin: 0;
+  padding: 0; }
+aside .sidebar-nav li {
+  list-style: none;
+  border-bottom: 1px solid #babbbd;
+  font-size: 1.125em;
+  padding-left: 5px; }
+aside .sidebar-nav li:last-child {
+  border-bottom: none; }
+
+/* Layout */
+/* offset the fixed position header for jump links */
+section:before {
+  display: block;
+  content: "";
+  height: 60px;
+  margin: -60px 0 0; }
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+header {
+  width: 100%;
+  background-color: #153E56;
+  padding: 1.5em;
+  color: #ffffff; }
+  header h1 a,
+  header h1 a:link,
+  header h1 a:visited {
+    color: #ffffff;
+    border-bottom: 0px; }
+  header h1 a:hover {
+    border-bottom: 1px solid #fff; }
+
+header h1 {
+  margin: 0;
+  font-size: 26pt; }
+
+/* Helpers */
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+p > code, li > code {
+  padding: 2px 4px;
+  background-color: #eaeaff;
+  border: 1px solid #d5d5d5;
+  font-size: 10pt;
+  font-family: monospace; }
+
+pre {
+  max-width: 100%;
+  font-size: 0.875em;
+  overflow-y: scroll;
+  background-color: #f1f2f2;
+  padding: 10px; }
+
+/** Overall structure, desktop and mobile */
+header {
+  position: static; }
+
+.wrap.content {
+  position: relative; }
+
+aside {
+  width: 25%;
+  left: 0%;
+  position: absolute; }
+
+.main-content {
+  left: 30%;
+  position: absolute;
+  max-width: 700px;
+  margin-bottom: 20px; }
+
+@media screen and (max-width: 40.5em) {
+  .wrap.content {
+    position: static; }
+
+  aside {
+    position: static;
+    width: 100%; }
+
+  .main-content {
+    margin-top: 1.5em;
+    position: static;
+    width: 100%; } }
+/* Links */
+/* for hover effects */
+a {
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  transition: .2s; }
+
+a,
+a:link,
+a:visited {
+  color: #0072ce;
+  border-bottom: 1px dotted #0072ce;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: 1px solid #7eb8dd;
+  color: #7eb8dd;
+  text-decoration: none; }
+
+a:active {
+  border-bottom: 1px solid #0072ce;
+  color: #002d72;
+  text-decoration: none; }
+
+a:focus {
+  border-bottom: 1px solid #0072ce;
+  color: #0072ce;
+  outline: thin dotted;
+  text-decoration: none; }
+
+a.skip-link {
+  color: #0072ce;
+  border-bottom: none;
+  padding: .25em; }
+
+a.skip-link:hover,
+a.skip-link:active,
+a.skip-link:focus {
+  background-color: #0072ce;
+  color: #ffffff;
+  border-bottom: none; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,325 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+// Colors
+$header:              #153E56;
+$white:               #ffffff;
+$mid-gray:            #75787b;
+$border-gray:         #babbbd;
+$link:                #0072ce;
+$link-active:         #002d72;
+$link-hover:          #7eb8dd;
+
+// Fonts
+$serif:               "Merriweather", "Georgia", "Times New Roman", serif;
+$sans-serif:          "Open Sans", Arial, sans-serif;
+
+// Mobile Breakpoints
+$mobile: new-breakpoint(min-width 0px max-width 640px 4);
+$slimmer: new-breakpoint(min-width 641px max-width 980px 12);
+
+/** more normalize **/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*
+Typography
+==================================
+*/
+
+body {
+    font-family: $serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.9em;
+}
+
+header h1 {
+    font-family: $serif;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif;
+}
+
+h1 {
+    margin-top: 0.8em;
+    margin-bottom: 1em;
+    font-size: 24pt;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+}
+
+/* todo: errrr */
+img {width: 700px;}
+
+
+/* Lists */
+
+.main-content ul {
+    padding-left: 1.1em;
+}
+
+.main-content li {
+    margin-bottom: 1em;
+}
+
+li h3,
+li h4 {
+    margin: 0;
+}
+
+li p {
+    margin-top: 0;
+}
+
+
+/* Navigation */
+
+aside {
+
+  p {
+    padding-left: 15px;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    padding: 10px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .sidebar-nav a,
+  .sidebar-nav a:link,
+  .sidebar-nav a:visited {
+    border-bottom: none;
+    color: $mid-gray;
+  }
+
+  .sidebar-nav li:hover,
+  .sidebar-nav .sidebar-nav-active {
+    color: $mid-gray;
+    border-left: 5px solid $header;
+    background-color: transparent;
+    border-bottom: 1px solid $border-gray;
+    padding-left: 0;
+  }
+  .sidebar-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar-nav li {
+    list-style: none;
+    border-bottom: 1px solid $border-gray;
+    font-size: 1.125em;
+    padding-left: 5px;
+  }
+  .sidebar-nav li:last-child {
+    border-bottom: none;
+  }
+
+}
+
+/* Layout */
+
+/* offset the fixed position header for jump links */
+section:before {
+    display: block;
+    content: "";
+    height: 60px;
+    margin: -60px 0 0;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: $header;
+    padding: 1.5em;
+    color: $white;
+
+    h1 a,
+    h1 a:link,
+    h1 a:visited {
+      color: $white;
+      border-bottom: 0px;
+    }
+
+    h1 a:hover {
+      border-bottom: 1px solid #fff;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26pt;
+}
+
+
+/* Helpers */
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+
+p > code, li > code {
+  padding: 2px 4px;
+  background-color: #eaeaff;
+  border: 1px solid #d5d5d5;
+  font-size: 10pt;
+  font-family: monospace;
+}
+
+pre {
+  max-width: 100%;
+  font-size: 0.875em;
+  overflow-y: scroll;
+  background-color: #f1f2f2;
+  padding: 10px;
+}
+
+
+/** Overall structure, desktop and mobile */
+
+header {
+    position: static;
+}
+
+.wrap.content {
+    position: relative;
+}
+
+aside {
+    width: 25%;
+    left: 0%;
+    position: absolute;
+}
+
+.main-content {
+    left: 30%;
+    position: absolute;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 40.5em) {
+
+    .wrap.content {
+        position: static;
+    }
+
+    aside {
+        position: static;
+        width: 100%;
+    }
+
+    .main-content {
+        margin-top: 1.5em;
+        position: static;
+        width: 100%;
+    }
+
+}
+
+
+
+
+/* Links */
+
+/* for hover effects */
+a {
+    -webkit-transition: .2s;
+       -moz-transition: .2s;
+            transition: .2s;
+}
+
+a,
+a:link,
+a:visited {
+    color: $link;
+    border-bottom: 1px dotted $link;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid $link-hover;
+    color: $link-hover;
+    text-decoration: none;
+}
+
+a:active {
+    border-bottom: 1px solid $link;
+    color: $link-active;
+    text-decoration: none;
+}
+
+a:focus {
+    border-bottom: 1px solid $link;
+    color: $link;
+    outline: thin dotted;
+    text-decoration: none;
+}
+
+a.skip-link {
+    color: $link;
+    border-bottom: none;
+    padding: .25em;
+}
+
+a.skip-link:hover,
+a.skip-link:active,
+a.skip-link:focus {
+    background-color: $link;
+    color: $white;
+    border-bottom: none;
+}
+
