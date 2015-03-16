@@ -44,10 +44,10 @@ img {
   width: 700px; }
 
 /* Lists */
-.main-content ul {
+article ul {
   padding-left: 1.1em; }
 
-.main-content li {
+article li {
   margin-bottom: 1em; }
 
 li h3,
@@ -90,20 +90,13 @@ aside .sidebar-nav li:last-child {
 
 /* Layout */
 /* offset the fixed position header for jump links */
-section:before {
+article:before {
   display: block;
   content: "";
   height: 60px;
   margin: -60px 0 0; }
 
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px; }
-
 header {
-  width: 100%;
   background-color: #153E56;
   padding: 1.5em;
   color: #ffffff; }
@@ -166,35 +159,40 @@ pre {
   padding: 10px; }
 
 /** Overall structure, desktop and mobile */
-header {
-  position: static; }
-
-.wrap.content {
-  position: relative; }
-
 aside {
-  width: 25%;
-  left: 0%;
-  position: absolute; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 25.36421%; }
+  aside:last-child {
+    margin-right: 0; }
 
-.main-content {
-  left: 30%;
-  position: absolute;
-  max-width: 700px;
+article {
+  margin-left: 2.13245%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
   margin-bottom: 20px; }
+  article:last-child {
+    margin-right: 0; }
 
 @media screen and (max-width: 40.5em) {
-  .wrap.content {
-    position: static; }
-
   aside {
-    position: static;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%; }
+    aside:last-child {
+      margin-right: 0; }
 
-  .main-content {
-    margin-top: 1.5em;
-    position: static;
-    width: 100%; } }
+  article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    article:last-child {
+      margin-right: 0; } }
 /* Links */
 /* for hover effects */
 a {

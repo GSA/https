@@ -69,11 +69,11 @@ img {width: 700px;}
 
 /* Lists */
 
-.main-content ul {
+article ul {
     padding-left: 1.1em;
 }
 
-.main-content li {
+article li {
     margin-bottom: 1em;
 }
 
@@ -135,22 +135,14 @@ aside {
 /* Layout */
 
 /* offset the fixed position header for jump links */
-section:before {
+article:before {
     display: block;
     content: "";
     height: 60px;
     margin: -60px 0 0;
 }
 
-.wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 header {
-    width: 100%;
     background-color: $header;
     padding: 1.5em;
     color: $white;
@@ -230,42 +222,31 @@ pre {
 
 /** Overall structure, desktop and mobile */
 
-header {
-    position: static;
+.container {
+
 }
 
-.wrap.content {
-    position: relative;
+.wrap {
 }
 
 aside {
-    width: 25%;
-    left: 0%;
-    position: absolute;
+  @include span-columns(3.25);
 }
 
-.main-content {
-    left: 30%;
-    position: absolute;
-    max-width: 700px;
-    margin-bottom: 20px;
+article {
+  @include shift(0.25);
+  @include span-columns(8);
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 40.5em) {
 
-    .wrap.content {
-        position: static;
-    }
-
     aside {
-        position: static;
-        width: 100%;
+        @include span-columns(12);
     }
 
-    .main-content {
-        margin-top: 1.5em;
-        position: static;
-        width: 100%;
+    article {
+        @include span-columns(12);
     }
 
 }
