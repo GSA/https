@@ -52,7 +52,7 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 **Mixed Content:** Websites served over HTTPS need to ensure that all external resources (images, scripts, fonts, iframes, etc.) are also loaded over a secure connection. Modern browsers will refuse to load many insecure resources referenced from within a secure website. When migrating existing websites, this can involve a combination of automated and manual effort to update, replace, or remove references to insecure resources. For some websites, this can be the most time consuming aspect of the migration process.
 
-**APIs and Services:** Web services that serve primarily non-browser clients, such as web APIs, may require a more gradual and hands-on migration strategy, as not all clients can be expected to be configured for HTTPS connections or to successfully follow redirects.
+**APIs and Services:** Web services that serve primarily non-browser clients, such as web APIs, may require a [more gradual and hands-on migration strategy](https://https.cio.gov/apis/), as not all clients can be expected to be configured for HTTPS connections or to successfully follow redirects.
 
 **Planning for Change:** Protocols and web standards improve regularly, and security vulnerabilities can emerge that require prompt attention. Federal websites and services should deploy HTTPS in a manner that allows for rapid updates to configuration and replacement of certificates.
 
