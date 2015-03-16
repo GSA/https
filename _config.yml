@@ -3,6 +3,7 @@ highlighter: rouge
 markdown: redcarpet
 redcarpet:
   extensions:
+  - smart
   - with_toc_data
 
 exclude:
