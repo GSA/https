@@ -162,7 +162,7 @@ pre {
 
 /** Overall structure, desktop and mobile */
 header {
-  position: fixed; }
+  position: static; }
 
 .wrap.content {
   position: relative; }
