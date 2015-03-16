@@ -4,7 +4,7 @@ title: Strict Transport Security
 permalink: /hsts/
 ---
 
-**HTTP Strict Transport Security** (HSTS) is a simple and [widely supported](http://caniuse.com/#search=hsts) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
+**[HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)** (HSTS) is a simple and [widely supported](http://caniuse.com/#search=hsts) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
 
 When a browser knows that a domain has enabled HSTS, it does two things:
 

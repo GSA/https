@@ -16,41 +16,33 @@ exclude:
 # Site metadata
 name: HTTPS for .gov
 description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
-
+url: https://https.cio.gov
 
 # GitHub information
+org_name: GSA
 repo_name: https
-branch: gh-pages
-gh_org: GSA
-url: https://https.cio.gov
+branch: master
 
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: HTTPS for .gov
-  url: ""
-  internal: true
+- text: Home
+  url: /
+- text: Why Everything?
+  url: /everything/
 - text: FAQ
-  url: faq/
-  internal: true
+  url: /faq/
 - text: Authentication
-  url: authentication/
-  internal: true
+  url: /authentication/
 - text: Server Name Indication
-  url: sni/
-  internal: true
+  url: /sni/
 - text: Strict Transport Security
-  url: hsts/
-  internal: true
+  url: /hsts/
 - text: Mixed Content
-  url: mixed-content/
-  internal: true
-- text: Technical Concepts
-  url: technical-concepts/
-  internal: true
+  url: /mixed-content/
+- text: Migrating APIs
+  url: /apis/
+- text: Other Technical Concepts
+  url: /technical-concepts/
 - text: Resources
-  url: resources/
-  internal: true
-
-# Style Variables
-brand_color: "#2cb34a"
+  url: /resources/

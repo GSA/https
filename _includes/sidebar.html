@@ -3,15 +3,17 @@
   <nav class="sidebar-nav" role="navigation">
     <ul>
       {% for link in site.navigation %}
-        {% if link.internal == true %}
-          <li><a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a></li>
-        {% else %}
-          <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+        {% assign current = '' %}
+        {% if page.url == link.url %}
+          {% assign current = 'sidebar-nav-active' %}
         {% endif %}
+        <li class="{{ current }}">
+          <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
       {% endfor %}
-      <li>
-      <a href="https://github.com/GSA/https">Edit This Site</a>
-      </li>
     </ul>
   </nav>
+  <p>
+    <a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/edit/{{ site.branch }}/{{ page.path }}">Edit this page</a>
+  </p>
 </aside>

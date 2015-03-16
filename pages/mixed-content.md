@@ -18,7 +18,7 @@ In Chrome, a website indicator for passive mixed content looks like this:
 
 ![fedramp in chrome](/assets/images/mixed-content.png)
 
-### Migration strategy
+## Migration strategy
 
 Every website's mixed content situation will be different, but the general approach is:
 
@@ -29,7 +29,7 @@ Every website's mixed content situation will be different, but the general appro
 
 Note: the below instructions use tools **optimized for an OS X or Linux environment**. Documentation for Windows-based tools would be a welcome contribution to this guide.
 
-### Linking to resources securely
+## Linking to resources securely
 
 Most commonly used third party services, such as Google Analytics or AddThis, **will automatically adapt** when migrating to HTTPS.
 
@@ -49,7 +49,7 @@ When migrating a site with a lot of user- or staff-submitted content (e.g. a blo
 
 This is a great opportunity to improve your website's privacy and lessen your dependency on third parties, by copying those media files to your own server instead and hosting them yourself.
 
-### Scanning your code
+## Scanning your code
 
 After identifying and fixing the obvious issues, you can scan your website's files for leads. On a Mac or Linux-based system, `grep` is very handy:
 
@@ -71,7 +71,7 @@ Finding links in JavaScript is more challenging, but you can look for all `http:
     grep -r "http:" | grep -v "](http:"
 
 
-### Crawling your website
+## Crawling your website
 
 [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) is a very handy command line tool that can crawl an `http://` or `https://` website to see if it contains any references to insecure resources. This is especially helpful if your content is primarily managed in a CMS.
 
@@ -98,7 +98,7 @@ Any discovered mixed content will be listed as a `WARNING`. You can also get the
 mixed-content-scan https://https.cio.gov --format=json
 ```
 
-### Why do browsers block mixed content?
+## Why do browsers block mixed content?
 
 If mixed content were not blocked, an attacker could control the main website by conducting a MITM attack against any of its active resources.
 

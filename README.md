@@ -2,7 +2,7 @@
 
 This is a collection of resources, best practices, and case studies for HTTPS in the federal government.
 
-Maintained by people from the [U.S. Digital Service](http://wh.gov/usds) and [18F](https://18f.gsa.gov). Please join us and help out!
+Maintained by people from the [U.S. Digital Service](https://wh.gov/usds) and [18F](https://18f.gsa.gov). Please join us and help out!
 
 To run the site:
 
