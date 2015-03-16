@@ -9,7 +9,7 @@ permalink: /faq/
 When properly configured, an HTTPS connection guarantees three things:
 
 * **Confidentiality.** The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.
-* **Authentication.** The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".
+* **Authenticity.** The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".
 * **Integrity.** The data sent between the visitor and the website has not been tampered with or modified.
 
 A plain HTTP connection can be easily monitored, modified, and impersonated.
