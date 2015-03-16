@@ -10,6 +10,9 @@ $link:                #0072ce;
 $link-active:         #002d72;
 $link-hover:          #7eb8dd;
 
+$header-height:        80px;
+$header-height-mobile: 65px;
+
 // Fonts
 $serif:               "Merriweather", "Georgia", "Times New Roman", serif;
 $sans-serif:          "Open Sans", Arial, sans-serif;
@@ -57,6 +60,7 @@ h1 {
     margin-top: 0.8em;
     margin-bottom: 1em;
     font-size: 24pt;
+    line-height: 1.3em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -69,6 +73,69 @@ h2:before, h3:before, h4:before, h5:before, h6:before {
   display: block; position: relative;
   width: 0; height: 4em;
   margin-top: -4em;
+}
+
+/** Overall structure, desktop and mobile */
+
+header {
+    background-color: $header;
+    padding: 1.3em;
+    color: $white;
+
+    position: fixed;
+    height: $header-height;
+    width: 100%;
+
+    h1 {
+        margin: 0;
+        font-size: 26pt;
+    }
+
+    h1 a,
+    h1 a:link,
+    h1 a:visited {
+      color: $white;
+      border-bottom: 0px;
+    }
+
+    h1 a:hover {
+      border-bottom: 1px solid #fff;
+    }
+}
+
+aside {
+  @include span-columns(3.25);
+  margin-top: $header-height;
+}
+
+article {
+  @include shift(0.25);
+  @include span-columns(8);
+  margin-bottom: 20px;
+  margin-top: $header-height;
+}
+
+@media screen and (max-width: 40.5em) {
+
+    header {
+      padding: 20px 10px;
+      height: $header-height-mobile;
+      h1 {
+        font-size: 18pt;
+      }
+    }
+
+    aside {
+        @include span-columns(12);
+        margin-top: $header-height-mobile;
+    }
+
+    article {
+        @include span-columns(12);
+        padding-left: 5px;
+        margin-top: 0px;
+    }
+
 }
 
 /* todo: errrr */
@@ -93,6 +160,7 @@ li h4 {
 li p {
     margin-top: 0;
 }
+
 
 
 /* Navigation */
@@ -140,72 +208,6 @@ aside {
 
 }
 
-/* Layout */
-
-/* offset the fixed position header for jump links */
-
-header {
-    background-color: $header;
-    padding: 1.5em;
-    color: $white;
-
-    position: fixed;
-    width: 100%;
-
-    h1 a,
-    h1 a:link,
-    h1 a:visited {
-      color: $white;
-      border-bottom: 0px;
-    }
-
-    h1 a:hover {
-      border-bottom: 1px solid #fff;
-    }
-}
-
-header h1 {
-    margin: 0;
-    font-size: 26pt;
-}
-
-
-/* Helpers */
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/* Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-    visibility: hidden;
-}
 
 
 p > code, li > code {
@@ -223,45 +225,6 @@ pre {
   background-color: #f1f2f2;
   padding: 10px;
 }
-
-
-/** Overall structure, desktop and mobile */
-
-.container {
-
-}
-
-.wrap {
-
-}
-
-aside {
-  @include span-columns(3.25);
-  margin-top: 80px;
-}
-
-article {
-  @include shift(0.25);
-  @include span-columns(8);
-  margin-bottom: 20px;
-  margin-top: 80px;
-}
-
-@media screen and (max-width: 40.5em) {
-
-    aside {
-        @include span-columns(12);
-    }
-
-    article {
-        @include span-columns(12);
-        padding-left: 5px;
-        margin-top: 0px;
-    }
-
-}
-
-
 
 
 /* Links */
@@ -314,3 +277,40 @@ a.skip-link:focus {
     border-bottom: none;
 }
 
+
+/* Helpers */
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
