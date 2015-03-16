@@ -9,9 +9,9 @@
           <li><a href="{{ link.url }}">{{ link.text }}</a></li>
         {% endif %}
       {% endfor %}
-      <li>
-      <a href="https://github.com/GSA/https">Edit This Site</a>
-      </li>
     </ul>
   </nav>
+  <p>
+    <a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/edit/{{ site.branch }}/{{ page.path }}">Edit this page</a>
+  </p>
 </aside>

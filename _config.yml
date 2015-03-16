@@ -16,12 +16,12 @@ exclude:
 # Site metadata
 name: HTTPS for .gov
 description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
+url: https://https.cio.gov
 
 # GitHub information
+org_name: GSA
 repo_name: https
-branch: gh-pages
-gh_org: GSA
-url: https://https.cio.gov
+branch: master
 
 # Navigation
 # List links that should appear in the site sidebar here
