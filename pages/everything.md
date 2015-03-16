@@ -4,7 +4,7 @@ title: Why HTTPS for Everything?
 permalink: /everything/
 ---
 
-HTTP has become central to our way of life. Originally invented just for websites, HTTP is now the primary protocol used by computers, tablets, smartphones, and many other devices to communicate over the vast public internet.
+HTTP has become central to today's way of life. Originally invented just for websites, HTTP is now the primary protocol used by computers, tablets, smartphones, and many other devices to communicate over the vast public internet.
 
 As our dependency on the internet has grown, the risk to users' privacy and safety has grown along with it.
 
@@ -24,7 +24,7 @@ Widespread use of HTTPS also means that clients can begin assuming HTTPS with mo
 
 Web browsers can begin displaying HTTPS connections as normal, and HTTP connections as non-secure. HTTPS validation failures can become more strict, reducing the effectiveness of phishing and user error.
 
-These changed expectations improve the security of HTTPS on every website. In other words, **protecting non-sensitive sites strengthens the protections of sensitive sites**.
+These changed expectations improve the security of HTTPS on every website. In other words, **protecting less sensitive sites strengthens the protections of more sensitive sites**.
 
 ## HTTPS is the internet's next phase
 
@@ -37,6 +37,6 @@ The internet's standards bodies, web browsers, major tech companies, and the int
 
 Ultimately, the goal of the internet community is to establish encryption as the norm, and to phase out unencrypted connections.
 
-Investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate sites and services, improving the status quo, and contributing their improvements back to the public.
+Investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate websites and services, improving the status quo, and contributing their improvements back to the public.
 
 The more US government websites and services that join the transition to an encrypted internet, the smoother and faster it will be.
