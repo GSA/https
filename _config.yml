@@ -17,7 +17,6 @@ exclude:
 name: HTTPS for .gov
 description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
 
-
 # GitHub information
 repo_name: https
 branch: gh-pages
@@ -29,6 +28,9 @@ url: https://https.cio.gov
 navigation:
 - text: HTTPS for .gov
   url: ""
+  internal: true
+- text: Why Everything?
+  url: everything/
   internal: true
 - text: FAQ
   url: faq/
@@ -42,12 +44,9 @@ navigation:
 - text: Mixed Content
   url: mixed-content/
   internal: true
-- text: Technical Concepts
+- text: Other Technical Concepts
   url: technical-concepts/
   internal: true
 - text: Resources
   url: resources/
   internal: true
-
-# Style Variables
-brand_color: "#2cb34a"
