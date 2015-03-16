@@ -38,6 +38,8 @@ navigation:
   url: /hsts/
 - text: Mixed Content
   url: /mixed-content/
+- text: Migrating APIs
+  url: /apis/
 - text: Other Technical Concepts
   url: /technical-concepts/
 - text: Resources
