@@ -35,52 +35,28 @@ Typography
 */
 
 body {
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "Merriweather", "Times New Roman", serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 1.466666667;
+    line-height: 1.9em;
 }
 
 
-h1,
-h3,
-h4,
-h5,
-strong {
-    font-family: "Avenir Next Demi", "Avenir Next", Arial, sans-serif;
-    font-weight: 600;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Arial, sans-serif;
 }
 
-.site-title {
-    font-size: 1.625em;
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: normal;
-    color: #919395;
-    margin: 0;
-    line-height: 1.2941176470588236;
-    display: inline-block;
+h1 {
+    margin-top: 0;
+    margin-bottom: 1.3em;
+    font-size: 26pt;
 }
 
-h2 {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.375em;
-    margin: 1.4em 0 0 0;
-}
+/* todo: errrr */
+img {width: 700px;}
 
-h4 {
-    font-size: 1em;
-    text-transform: uppercase;
-}
 
-.page-title {
-    margin-top: .727272727em; /* 16/22 */
-}
-
-/*
-Lists
---------------------------------
-*/
+/* Lists */
 
 .main-content ul {
     padding-left: 1.1em;
@@ -99,11 +75,10 @@ li p {
     margin-top: 0;
 }
 
-/*
-Links
-==================================
-*/
 
+/* Links */
+
+/* for hover effects */
 a {
     -webkit-transition: .2s;
        -moz-transition: .2s;
@@ -137,18 +112,6 @@ a:focus {
     text-decoration: none;
 }
 
-a.title-link {
-    color: #75787B;
-    border-bottom: none;
-}
-
-a.title-link:hover,
-a.title-link:active,
-a.title-link:focus {
-    color: #7eb8dd;
-    border-bottom: none;
-}
-
 a.skip-link {
     color: #0072ce;
     border-bottom: none;
@@ -164,10 +127,7 @@ a.skip-link:focus {
 }
 
 
-/*
-Navigation
-==================================
-*/
+/* Navigation */
 
 .sidebar-nav a {
   display: block;
@@ -207,14 +167,7 @@ Navigation
 }
 
 
-/*
-Layout
-==================================
-*/
-
-.logo {
-    display: block;
-}
+/* Layout */
 
 .content {
   padding-top: 2em;
@@ -244,37 +197,7 @@ header {
 }
 
 
-/*
-Footer
-==================================
-*/
-
-/* for sticky footer */
-.container {
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-
-footer {
-    display: table-row; /* for sticky footer */
-    height: 1px; /* for sticky footer */
-    border-top: 2px solid #babbbd;
-    background: #f1f2f2;
-    width: 100%;
-    font-size: 0.875em;
-}
-
-footer .wrap {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-
-/*
-Helpers
-==================================
-*/
+/* Helpers */
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
@@ -312,10 +235,7 @@ Helpers
 }
 
 
-/*
-Style
-==================================
-*/
+/* Style */
 
 .intro {
     color: #75787B;
@@ -323,12 +243,6 @@ Style
 
 li h4 {
     margin: 0;
-}
-
-.license {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 
 pre {
@@ -339,184 +253,32 @@ pre {
     padding: 10px;
 }
 
-/*
-Post list
-----------------------------------
-*/
-
-ul.posts {
-    padding: 0;
+aside {
+    width: 25%;
+    float: left;
+    position: fixed;
 }
 
-.posts li {
-    list-style: none;
+.main-content {
+    width: 72%;
+    float: right;
+    margin-bottom: 20px;
 }
-
-.post-date {
-    color: #75787B;
-}
-
-/*
-Repo list
-----------------------------------
-*/
-
-ul.repo-list {
-    margin: .5em 0 1em 0;
-    padding: 0;
-}
-
-.repo-list li {
-    list-style: none;
-}
-
-.repo-list p {
-    margin: 0;
-    font-size: 0.875em;
-}
-
-.repo-list h4 {
-    text-transform: none;
-}
-
-/*
-Helper Classes
-==================================
-*/
-
-/*
-Clearfix list
-----------------------------------
-*/
-
-.group:before,
-.group:after {
-    content: " ";
-    display: table;
-}
-
-.group:after {
-    clear: both;
-}
-
-.group {
-    *zoom: 1;
-}
-
-/*
-Desktop Styles
-==================================
-*/
-
-@media screen and (min-width: 45em) and (min-height: 32.5em) {
-
-    /*
-    Typography
-    ==============================
-    */
-
-    /*
-    Layout
-    ==============================
-    */
-
-    .logo {
-        max-width: 30%;
-        padding-right: 20px;
-        float: right;
-    }
-
-    aside {
-        width: 25%;
-        float: left;
-    }
-
-    .main-content {
-        width: 72%;
-        float: right;
-        margin-bottom: 120px;
-    }
-
-    /*
-    Navigation
-    ==============================
-    */
-
-
-    /*
-    Style
-    ==============================
-    */
-
-    /*
-    Repo list
-    ------------------------------
-    */
-
-    .repo-list li {
-        list-style: none;
-        display: block;
-        float: left;
-        height: 4.0625em;
-        max-height: 4.0625em;
-        background-color: #E7E7E6;
-        border-left: 1px solid #BABBBD;
-        width: 30%;
-    }
-
-    .repo-list a:link,
-    .repo-list a:visited {
-        display: block;
-        max-height: 4.0625em;
-        background-color: #E7E7E6;
-        border-bottom: none;
-        padding: .625em 1em 1em 1em;
-    }
-
-    .repo-list a:hover {
-        color: #4D5F87;
-        background-color: #CDE3F1;
-    }
-
-    .repo-list li:first-child {
-        text-align: center;
-        border-left: none;
-        line-height: 60px;
-        padding: .625em 1em;
-        width: 10%;
-    }
-
-}
-
-@media screen and (max-width: 54.375em) and (min-height: 32.5em) {
-
-    /* keep the repo list containers the same height, but account for the need for more height */
-
-    .repo-list li {
-        height: 6em;
-        max-height: 6em;
-    }
-
-    .repo-list a:link,
-    .repo-list a:visited {
-        max-height: 6em;
-    }
-}
-
-/*
-Mobile Styles
-==================================
-*/
 
 @media screen and (max-width: 40.5em) {
 
     .main-content {
         margin-top: 1.5em;
+        float: none;
+        width: 100%;
+    }
+
+    aside {
+        position: static;
+        float: none;
+        width: 100%;
     }
 
 }
 
 
-
-img {width: 700px;}
-h1 {padding-top: 0; margin-top: 0;}
