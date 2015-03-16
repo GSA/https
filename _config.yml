@@ -27,26 +27,18 @@ branch: master
 # List links that should appear in the site sidebar here
 navigation:
 - text: HTTPS for .gov
-  url: ""
-  internal: true
+  url: /
 - text: Why Everything?
-  url: everything/
-  internal: true
+  url: /everything/
 - text: FAQ
-  url: faq/
-  internal: true
+  url: /faq/
 - text: Server Name Indication
-  url: sni/
-  internal: true
+  url: /sni/
 - text: Strict Transport Security
-  url: hsts/
-  internal: true
+  url: /hsts/
 - text: Mixed Content
-  url: mixed-content/
-  internal: true
+  url: /mixed-content/
 - text: Other Technical Concepts
-  url: technical-concepts/
-  internal: true
+  url: /technical-concepts/
 - text: Resources
-  url: resources/
-  internal: true
+  url: /resources/
