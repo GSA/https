@@ -33,6 +33,9 @@ navigation:
 - text: FAQ
   url: faq/
   internal: true
+- text: Authentication
+  url: authentication/
+  internal: true
 - text: Server Name Indication
   url: sni/
   internal: true
