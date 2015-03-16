@@ -35,8 +35,8 @@ The internet's standards bodies, web browsers, major tech companies, and the int
 * Google has begun to [favor HTTPS websites in search rankings](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html).
 * The Chrome and [Firefox](https://groups.google.com/d/msg/mozilla.dev.security/blV0MK4EbEE/i_Vy7sye0WsJ) security teams are working on [gradually marking plain HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
 
-Ultimately, the internet's goal is to establish encryption as the norm, and to phase out unencrypted connections.
+Ultimately, the goal of the internet community is to establish encryption as the norm, and to phase out unencrypted connections.
 
-Investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate, improving the status quo, and contributing their improvements back to the public.
+Investing in HTTPS makes it faster, cheaper, and easier for everyone. Many of the advancements of the last several years have come from major institutions and technology companies committing to migrate sites and services, improving the status quo, and contributing their improvements back to the public.
 
 The more US government websites and services that join the transition to an encrypted internet, the smoother and faster it will be.
