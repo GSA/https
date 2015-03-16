@@ -5,7 +5,6 @@
 $header:              #153E56;
 $white:               #ffffff;
 $mid-gray:            #75787b;
-$highlight-blue:      #4383A9;
 $border-gray:         #babbbd;
 $link:                #0072ce;
 $link-active:         #002d72;
@@ -55,9 +54,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin-top: 0;
-    margin-bottom: 1.3em;
-    font-size: 26pt;
+    margin-top: 0.8em;
+    margin-bottom: 1em;
+    font-size: 24pt;
 }
 
 h2, h3, h4, h5, h6 {
@@ -90,49 +89,50 @@ li p {
 
 /* Navigation */
 
-.sidebar-nav a {
-  display: block;
-  padding: 10px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-.sidebar-nav a,
-.sidebar-nav a:link,
-.sidebar-nav a:visited {
-  border-bottom: none;
-  color: $mid-gray;
-}
-.sidebar-nav li:hover,
-.sidebar-nav a:focus,
-.sidebar-nav li:active,
-.sidebar-nav .sidebar-nav-active {
-  color: $mid-gray;
-  border-left: 4px solid $highlight-blue;
-  background-color: transparent;
-  border-bottom: 1px solid $border-gray;
-  padding-left: 0;
-}
-.sidebar-nav ul {
-  margin: 0;
-  padding: 0;
-}
-.sidebar-nav li {
-  list-style: none;
-  border-bottom: 1px solid $border-gray;
-  font-size: 1.125em;
-  padding-left: 4px;
-}
-.sidebar-nav li:last-child {
-  border-bottom: none;
-}
+aside {
 
+  p {
+    padding-left: 15px;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    padding: 10px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .sidebar-nav a,
+  .sidebar-nav a:link,
+  .sidebar-nav a:visited {
+    border-bottom: none;
+    color: $mid-gray;
+  }
+
+  .sidebar-nav li:hover,
+  .sidebar-nav .sidebar-nav-active {
+    color: $mid-gray;
+    border-left: 5px solid $header;
+    background-color: transparent;
+    border-bottom: 1px solid $border-gray;
+    padding-left: 0;
+  }
+  .sidebar-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar-nav li {
+    list-style: none;
+    border-bottom: 1px solid $border-gray;
+    font-size: 1.125em;
+    padding-left: 5px;
+  }
+  .sidebar-nav li:last-child {
+    border-bottom: none;
+  }
+
+}
 
 /* Layout */
-
-.content {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
 
 /* offset the fixed position header for jump links */
 section:before {
@@ -222,7 +222,6 @@ header {
 aside {
     width: 25%;
     left: 0%;
-    padding-left: 10px;
     position: fixed;
 }
 

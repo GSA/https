@@ -32,9 +32,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Arial, sans-serif; }
 
 h1 {
-  margin-top: 0;
-  margin-bottom: 1.3em;
-  font-size: 26pt; }
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+  font-size: 24pt; }
 
 h2, h3, h4, h5, h6 {
   margin-top: 2em; }
@@ -58,46 +58,37 @@ li p {
   margin-top: 0; }
 
 /* Navigation */
-.sidebar-nav a {
+aside p {
+  padding-left: 15px; }
+aside .sidebar-nav a {
   display: block;
   padding: 10px;
   -webkit-transition: .4s;
   transition: .4s; }
-
-.sidebar-nav a,
-.sidebar-nav a:link,
-.sidebar-nav a:visited {
+aside .sidebar-nav a,
+aside .sidebar-nav a:link,
+aside .sidebar-nav a:visited {
   border-bottom: none;
   color: #75787b; }
-
-.sidebar-nav li:hover,
-.sidebar-nav a:focus,
-.sidebar-nav li:active,
-.sidebar-nav .sidebar-nav-active {
+aside .sidebar-nav li:hover,
+aside .sidebar-nav .sidebar-nav-active {
   color: #75787b;
-  border-left: 4px solid #4383A9;
+  border-left: 5px solid #153E56;
   background-color: transparent;
   border-bottom: 1px solid #babbbd;
   padding-left: 0; }
-
-.sidebar-nav ul {
+aside .sidebar-nav ul {
   margin: 0;
   padding: 0; }
-
-.sidebar-nav li {
+aside .sidebar-nav li {
   list-style: none;
   border-bottom: 1px solid #babbbd;
   font-size: 1.125em;
-  padding-left: 4px; }
-
-.sidebar-nav li:last-child {
+  padding-left: 5px; }
+aside .sidebar-nav li:last-child {
   border-bottom: none; }
 
 /* Layout */
-.content {
-  padding-top: 2em;
-  padding-bottom: 2em; }
-
 /* offset the fixed position header for jump links */
 section:before {
   display: block;
@@ -170,7 +161,6 @@ header {
 aside {
   width: 25%;
   left: 0%;
-  padding-left: 10px;
   position: fixed; }
 
 .main-content {
