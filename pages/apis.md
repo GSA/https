@@ -68,7 +68,7 @@ When turning off an HTTP endpoint, return an error in the same consumable manner
 
 **Do not redirect HTTP to HTTPS.** Redirects may break API clients as, unlike browsers, they may not be configured to follow redirects. Even if they followed the redirect, many API clients will change a POST request into a GET request, breaking RESTful APIs.
 
-RFC2616 [documented this improper behavior](http://tools.ietf.org/html/rfc2616#section-10.3.2). [RFC7231](https://tools.ietf.org/html/rfc7231#section-6.4.7) (HTTP/1.1) introduced a new HTTP status code 307 as a temporary redirect that does not allow changing the request method, and [https://tools.ietf.org/html/rfc7238](RFC7238) proposes 308 as a permanent redirect. While most web browsers support 307, and some support 308, these may not be supported by API clients and should not be relied on for migrating an API.
+RFC2616 [documented this improper behavior](http://tools.ietf.org/html/rfc2616#section-10.3.2). [RFC7231](https://tools.ietf.org/html/rfc7231#section-6.4.7) (HTTP/1.1) introduced a new HTTP status code 307 as a temporary redirect that does not allow changing the request method, and [RFC7238](https://tools.ietf.org/html/rfc7238) proposes 308 as a permanent redirect. While most web browsers support 307, and some support 308, these may not be supported by API clients and should not be relied on for migrating an API.
 
 This is meant to apply to APIs that are RESTful or equivalent. If your API is actually a public dataset that is downloaded usually through a web browser, a redirect would likely be appropriate. (Note that HSTS could also handle this redirect for you.)
 
