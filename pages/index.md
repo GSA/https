@@ -6,7 +6,7 @@ permalink: /
 
 The American people expect government websites to be secure and their interactions with those websites to be private. Hypertext Transfer Protocol Secure (HTTPS) offers the strongest privacy protection available for public web connections with today’s internet technology. The use of HTTPS reduces the risk of interception or modification of user interactions with government online services.
 
-This proposed initiative, "The HTTPS-Only Standard", would require the use of HTTPS on all publicly accessible Federal websites and web services.
+This proposed initiative, "The HTTPS-Only Standard," would require the use of HTTPS on all publicly accessible Federal websites and web services.
 
 We encourage your [feedback and suggestions](https://github.com/GSA/https/tree/readme#we-want-your-feedback).
 
