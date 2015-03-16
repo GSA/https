@@ -18,11 +18,11 @@ Once you've acquired and installed a certificate, you should test the API over H
 
 Enable [HTTP Strict Transport Security](/hsts/) if possible, but do **not** redirect API traffic from HTTP to HTTPS.
 
-You can safely enable HSTS and submit the domain to the HSTS browser preload list. HSTS was primarily [designed](http://tools.ietf.org/html/rfc6797#section-2.1) for web sites and is only supported in web browsers, not clients that would be used for integrating with APIs. As the API will continue to serve content over both HTTP and HTTPS, clients making HTTP requests to the API will continue to work.
+You can safely enable HSTS and submit the domain to the HSTS browser preload list. HSTS was primarily [designed](https://tools.ietf.org/html/rfc6797#section-2.1) for web sites and is only supported in web browsers, not clients that would be used for integrating with APIs. As the API will continue to serve content over both HTTP and HTTPS, clients making HTTP requests to the API will continue to work.
 
 ## Update Your Documentation
 
-Update your documentation to refer only to the HTTPS endpoint. Be sure to update all code examples, client libraries, sample applications, and your own applications (if you are an integrator of your own API). Update any pages, lists, or indexes that reference your API, such as `/data` or [data.gov](http://www.data.gov) (via `data.json`).
+Update your documentation to refer only to the HTTPS endpoint. Be sure to update all code examples, client libraries, sample applications, and your own applications (if you are an integrator of your own API). Update any pages, lists, or indexes that reference your API, such as `/data` or [data.gov](https://www.data.gov) (via `data.json`).
 
 Mark HTTP as deprecated in your documentation and strongly recommend migrating to the HTTPS endpoint. Publish a dedicated information and resources page to which you can link.
 
@@ -68,7 +68,7 @@ When turning off an HTTP endpoint, return an error in the same consumable manner
 
 **Do not redirect HTTP to HTTPS.** Redirects may break API clients as, unlike browsers, they may not be configured to follow redirects. Even if they followed the redirect, many API clients will change a POST request into a GET request, breaking RESTful APIs.
 
-This incorrect behavior is both common and [well-documented](http://tools.ietf.org/html/rfc2616#section-10.3.2). [RFC7231](https://tools.ietf.org/html/rfc7231#section-6.4.7) introduced a new HTTP status code 307 as a temporary redirect that does not allow changing the request method, and [RFC7238](https://tools.ietf.org/html/rfc7238) proposes 308 as a permanent redirect. While most web browsers support 307, and some support 308, these may not be supported by API clients and should not be relied on for migrating an API.
+This incorrect behavior is both common and [well-documented](https://tools.ietf.org/html/rfc2616#section-10.3.2). [RFC7231](https://tools.ietf.org/html/rfc7231#section-6.4.7) introduced a new HTTP status code 307 as a temporary redirect that does not allow changing the request method, and [RFC7238](https://tools.ietf.org/html/rfc7238) proposes 308 as a permanent redirect. While most web browsers support 307, and some support 308, these may not be supported by API clients and should not be relied on for migrating an API.
 
 This is meant to apply to APIs that are RESTful or equivalent. If your API is actually a public dataset that is downloaded usually through a web browser, a redirect would likely be appropriate. (Note that HSTS could also handle this redirect for you.)
 

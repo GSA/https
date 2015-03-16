@@ -24,7 +24,7 @@ permalink: /resources/
 
 * Washington Post: [Federal sites leaked the locations of people seeking AIDS services for years](http://www.washingtonpost.com/blogs/the-switch/wp/2014/11/07/federal-sites-leaked-the-locations-of-people-seeking-aids-services-for-years/)
 * Washington Post: [Your browser may soon force you to connect securely to some U.S. government Web sites](http://www.washingtonpost.com/blogs/the-switch/wp/2015/02/11/your-browser-may-soon-force-you-to-connect-securely-to-some-u-s-government-web-sites/)
-* FTC: [Government agencies enable HTTP Strict Transport Security for public websites](http://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
+* FTC: [Government agencies enable HTTP Strict Transport Security for public websites](https://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
 * E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](http://e-pluribusunum.com/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
 * Motherboard: [Whitehouse.gov Is Now Secure By Default, Signaling a Trend in Government](http://motherboard.vice.com/read/whitehouse-site-is-now-secure-by-default-signaling-a-trend-in-government)
 * NextGov: [WhiteHouse.gov Finally Gets Boosted Encryption](http://www.nextgov.com/cybersecurity/2015/03/white-house-dot-gov-website-use-https-encryption/107223/)
