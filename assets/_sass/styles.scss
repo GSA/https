@@ -61,6 +61,14 @@ h1 {
 
 h2, h3, h4, h5, h6 {
     margin-top: 2em;
+    line-height: 1.2em;
+}
+
+h2:before, h3:before, h4:before, h5:before, h6:before {
+  content: '';
+  display: block; position: relative;
+  width: 0; height: 4em;
+  margin-top: -4em;
 }
 
 /* todo: errrr */
@@ -135,17 +143,14 @@ aside {
 /* Layout */
 
 /* offset the fixed position header for jump links */
-article:before {
-    display: block;
-    content: "";
-    height: 60px;
-    margin: -60px 0 0;
-}
 
 header {
     background-color: $header;
     padding: 1.5em;
     color: $white;
+
+    position: fixed;
+    width: 100%;
 
     h1 a,
     h1 a:link,
@@ -227,16 +232,19 @@ pre {
 }
 
 .wrap {
+
 }
 
 aside {
   @include span-columns(3.25);
+  margin-top: 80px;
 }
 
 article {
   @include shift(0.25);
   @include span-columns(8);
   margin-bottom: 20px;
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 40.5em) {
@@ -248,6 +256,7 @@ article {
     article {
         @include span-columns(12);
         padding-left: 5px;
+        margin-top: 0px;
     }
 
 }
