@@ -10,6 +10,10 @@ exclude:
 - ".ruby-version"
 - ".jekyll-metadata"
 - ".gitignore"
+- ".travis.yml"
+- todo.txt
+- Gemfile
+- Gemfile.lock
 - vendor
 - README.md
 - CONTRIBUTING.md
