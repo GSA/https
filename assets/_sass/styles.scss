@@ -115,7 +115,7 @@ article {
   margin-top: $header-height;
 }
 
-@media screen and (max-width: 40.5em) {
+@media screen and (max-width: 600px) {
 
     header {
       padding: 20px 10px;
@@ -137,6 +137,14 @@ article {
         margin-top: 0px;
     }
 
+}
+
+@media screen and (max-width: 320px) {
+  header {
+      h1 {
+        font-size: 16pt;
+      }
+    }
 }
 
 /* todo: errrr */
