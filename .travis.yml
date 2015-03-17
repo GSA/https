@@ -12,8 +12,6 @@ notifications:
   email:
     recipients:
       - eric.mill@gsa.gov
-      - hillary.hartley@gsa.gov
-      - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
 
