@@ -9,7 +9,7 @@ The American people expect government websites to be secure and their interactio
 
 This proposed initiative, "The HTTPS-Only Standard," would require the use of HTTPS on all publicly accessible Federal websites and web services.
 
-We encourage your [feedback and suggestions](https://github.com/GSA/https/tree/readme#we-want-your-feedback).
+We encourage your [feedback and suggestions](https://github.com/WhiteHouse/https#we-want-your-feedback).
 
 ## Goal
 
@@ -88,7 +88,7 @@ In summation, the HTTPS-Only Standard will promote the secure transfer of user i
 
 Please use **[https.cio.gov](https://https.cio.gov)** for technical assistance and best practices to aid in the implementation of this proposed standard.
 
-Please **[provide public feedback and suggestions](https://github.com/GSA/https/#we-want-your-feedback)** for this proposal and technical assistance materials, or email [`https@cio.gov`](mailto:https@cio.gov) to provide private comments.
+Please **[provide public feedback and suggestions](https://github.com/WhiteHouse/https/#we-want-your-feedback)** for this proposal and technical assistance materials, or email [`https@cio.gov`](mailto:https@cio.gov) to provide private comments.
 
 ## Footnotes
 
