@@ -18,7 +18,7 @@ You don't need to install any software to suggest a change. To propose a change 
 
 If you would like to see and discuss the changes that other people have proposed, [visit the "Pull Requests" section](https://github.com/gsa/https/pulls "Link to the Pull Requests Section of GitHub") and [browse the issues](https://github.com/gsa/https/issues "Link to the Issues Section of GitHub").
 
-Feedback collected on the proposal text before **3/31/2015** will be considered for inclusion in the revised policy. The other pages on https.cio.gov are resources for agencies implementing the HTTPS proposal. Contributions are welcome at any time to these living documents.
+Feedback collected on the proposal text before **3/31/2015** will be considered for inclusion in the revised policy. The other pages on [https.cio.gov](https://https.cio.gov) are resources for agencies implementing the HTTPS proposal. Contributions are welcome at any time to these living documents.
 
 ### Developing on the site locally
 
