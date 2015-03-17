@@ -2,6 +2,7 @@
 layout: page
 title: Server Name Indication
 permalink: /sni/
+description: "An overview of Server Name Indication (SNI), a TLS extension to allow multiple secure hostnames to be served from a single IP address."
 ---
 
 **[Server Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication)**, often abbreviated **SNI**, is an [extension to TLS](https://tools.ietf.org/html/rfc6066#page-6) that allows multiple hostnames to be served over HTTPS from the same IP address. SNI accomplishes this by providing a mechanism for the client to tell the server which hostname it is trying to connect to.

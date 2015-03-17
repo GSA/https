@@ -2,6 +2,7 @@
 layout: page
 title: Migrating APIs to HTTPS
 permalink: /apis/
+description: "An outline of the process for migrating a web API from HTTP to HTTPS."
 ---
 
 All APIs should use and require HTTPS to [help guarantee](/faq/) **confidentiality**, **authenticity**, and **integrity**.

@@ -1,7 +1,8 @@
 ---
 layout: page
-title: FAQ
+title: HTTPS FAQ
 permalink: /faq/
+description: "Frequently asked questions about HTTPS: what it does, and what it doesn't do."
 ---
 
 ### What does HTTPS do?

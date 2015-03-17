@@ -2,6 +2,7 @@
 layout: page
 title: Why HTTPS for Everything?
 permalink: /everything/
+description: "Today, there is no such thing as insensitive web traffic. By simply always using HTTPS, both people and browsers can make safer assumptions about secure connections."
 ---
 
 HTTP has become central to today's way of life. Originally invented just for websites, HTTP is now the primary protocol used by computers, tablets, smartphones, and many other devices to communicate over the vast public internet.

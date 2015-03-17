@@ -2,6 +2,7 @@
 layout: page
 title: Technical Concepts
 permalink: /technical-concepts/
+description: "More relevant technical concepts relating to HTTPS."
 ---
 
 ### Perfect Forward Secrecy

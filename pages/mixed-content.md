@@ -2,6 +2,7 @@
 layout: page
 title: Mixed Content
 permalink: /mixed-content/
+description: "Strategies for dealing with mixed content when upgrading a website from HTTP to HTTPS."
 ---
 
 When an HTTPS website references insecure (HTTP) resources, this is called **[mixed content](http://www.w3.org/TR/mixed-content/)**.
@@ -24,7 +25,7 @@ Every website's mixed content situation will be different, but the general appro
 
 * Enable `https://` for your website, but don't force a redirect. Continue to present the `http://` version as the canonical URL to search engines.
 * Identify the most obvious and widespread pieces of mixed content by loading your website in a browser over `https://` and observing breakages. Chrome and Firefox will log any mixed content warnings to the console, which should point out necessary site-wide changes. Use these to [secure your resource links](#linking-to-resources-securely).
-* After fixing them, tackle the long tail by [scanning your code](#scanning-your-code), [crawling your website](#crawling-your-website), and potentially adding [automatic mixed content reporting](#automatic-mixed-content-reporting).
+* After fixing them, tackle the long tail by [scanning your code](#scanning-your-code) and [crawling your website](#crawling-your-website).
 * Finally, force the redirect to HTTPS, and tell search engines that your new URL starts with `https://`.
 
 Note: the below instructions use tools **optimized for an OS X or Linux environment**. Documentation for Windows-based tools would be a welcome contribution to this guide.

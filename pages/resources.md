@@ -2,15 +2,10 @@
 layout: page
 title: Resources
 permalink: /resources/
+description: "Articles, news, and tools about HTTPS."
 ---
 
-### Articles
-
-* FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
-* 18F: [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
-* 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
-
-### Standards and tools
+### Tools
 
 [SSL Labs](https://www.ssllabs.com/ssltest/) is a universally referenced HTTPS evaluation and grading tool for public-facing websites.
 
@@ -19,6 +14,12 @@ permalink: /resources/
 * [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the SSL Labs API. (See its [Terms of Use](https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs.md#terms-and-conditions).)
 * [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
 * [`site-inspector`](https://github.com/benbalter/site-inspector-ruby) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
+
+### Articles
+
+* FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
+* 18F: [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
+* 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
 
 ### News
 
