@@ -15,9 +15,10 @@ description: "Articles, news, and tools about HTTPS."
 * [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
 * [`site-inspector`](https://github.com/benbalter/site-inspector-ruby) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
 
-### Articles
+### HTTPS in .gov
 
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
+* CIA: [Statement on CIA Website Enhancement](https://www.cia.gov/news-information/press-releases-statements/press-release-archive-2006/statement-on-cia-website-enhancement.html) from 2006
 * 18F: [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
 * 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
 
