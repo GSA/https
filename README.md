@@ -10,7 +10,7 @@ We encourage your feedback and suggestions.
 
 ### We Want Your Feedback
 
-We encourage your feedback and suggestions on this proposal.
+We encourage your feedback and suggestions on this proposal, either here on GitHub or by emailing [`https@cio.gov`](mailto:https@cio.gov) to provide private comments.
 
 Concurrent with the public engagement of [Project Open Data](https://project-open-data.cio.gov) and the [U.S. Digital Service Playbook](https://playbook.cio.gov), suggestions and discussions are welcome via [GitHub Issues](https://github.com/gsa/https/issues). You may also propose changes to the content directly by submitting a [pull request](https://help.github.com/articles/creating-a-pull-request "More Information on Submitting Pull Requests").
 
