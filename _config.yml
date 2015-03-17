@@ -14,6 +14,7 @@ exclude:
 - todo.txt
 - Gemfile
 - Gemfile.lock
+- Makefile
 - vendor
 - README.md
 - CONTRIBUTING.md
