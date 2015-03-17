@@ -1,5 +1,22 @@
 language: ruby
 rvm:
-    - 2.1
+  - 2.2.0
 
-script: jekyll build
+sudo: false
+git:
+  submodules: false
+
+script: bundle exec jekyll b --trace
+
+notifications:
+  email:
+    recipients:
+      - eric.mill@gsa.gov
+      - hillary.hartley@gsa.gov
+      - gregory.boone@gsa.gov
+    on_success: change
+    on_failure: change
+
+branches:
+  only:
+    - master
