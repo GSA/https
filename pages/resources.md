@@ -24,12 +24,7 @@ description: "Articles, news, and tools about HTTPS."
 
 ### News
 
-* Washington Post: [Federal sites leaked the locations of people seeking AIDS services for years](http://www.washingtonpost.com/blogs/the-switch/wp/2014/11/07/federal-sites-leaked-the-locations-of-people-seeking-aids-services-for-years/)
 * Washington Post: [Your browser may soon force you to connect securely to some U.S. government Web sites](http://www.washingtonpost.com/blogs/the-switch/wp/2015/02/11/your-browser-may-soon-force-you-to-connect-securely-to-some-u-s-government-web-sites/)
-* FTC: [Government agencies enable HTTP Strict Transport Security for public websites](https://www.ftc.gov/news-events/blogs/techftc/2015/02/government-agencies-enable-http-strict-transport-security-public)
+* Washington Post: [The federal government's online privacy watchdog just made its Web site more secure](http://www.washingtonpost.com/blogs/the-switch/wp/2015/03/06/the-federal-governments-online-privacy-watchdog-just-made-its-web-site-more-secure/)
 * E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](http://e-pluribusunum.com/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
 * Motherboard: [Whitehouse.gov Is Now Secure By Default, Signaling a Trend in Government](http://motherboard.vice.com/read/whitehouse-site-is-now-secure-by-default-signaling-a-trend-in-government)
-* NextGov: [WhiteHouse.gov Finally Gets Boosted Encryption](http://www.nextgov.com/cybersecurity/2015/03/white-house-dot-gov-website-use-https-encryption/107223/)
-* The Hill: [FTC enables default encryption](http://thehill.com/policy/technology/234873-ftc-enables-default-encryption)
-* The Hill: [White House website goes secure](http://thehill.com/policy/technology/235323-white-house-website-goes-secure)
-* Washington Post: [The federal government’s online privacy watchdog just made its Web site more secure](http://www.washingtonpost.com/blogs/the-switch/wp/2015/03/06/the-federal-governments-online-privacy-watchdog-just-made-its-web-site-more-secure/)
