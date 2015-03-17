@@ -10,6 +10,7 @@ exclude:
 - ".ruby-version"
 - ".jekyll-metadata"
 - ".gitignore"
+- vendor
 - README.md
 - CONTRIBUTING.md
 - LICENSE.md
