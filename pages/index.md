@@ -21,7 +21,7 @@ The unencrypted HTTP protocol does not protect data from interception or alterat
 
 Private and secure connections are becoming the Internet’s baseline, as expressed by the policies of the Internet's [standards](https://w3ctag.github.io/web-https/) [bodies](http://www.internetsociety.org/news/internet-society-commends-internet-architecture-board-recommendation-encryption-default), popular web browsers, and the Internet community of practice. The Federal government must adapt to this changing landscape, and benefits by beginning the conversion now. Proactive investment at the Federal level will support faster internet-wide adoption and promote better privacy standards for the entire browsing public.
 
-The majority of Federal websites use HTTP as the as primary protocol to communicate over the public internet. Unencrypted HTTP connections create a privacy vulnerability and expose potentially sensitive information about users of unencrypted Federal websites and services. Data sent over HTTP is susceptible to interception, manipulation, and impersonation. This data can include browser identity, website content, search terms, and other user-submitted information.
+The majority of Federal websites use HTTP as the primary protocol to communicate over the public internet. Unencrypted HTTP connections create a privacy vulnerability and expose potentially sensitive information about users of unencrypted Federal websites and services. Data sent over HTTP is susceptible to interception, manipulation, and impersonation. This data can include browser identity, website content, search terms, and other user-submitted information.
 
 **All browsing activity should be considered private and sensitive.**
 
