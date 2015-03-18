@@ -21,7 +21,7 @@ If a server only ever handles traffic for a single hostname, there's no need for
 
 However, in many cases, such as [content distribution networks (CDNs)](https://en.wikipedia.org/wiki/Content_delivery_network), the server services far too many unrelated hostnames to reasonably share a single server certificate. Due to the scarcity of IPv4 addresses, it is also long-term untenable to simply acquire a new IPv4 address for each hostname. Therefore, client SNI support is extremely useful.
 
-Thus, it can be highly desirable for servers to depend on client SNI support. All modern browsers support SNI, but some older browsers on older OSes (notably IE6 and Android versions before Honeycomb). Depending on what clients are necessary to support, servers may or may not be able to depend on client SNI support.
+Thus, it can be highly desirable for servers to depend on client SNI support. All modern browsers support SNI, but some older browsers on older OSes (notably IE6 and Android versions before Honeycomb) do not. Depending on what clients are necessary to support, servers may or may not be able to depend on client SNI support.
 
 ## Client support
 
