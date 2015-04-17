@@ -84,10 +84,6 @@ This proposal requires that agencies deploy HTTPS on Federal domains under the f
 
 In summation, the HTTPS-Only Standard will promote the secure transfer of user information, and enact a meaningful privacy safeguard for the consumer.
 
-## Technical Assistance
-
-Please use **[https.cio.gov](https://https.cio.gov)** for technical assistance and best practices to aid in the implementation of this proposed standard.
-
 ## Footnotes
 
 <a name="footnote-1" href="#footnote-source-1">⬑ 1.</a> Publicly-accessible websites and services are defined here as online resources and services available over HTTP or HTTPS over the public internet that are maintained in whole or in part by the Federal Government and operated by an agency, contractor, or other organization on behalf of the agency.  They present government information or provide services to the public or a specific user group and support the performance of an agency’s mission. This definition includes all web interactions, whether a visitor is logged-in or anonymous.
