@@ -13,7 +13,7 @@ We encourage your [feedback and suggestions](https://github.com/WhiteHouse/https
 
 ## Goal
 
-All publicly accessible Federal websites and <a class="footnote" name="footnote-source-1"></a>web services [[1]](#footnote-1) only provide service over a secure connection. The strongest privacy protection currently available for public web connections is Hypertext Transfer Protocol Secure (HTTPS). In addition, HTTPS ensures the integrity of the exchanges, making sure that pages and documents cannot be modified when they traverse the network.
+All publicly accessible Federal websites and <a class="footnote" name="footnote-source-1"></a>web services [[1]](#footnote-1) only provide service over a secure connection. The strongest privacy and integrity protection currently available for public web connections is Hypertext Transfer Protocol Secure (HTTPS).
 
 ## Background
 
@@ -49,9 +49,9 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 **Site Performance:** While encryption adds some computational overhead, modern software and hardware can handle this overhead without substantial deleterious impact on server performance or [latency](https://istlsfastyet.com). Websites whose content delivery networks or server software support the SPDY or HTTP/2 protocols, which require HTTPS in some major browsers, may find their site performance substantially improved overall as a result of migrating to HTTPS.
 
-**[Server Name Indication](/sni/):** The Server Name Indication extension to TLS allows for more efficient use of IP addresses when serving multiple domains. However, these technologies are not supported by some legacy clients. Web service owners should evaluate the feasibility of using this technology to improve performance and efficiency. In addition to performance considerations, domains and subdomains may themselves be sensitive -- for example 'depression.foo.gov' -- which SNI does not protect.
+**[Server Name Indication](/sni/):** The Server Name Indication extension to TLS allows for more efficient use of IP addresses when serving multiple domains. However, these technologies are not supported by some legacy clients. Web service owners should evaluate the feasibility of using this technology to improve performance and efficiency.
 
-**Mixed Content:** Websites served over HTTPS need to ensure that all external resources (images, scripts, fonts, iframes, etc.) are also loaded over a secure connection. Modern browsers will refuse to load many insecure resources referenced from within a secure website. When migrating existing websites, this can involve a combination of automated and manual effort to update, replace, or remove references to insecure resources. For some websites, this can be the most time consuming aspect of the migration process. Moreover, poorly-configured HTTPS page elements can pose a security risk to the entire page, in that exploiting a flaw in a third-party HTTPS configuration can allow injection of malicious software into the page.
+**[Mixed Content](/mixed-content/):** Websites served over HTTPS need to ensure that all external resources (images, scripts, fonts, iframes, etc.) are also loaded over a secure connection. Modern browsers will refuse to load many insecure resources referenced from within a secure website. When migrating existing websites, this can involve a combination of automated and manual effort to update, replace, or remove references to insecure resources. For some websites, this can be the most time consuming aspect of the migration process.
 
 **APIs and Services:** Web services that serve primarily non-browser clients, such as web APIs, may require a [more gradual and hands-on migration strategy](/apis/), as not all clients can be expected to be configured for HTTPS connections or to successfully follow redirects.
 

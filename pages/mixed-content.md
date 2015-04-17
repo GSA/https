@@ -107,6 +107,12 @@ Even with passive content like images, attackers can manipulate what the page lo
 
 When a website is accessible over `http://`, loading other insecure resources does not generate any sort of warning, and so websites operating over plain HTTP often accumulate many of these sub-resources.
 
-## Security considerations for HTTPS mixed content
+## Security considerations for third party content
 
-Even if a page has all page elements loaded over HTTPS, variations in HTTPS configurations could result in security vulnerabilities. For example, if 'foo.gov' loads a page element over HTTPS from 'bar.com' but 'bar.com' is not as fastidious with it's HTTPS/TLS configuration, the page element from 'bar.com' may allow injection of malicious software into the page. For example, if 'bar.com' uses a TLS configuration that is known to be weak, a malicious network adversary may be able to modify or replace the page element to inject software that could read the page contents or, potentially, exploit browser vulnerabilities and accomplish more global access to the client device. Accordingly, just as it's important to regularly evaluate the HTTPS/TLS configuration of US government websites, it will be important to also evaluate the configurations of the domains that serve third-party page elements.
+Incorporating or loading content from third party domains creates an additional attack vector.
+
+Even if a page has all page elements loaded over HTTPS, variations in HTTPS configurations could result in security vulnerabilities. For example, if 'foo.gov' loads a page element over HTTPS from 'bar.com' but 'bar.com' is not as fastidious with it's HTTPS/TLS configuration, the page element from 'bar.com' may allow injection of malicious software into the page.
+
+For example, if 'bar.com' uses a TLS configuration that is known to be weak, a malicious network adversary may be able to modify or replace the page element to inject software that could read the page contents or, potentially, exploit browser vulnerabilities and accomplish more global access to the client device. Accordingly, just as it's important to regularly evaluate the HTTPS/TLS configuration of US government websites, it will be important to also evaluate the configurations of the domains that serve third-party page elements.
+
+Note that this is still a strict improvement over incorporating content third party domains over unencrypted HTTP. Attacks on the privacy, integrity, and security of connections to third party domains over unencrypted HTTP are trivial.
