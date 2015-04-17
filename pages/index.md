@@ -55,7 +55,7 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 **APIs and Services:** Web services that serve primarily non-browser clients, such as web APIs, may require a [more gradual and hands-on migration strategy](/apis/), as not all clients can be expected to be configured for HTTPS connections or to successfully follow redirects.
 
-**Planning for Change:** Protocols and web standards improve regularly, and security vulnerabilities can emerge that require prompt attention. Federal websites and services should deploy HTTPS in a manner that allows for rapid updates to configuration and replacement of certificates.
+**Planning for Change:** Protocols and web standards improve regularly, and security vulnerabilities can emerge that require prompt attention. Federal websites and services should deploy HTTPS in a manner that allows for rapid updates to certificates, cipher choices (including [forward secrecy](/technical/#forward-secrecy)) protocol versions, and other configuration elements.
 
 **[Strict Transport Security](/hsts/):** Websites and services available over HTTPS must enable HTTP Strict Transport Security (HSTS) to instruct compliant browsers to assume HTTPS going forward. This reduces insecure redirects, and protects users against attacks that attempt to downgrade connections to plain HTTP. Once HSTS is in place, domains can be submitted to a ["preload list"](https://hstspreload.appspot.com) used by all major browsers to ensure the HSTS policy is in effect at all times.
 
