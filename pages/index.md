@@ -96,6 +96,6 @@ Please **[provide public feedback and suggestions](https://github.com/WhiteHouse
 
 <a name="footnote-2" href="#footnote-source-2">⬑ 2.</a> In the context of HTTPS on the web, a certificate authority is a third party organization or company trusted by browsers and operating systems to issue digital certificates on behalf of domain owners.
 
-<a name="footnote-3" href="#footnote-source-3">⬑ 3.</a> Allowing HTTP connections for the sole purpose of redirecting clients to HTTPS connections is acceptable and encouraged. HSTS headers should specify a max-age of at least 1 year.
+<a name="footnote-3" href="#footnote-source-3">⬑ 3.</a> Allowing HTTP connections for the sole purpose of redirecting clients to HTTPS connections is acceptable and encouraged. HSTS headers must specify a max-age of at least 1 year.
 
 <a name="footnote-4" href="#footnote-source-4">⬑ 4.</a> "Intranet" is defined here as a computer network that is not directly reachable over the public internet.
