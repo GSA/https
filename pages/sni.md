@@ -23,6 +23,10 @@ However, in many cases, such as [content distribution networks (CDNs)](https://e
 
 Thus, it can be highly desirable for servers to depend on client SNI support. All modern browsers support SNI, but some older browsers on older OSes (notably IE6 and Android versions before Honeycomb) do not. Depending on what clients are necessary to support, servers may or may not be able to depend on client SNI support.
 
+## SNI privacy considerations
+
+SNI is sent by browsers to servers in the clear -- i.e., it is sent before the TLS/SSL handshake is sending encrypted data. This can pose privacy problems in some cases where the domain or a subdomain may themselves reveal sensitive information. For example, 'contraception.foo.gov' or 'suicide-help.foo.gov' may reveal to passive eavesdroppers that the client is seeking potentially stigmatizing health-related information. Care should be taken in provisioning domains and subdomains to avoid leaking sensitive information through SNI.
+
 ## Client support
 
 The most commonly used clients without support for SNI are:
