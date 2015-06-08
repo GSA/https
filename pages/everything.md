@@ -5,7 +5,7 @@ permalink: /everything/
 description: "Today, there is no such thing as insensitive web traffic. By simply always using HTTPS, both people and browsers can make safer assumptions about secure connections."
 ---
 
-HTTP has become central to today's way of life. Originally invented just for websites, HTTP is now the primary protocol used by computers, tablets, smartphones, and many other devices to communicate over the vast public internet.
+HTTP has become central to today's way of life. HTTP is currently the primary protocol for applications used on computers, tablets, smartphones, and many other devices.
 
 As our dependency on the internet has grown, the risk to users' privacy and safety has grown along with it.
 
@@ -15,7 +15,7 @@ Today, **there is no such thing as insensitive web traffic**, and public service
 
 When properly configured, HTTPS can provide a fast, secure connection that offers the level of privacy and reliability that users should expect from government web services.
 
-## Privacy by default
+## Privacy and integrity by default
 
 By using private connections by default, changed expectations make everyone safer.
 
@@ -32,7 +32,7 @@ These changed expectations improve the security of HTTPS on every website. In ot
 The internet's standards bodies, web browsers, major tech companies, and the internet community of practice have all come to understand that HTTPS should be the baseline for all web traffic.
 
 * The W3C's Technical Architecture Group has found that [the web should actively prefer secure connections](http://www.w3.org/2001/tag/doc/web-https) and transition entirely to HTTPS.
-* The IETF has said that [pervasive monitoring is an attack](https://datatracker.ietf.org/doc/rfc7258/), and the Internet Architecture Board (the IETF's parent organization) recommends that [new protocols use encryption by default](http://www.internetsociety.org/news/internet-society-commends-internet-architecture-board-recommendation-encryption-default).
+* The IETF has said that [pervasive monitoring is an attack](https://datatracker.ietf.org/doc/rfc7258/), and the Internet Architecture Board (the IETF's parent organization) recommends that [new protocols use encryption by default](https://www.iab.org/2014/11/14/iab­statement­on­internet­confidentiality/).
 * Google has begun to [favor HTTPS websites in search rankings](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html).
 * The Chrome and [Firefox](https://groups.google.com/d/msg/mozilla.dev.security/blV0MK4EbEE/i_Vy7sye0WsJ) security teams are working on [gradually marking plain HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
 
