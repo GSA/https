@@ -43,7 +43,7 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 ## Challenges and Considerations
 
-**Site Performance:** While encryption adds some computational overhead, modern software and hardware can handle this overhead without substantial deleterious impact on server performance or [latency](https://istlsfastyet.com). Websites wth content delivery networks or server software that supports the SPDY or HTTP/2 protocols, which require HTTPS in some major browsers, may find their site performance substantially improved as a result of migrating to HTTPS.
+**Site Performance:** While encryption adds some computational overhead, modern software and hardware can handle this overhead without substantial deleterious impact on server performance or [latency](https://istlsfastyet.com). Websites with content delivery networks or server software that support the SPDY or HTTP/2 protocols, which require HTTPS in some major browsers, may find their site performance substantially improved as a result of migrating to HTTPS.
 
 **[Server Name Indication](/sni/):** The Server Name Indication extension to TLS allows for more efficient use of IP addresses when serving multiple domains. However, these technologies are not supported by some legacy clients. Web service owners should evaluate the feasibility of using this technology to improve performance and efficiency.
 
