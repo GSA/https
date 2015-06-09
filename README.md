@@ -1,24 +1,20 @@
-## The HTTPS-Only Standard
+## HTTPS Everywhere for the U.S. Government
 
-The American people expect government websites to be secure and their interactions with those websites to be private. Hypertext Transfer Protocol Secure (HTTPS) offers the strongest privacy protection available for public web connections with today’s internet technology. The use of HTTPS reduces the risk of interception or modification of user interactions with government online services.
+The American people expect government websites to be secure and their interactions with those websites to be private.
 
-This proposed initiative, "The HTTPS-Only Standard," would require the use of HTTPS on all publicly accessible Federal websites and web services.
+This site contains a web-friendly version of the White House Office of Management and Budget memorandum [M-15-13](https://www.whitehouse.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf), **"A Policy to Require Secure Connections across Federal Websites and Web Services"**, and provides technical guidance and best practices to assist in its implementation.
 
-We encourage your feedback and suggestions.
+**[Read the policy.](https://https.cio.gov)**
 
-**[Read the proposal.](https://https.cio.gov)**
+Please [open an issue](https://github.com/gsa/https/issues/new) to leave feedback or suggestions. Pull requests are welcome to pages _other_ than the homepage, which shows the final policy and is not subject to change through GitHub.
 
-### We Want Your Feedback
+### Thank You For Your Feedback
 
-We encourage your feedback and suggestions on this proposal, either here on GitHub or by emailing [`https@cio.gov`](mailto:https@cio.gov) to provide private comments.
+This policy was open for public comment before its finalization. It received [numerous comments](https://github.com/GSA/https/issues?utf8=%E2%9C%93&q=label%3A%22Public+Comment%22+) whose thoughtfulness and feedback improved the **[final policy](https://www.whitehouse.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf)**.
 
-Concurrent with the public engagement of [Project Open Data](https://project-open-data.cio.gov) and the [U.S. Digital Service Playbook](https://playbook.cio.gov), suggestions and discussions are welcome via [GitHub Issues](https://github.com/gsa/https/issues). You may also propose changes to the content directly by submitting a [pull request](https://help.github.com/articles/creating-a-pull-request "More Information on Submitting Pull Requests").
+You can see what changed between the proposal and the final policy in [pull request #108](https://github.com/GSA/https/pull/108).
 
-You don't need to install any software to suggest a change. To propose a change from your browser, [select the proposal](https://github.com/GSA/https/blob/master/pages/index.md "Link to the HTTPS proposal"). You can use GitHub's in-browser editor to edit files and submit a "pull request" for your changes to be merged into the document.
-
-If you would like to see and discuss the changes that other people have proposed, [visit the "Pull Requests" section](https://github.com/gsa/https/pulls "Link to the Pull Requests Section of GitHub") and [browse the issues](https://github.com/gsa/https/issues "Link to the Issues Section of GitHub").
-
-**The official comment period is now closed.** Thank you for your comments and suggestions to the proposed policy. The other pages on [https.cio.gov](https://https.cio.gov) are resources for agencies implementing the HTTPS proposal. Contributions are welcome at any time to these living documents.
+The homepage of this site is the final policy. The other pages on [https.cio.gov](https://https.cio.gov) are open for contribution at any time, and are intended to be resources for agencies implementing the HTTPS policy.
 
 ### Developing on the site locally
 
