@@ -64,7 +64,7 @@ In the above example, the browser will remember the HSTS policy for 180 days. Th
 
 Since it's just an HTTP header, HSTS is very easy to add to a domain.
 
-However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until their first successful secure connection to a given domain.
+However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
 
 To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox and Safari also now use HSTS preload lists that include Chrome's list, as will upcoming versions of Internet Explorer.
 
