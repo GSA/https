@@ -7,13 +7,9 @@ description: "Articles, news, and tools about HTTPS."
 
 ### Tools
 
-[SSL Labs](https://www.ssllabs.com/ssltest/) is a universally referenced HTTPS evaluation and grading tool for public-facing websites.
-
-18F has also written [`https-scan`](https://github.com/18F/https-scan), a command line tool which runs one or more domains through several separate small tools:
-
-* [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the SSL Labs API. (See its [Terms of Use](https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs.md#terms-and-conditions).)
+* [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the API for [SSL Labs](https://www.ssllabs.com/ssltest/), a universally referenced HTTPS evaluation and grading tool for public-facing websites.
+* [`site-inspector`](https://github.com/benbalter/site-inspector) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
 * [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
-* [`site-inspector`](https://github.com/benbalter/site-inspector-ruby) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
 
 ### HTTPS in .gov
 
