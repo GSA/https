@@ -39,6 +39,8 @@ navigation:
   url: /everything/
 - text: FAQ
   url: /faq/
+- text: Authentication
+  url: /authentication/
 - text: Server Name Indication
   url: /sni/
 - text: Strict Transport Security
