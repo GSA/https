@@ -41,8 +41,8 @@ navigation:
   url: /faq/
 - text: Strict Transport Security
   url: /hsts/
-- text: Technical Concepts
-  url: /technical-concepts/
+- text: Technical Guidelines
+  url: /technical-guidelines/
 - text: Mixed Content
   url: /mixed-content/
 - text: Server Name Indication

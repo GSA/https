@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Technical Concepts
-permalink: /technical-concepts/
-description: "More relevant technical concepts relating to HTTPS."
+title: Technical Guidelines
+permalink: /technical-guidelines/
+description: "Technical guidelines relating to HTTPS strength and quality."
 ---
 
 This page covers some relevant technical concepts relevant to the **strength and quality** of a server's HTTPS configuration.
