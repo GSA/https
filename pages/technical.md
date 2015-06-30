@@ -32,6 +32,31 @@ Both SSL and TLS contain a mechanism for negotiating a shared protocol version, 
 To protect against this attack, servers can support the `TLS_FALLBACK_SCSV` feature, which prevents such "downgrade attacks". This is enabled by default for servers in the most recent version of OpenSSL and should be used on all servers, with no known downsides.
 
 
+### Protocols: TLSv1.0+
+
+TLS 1.0 has [known vulnerabilities](http://www.nist.gov/itl/csd/tls-043014.cfm) (a.k.a., the BEAST attack) and therefore should be avoided where possible.  Section 3.1 of [NIST SP - 800-52 Rev 1](http://www.nist.gov/manuscript-publication-search.cfm?pub_id=915295) says:
+
+> Servers that support government-only applications __shall__ be configured to support TLS 1.1, and __should__ be configured to support TLS 1.2.  These servers __shall not__ support TLS 1.0, SSL 2.0, or SSL 3.0.
+
+And:
+
+> Agencies __shall__ develop migration plans to support TLS 1.2 by January 1, 2015.
+
+And:
+
+> Servers that support citizen or business-facing applications __shall__ be configured to support version 1.1 and __should__ be configured to support version 1.2.  These servers may also be configured to support TLS version 1.0 in order to enable interaction with citizens and businesses.  These servers __shall not__ support SSL version 3.0 or earlier.  If TLS 1.0 is supported, the use of TLS 1.1 and 1.2 __shall__ be preferred over TLS 1.0.
+
+And finally:
+
+> Some server implementations are known to implement version negotiation incorrectly.  For example, there are TLS 1.0 servers that terminate the connection when the client offers a version newer than TLS 1.0.  Servers that incorrectly implement TLS version negotiation __shall not__ be used.
+
+Section 3.9 of this document has a summary of the server recommendations to be followed by all government agencies.
+
+Regarding mitigations for the BEAST attack, the page "[Mitigating the BEAST attack on TLS](https://community.qualys.com/blogs/securitylabs/2011/10/17/mitigating-the-beast-attack-on-tls)" says (among other things):
+
+> The only fully safe choice at the moment is the AES-GCM suites supported only in TLS 1.2
+
+
 ### Certificate signature hashing algorithms (SHA-1, SHA-256)
 
 A key component of the TLS security model is X.509 certificates, which use cascading signatures. A root certificate authority's certificate (which is included with your OS) is used to sign an intermediary certificate, which is used to sign your website's certificate.
