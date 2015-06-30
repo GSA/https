@@ -16,9 +16,9 @@ This page covers some relevant technical concepts relevant to the **strength and
 
 HTTPS today uses **Transport Layer Security (TLS)**. TLS is a network protocol that establishes an encrypted connection to an authenticated peer over an untrusted network.
 
-Earlier, less secure versions of this protocol went by the name **Secure Sockets Layer (SSL)**.
+Earlier, less secure versions of this protocol were called **Secure Sockets Layer**, or **SSL)**.
 
-SSL and TLS do the same thing, and because of its early ubiquity, "SSL" is frequently used today to generically refer to TLS/HTTPS. However, all versions of SSL as a protocol are now considered insecure for modern use.
+SSL and TLS perform the same function, and TLS is a direct successor and replacement for TLS. Because of its early ubiquity, "SSL" is frequently used today to generically refer to TLS/HTTPS. However, all versions of SSL as a protocol are now considered insecure for modern use.
 
 The major versions of SSL/TLS in use today are:
 
@@ -73,4 +73,4 @@ There are a number of ciphers available to a TLS connection, and one of those is
 Due to the serious flaw in RC4, and the fact that the BEAST attack has been mitigated by all modern browsers, all HTTPS sites should be configured to use ciphers other than RC4.
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain employs the RC4 cipher.
-**[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to avoid using the RC4 cipher.
+* **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to avoid using the RC4 cipher.
