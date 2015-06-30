@@ -36,7 +36,7 @@ A downgrade attack can be prevented by using **[TLS Fallback SCSV](https://tools
 For more details of NIST recommendations, read [NIST Special Publication 800-52](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf).
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain still offers insecure SSLv3, or when a domain does not yet offer TLSv1.2.
-**[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to support TLSv1.0, TLSv1.1, and TLSv1.2, and has TLS Fallback SCSV enabled.
+* **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to support TLSv1.0, TLSv1.1, and TLSv1.2, and has TLS Fallback SCSV enabled.
 
 ### Forward secrecy
 
@@ -49,7 +49,7 @@ In forward secret connections, the server and client create a temporary key for 
 In TLS, forward secrecy is provided by choosing ciphersuites that include the [Ephemeral Diffie-Hellman (DHE)](https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange) and [Ephemeral Elliptic Curve Diffie–Hellman (ECDHE)](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) key exchanges.
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain offers little or no forward secrecy.
-**[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to offer robust forward secrecy.
+* **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to offer robust forward secrecy.
 
 ### Signature algorithms
 
