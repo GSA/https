@@ -81,3 +81,6 @@ DEPENDENCIES
   redcarpet
   rouge
   sass
+
+BUNDLED WITH
+   1.10.3
