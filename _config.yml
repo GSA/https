@@ -39,15 +39,15 @@ navigation:
   url: /everything/
 - text: FAQ
   url: /faq/
-- text: Server Name Indication
-  url: /sni/
 - text: Strict Transport Security
   url: /hsts/
+- text: Technical Guidelines
+  url: /technical-guidelines/
 - text: Mixed Content
   url: /mixed-content/
+- text: Server Name Indication
+  url: /sni/
 - text: Migrating APIs
   url: /apis/
-- text: Other Technical Concepts
-  url: /technical-concepts/
 - text: Resources
   url: /resources/
