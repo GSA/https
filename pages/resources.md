@@ -5,6 +5,10 @@ permalink: /resources/
 description: "Articles, news, and tools about HTTPS."
 ---
 
+### Learning
+
+The DigitalGov University has an **[Introduction to HTTPS for Beginners](https://www.youtube.com/watch?v=d2GmcPYWm5k)**, led by Eric Mill and Gray Brooks from the General Services Administration. This introduction runs a little over an hour, and covers how HTTP and the web work, what HTTPS does to help, and [why we should use it for everything](/everything/).
+
 ### Tools
 
 * [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the API for [SSL Labs](https://www.ssllabs.com/ssltest/), a universally referenced HTTPS evaluation and grading tool for public-facing websites.
