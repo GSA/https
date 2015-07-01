@@ -99,6 +99,24 @@ Any discovered mixed content will be listed as a `WARNING`. You can also get the
 mixed-content-scan https://https.cio.gov --format=json
 ```
 
+## Automatically detecting mixed content
+
+Site owners also have the option of using a **[Content Security Policy]()** header that will instruct browsers to ping a given URL with information about any observed mixed content warnings.
+
+A CSP policy that only specified pinging for mixed content warnings might look like:
+
+```
+Content-Security-Policy-Report-Only: default-src https:; report-uri https://example.com/reporting/endpoint
+```
+
+CSP reporting, especially for larger services, is an advanced approach that will likely require planning and tuning by a dedicated development team.
+
+Some resources:
+
+* An engineer [describes Twitter's approach](https://oreoshake.github.io/csp/twitter/2014/07/25/twitters-csp-report-collector-design.html) as of 2014.
+* [`report-uri.io`](https://report-uri.io), which offers a hosted reporting URI for CSP violations (or public key pinning violations) and accompanying dashboard.
+* A newly developed CSP extension, [Upgrade Insecure Requests](https://w3c.github.io/webappsec/specs/upgrade/), will instruct browsers to automatically upgrade referenced HTTP URLs to HTTPS URLs without triggering mixed content detection. This extension is not finalized, and as of June 2015 is only available in Chrome.
+
 ## Why do browsers block mixed content?
 
 If mixed content were not blocked, an attacker could control the main website by conducting a MITM attack against any of its active resources.
