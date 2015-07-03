@@ -2,7 +2,7 @@
 layout: page
 title: Why HTTPS for Everything?
 permalink: /everything/
-description: "Today, there is no such thing as insensitive web traffic. By simply always using HTTPS, both people and browsers can make safer assumptions about secure connections."
+description: "Today, there is no such thing as non-sensitive web traffic. By simply always using HTTPS, both people and browsers can make safer assumptions about secure connections."
 ---
 
 HTTP has become central to today's way of life. HTTP is currently the primary protocol for applications used on computers, tablets, smartphones, and many other devices.
@@ -11,7 +11,7 @@ As our dependency on the internet has grown, the risk to users' privacy and safe
 
 Every unencrypted HTTP request reveals information about a user's behavior, and the interception and tracking of unencrypted browsing has become commonplace.
 
-Today, **there is no such thing as insensitive web traffic**, and public services should not depend on the benevolence of network operators.
+Today, **there is no such thing as non-sensitive web traffic**, and public services should not depend on the benevolence of network operators.
 
 When properly configured, HTTPS can provide a fast, secure connection that offers the level of privacy and reliability that users should expect from government web services.
 
