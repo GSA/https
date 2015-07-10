@@ -37,6 +37,6 @@ The most commonly used clients without support for SNI are:
 
 Additionally, some enterprise networks may not yet be configured for SNI support.
 
-Note that Internet Explorer on Windows XP has already been rendered nearly unusable by the [POODLE vulnerability](https://en.wikipedia.org/wiki/POODLE). This vulnerability caused many major websites to disable support for SSLv3, which IE6 requires.
+Note that Internet Explorer 6 on Windows XP has already been rendered nearly unusable by the [POODLE vulnerability](https://en.wikipedia.org/wiki/POODLE), which caused many major websites to disable support for [SSLv3](/technical-guidelines/#ssl-and-tls).
 
 For specific detail on client support for SNI, refer to [Wikipedia](https://en.wikipedia.org/wiki/Server_Name_Indication#Client_side).
