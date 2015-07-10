@@ -7,7 +7,11 @@ description: "Articles, news, and tools about HTTPS."
 
 ### Learning
 
-The DigitalGov University has an **[Introduction to HTTPS for Beginners](https://www.youtube.com/watch?v=d2GmcPYWm5k)**, led by Eric Mill and Gray Brooks from the General Services Administration. This introduction runs a little over an hour, and covers how HTTP and the web work, what HTTPS does to help, and [why we should use it for everything](/everything/).
+The DigitalGov University has two presentations on HTTPS, led by Eric Mill and Gray Brooks from the General Services Administration.
+
+* **[An Introduction to HTTPS for Beginners](https://www.youtube.com/watch?v=d2GmcPYWm5k)**. This introduction runs a little over an hour, and covers how HTTP and the web work, what HTTPS does to help, and [why we should use it for everything](/everything/).
+
+* **[Implementing HTTPS](https://www.youtube.com/watch?v=rnM2qAfEG-M)**. A more detailed explanation of how HTTPS works, how to migrate a website to HTTPS, the [technical concepts](/technical-guidelines/) you should be aware of when implementing HTTPS, and new and upcoming advances in HTTPS.
 
 ### Tools
 
