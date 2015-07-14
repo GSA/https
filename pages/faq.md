@@ -35,6 +35,18 @@ While HTTPS encrypts the entire HTTP request and response, the DNS resolution an
 
 Additionally, attackers can still analyze encrypted HTTPS traffic for "side channel" information. This can include the time spent on site, or the relative size of user input.
 
+### How does migrating to HTTPS affect search engine optimization (SEO)?
+
+In general, migrating to HTTPS improves website SEO and intelligence.
+
+* As of August 2014, Google [uses HTTPS as a ranking signal](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html), which can improve search rankings.
+* Migrating to HTTPS will improve analytics about web traffic referred from HTTPS websites, as referrer information [is not passed from HTTPS websites to HTTP websites](https://stackoverflow.com/a/1361720/16075).
+
+To make the migration as smooth as possible, and avoid taking a SEO hit:
+
+* Use a **proper 301 redirect** to redirect users from `http://` to `https://`. **Do not use a 302 redirect**, as this may negatively impact search rankings.
+* Use the [canonical link element](https://en.wikipedia.org/wiki/Canonical_link_element) (`<link rel="canonical">`) to inform search engines that the "canonical" URL for a website uses `https://`.
+
 ### How difficult is it to attack an HTTPS connection?
 
 Attacks on HTTPS connections generally fall into 3 categories:
