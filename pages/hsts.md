@@ -26,6 +26,16 @@ In its **strongest and recommended form**, the HSTS policy includes all subdomai
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
+On Microsoft systems running IIS (Internet Information Services) there are no ".htaccess" files to implement custom headers. IIS applications use a central "web.config" file for configuration. For IIS 7.0 an up the code is as follows:
+
+```
+<httpProtocol>
+  <customHeaders>
+    <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload "/>
+  </customHeaders>
+</httpProtocol>
+```
+
 ## Background
 
 Strict Transport Security was [proposed in 2009](https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html), motivated by [Moxie Marlinspike's demonstration](http://www.thoughtcrime.org/software/sslstrip/) of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and [finalized as RFC 6797 in 2012](https://tools.ietf.org/html/rfc6797).
