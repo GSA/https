@@ -26,15 +26,7 @@ In its **strongest and recommended form**, the HSTS policy includes all subdomai
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-On Microsoft systems running IIS (Internet Information Services) there are no ".htaccess" files to implement custom headers. IIS applications use a central "web.config" file for configuration. For IIS 7.0 an up the code is as follows:
-
-```
-<httpProtocol>
-  <customHeaders>
-    <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload "/>
-  </customHeaders>
-</httpProtocol>
-```
+See below for examples of **[how to set an HSTS policy in common web servers](#configuration-for-common-web-servers)**.
 
 ## Background
 
@@ -103,6 +95,30 @@ When a domain owner follows the recommendations in this article and sets an HSTS
 It's a clear and auditable commitment, and gives anyone overseeing an organization's transition to HTTPS a way of marking domains as "done".
 
 Zooming out even further: it's technically possible to preload HSTS for an entire top-level domain (e.g. ".gov"). No top-level domain has yet done this &mdash; but as a comparatively small, centrally managed top-level domain, perhaps someday `.gov` can be the first.
+
+## Configuration for common web servers
+
+On **nginx**, you would apply an `add_header` command to the appropriate virtual host configuration. This website, `https.cio.gov`, is hosted on nginx, and uses [this batch of HTTPS rules](https://github.com/fisma-ready/nginx/blob/master/ssl/ssl.rules) to set this header:
+
+```
+add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload';
+```
+
+On **Apache**, you would apply a `Header` directive to always set the HSTS header, like so:
+
+```
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+```
+
+On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central "web.config" file for configuration. For IIS 7.0 and up, the code is as follows:
+
+```
+<httpProtocol>
+  <customHeaders>
+    <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload "/>
+  </customHeaders>
+</httpProtocol>
+```
 
 ## Resources
 
