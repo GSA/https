@@ -68,7 +68,7 @@ While details on browser and OS policies vary, site owners should generally cons
 
 ### RC4
 
-There are a number of ciphers available to a TLS connection, and one of those is the [RC4](https://en.wikipedia.org/wiki/RC4) (Also known as ARC4 or ARCFOUR). RC4 was a popular cipher due to being a fast cipher which was not vulnerable to the [BEAST](https://community.qualys.com/blogs/securitylabs/2011/10/17/mitigating-the-beast-attack-on-tls) attack. However, in 2013 it was announced that [RC4 had a serious flaw](http://www.isg.rhul.ac.uk/tls/) that would make it possible for a determined attacker to decrypt data encrypted with RC4 in TLS.
+There are a number of ciphers available to a TLS connection, and one of those is [RC4](https://en.wikipedia.org/wiki/RC4) (also known as ARC4 or ARCFOUR). RC4 was a popular cipher due to being a fast cipher which was not vulnerable to the [BEAST](https://community.qualys.com/blogs/securitylabs/2011/10/17/mitigating-the-beast-attack-on-tls) attack. However, in 2013 it was announced that [RC4 had a serious flaw](http://www.isg.rhul.ac.uk/tls/) that would make it possible for a determined attacker to decrypt data encrypted with RC4 in TLS.
 
 Due to the serious flaw in RC4, and the fact that the BEAST attack has been mitigated by all modern browsers, all HTTPS sites should be configured to use ciphers other than RC4.
 
