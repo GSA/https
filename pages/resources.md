@@ -5,6 +5,10 @@ permalink: /resources/
 description: "Articles, news, and tools about HTTPS."
 ---
 
+### Ask Others In Government
+
+The HTTPS-Help listserv is a support forum for anyone with a .gov or .mil address.  Any questions, ideas, or general discussion about HTTPS is welcome.  Anyone with a .gov or .mil email address can join by emailing listserv@listserv.gsa.gov. The message should have no subject and the body should say "subscribe https-help".
+
 ### Learning
 
 The DigitalGov University has two presentations on HTTPS, led by Eric Mill and Gray Brooks from the General Services Administration.
