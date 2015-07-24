@@ -38,6 +38,8 @@ navigation:
   url: /
 - text: Why Everything?
   url: /everything/
+- text: Compliance Guide
+  url: /guide/
 - text: FAQ
   url: /faq/
 - text: Strict Transport Security
