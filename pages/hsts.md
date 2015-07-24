@@ -94,7 +94,7 @@ When a domain owner follows the recommendations in this article and sets an HSTS
 
 It's a clear and auditable commitment, and gives anyone overseeing an organization's transition to HTTPS a way of marking domains as "done".
 
-Zooming out even further: it's technically possible to preload HSTS for an entire top-level domain (e.g. ".gov"). No top-level domain has yet done this &mdash; but as a comparatively small, centrally managed top-level domain, perhaps someday `.gov` can be the first.
+Zooming out even further: it's technically possible to preload HSTS for an entire top-level domain (e.g. ".gov"), as [Google first did with `.google`](https://chromium.googlesource.com/chromium/src/+/ea9dfef649a309a05c3b5c112150485836fbfcc7%5E%21/net/http/transport_security_state_static.json). As a relatively small, centrally managed top-level domain, perhaps someday `.gov` can get there.
 
 ## Configuration for common web servers
 
