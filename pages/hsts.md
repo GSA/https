@@ -68,11 +68,11 @@ Since it's just an HTTP header, HSTS is very easy to add to a domain.
 
 However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
 
-To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox and Safari also now use HSTS preload lists that include Chrome's list, as will upcoming versions of Internet Explorer.
+To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Opera, and Safari also use HSTS preload lists that include Chrome's list, as will newer versions of Internet Explorer.
 
 The Chrome security team allows any domain to [submit their domain to the list](https://hstspreload.appspot.com/), provided it meets the following requirements:
 
-* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`).
+* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`) -- especially the `www` subdomain, if a DNS record for it exists.
 * The HSTS policy includes all subdomains, with a long `max-age`, and a `preload` flag to indicate that the domain owner consents to preloading.
 * The website redirects from HTTP to HTTPS, at least on the root domain.
 
