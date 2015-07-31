@@ -13,7 +13,7 @@ See the [recorded presentation on YouTube](https://www.youtube.com/watch?v=rnM2q
 * [Simple explanation for elliptic curve cryptography](https://bithin.wordpress.com/2012/02/22/simple-explanation-for-elliptic-curve-cryptography-ecc/)
 * [Prime factorization](http://modular.math.washington.edu/edu/2007/spring/ent/ent-html/node7.html)
 * [SSL Labs analysis of https.cio.gov](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)
-* [nginx configuration for https.cio.gov](https://github.com/GSA/https/blob/configs/deploy/site.conf)
+* [nginx configuration for https.cio.gov](https://github.com/GSA/https/blob/master/deploy/site.conf)
 * [general nginx HTTPS configuration template](https://github.com/fisma-ready/nginx/blob/master/ssl/ssl.rules)
 * [Apache configuration for courtlistener.com](https://github.com/freelawproject/courtlistener/blob/master/apache/courtlistener.com.conf)
 * [Mozilla CA certificate policy](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/)
