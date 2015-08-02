@@ -68,7 +68,7 @@ Since it's just an HTTP header, HSTS is very easy to add to a domain.
 
 However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
 
-To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Opera, and Safari also use HSTS preload lists that include Chrome's list, as will newer versions of Internet Explorer.
+To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome's HSTS preload list.
 
 The Chrome security team allows any domain to [submit their domain to the list](https://hstspreload.appspot.com/), provided it meets the following requirements:
 
