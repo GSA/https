@@ -68,11 +68,11 @@ Since it's just an HTTP header, HSTS is very easy to add to a domain.
 
 However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
 
-To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox and Safari also now use HSTS preload lists that include Chrome's list, as will upcoming versions of Internet Explorer.
+To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome's HSTS preload list.
 
 The Chrome security team allows any domain to [submit their domain to the list](https://hstspreload.appspot.com/), provided it meets the following requirements:
 
-* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`).
+* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`) -- especially the `www` subdomain, if a DNS record for it exists.
 * The HSTS policy includes all subdomains, with a long `max-age`, and a `preload` flag to indicate that the domain owner consents to preloading.
 * The website redirects from HTTP to HTTPS, at least on the root domain.
 
@@ -94,7 +94,7 @@ When a domain owner follows the recommendations in this article and sets an HSTS
 
 It's a clear and auditable commitment, and gives anyone overseeing an organization's transition to HTTPS a way of marking domains as "done".
 
-Zooming out even further: it's technically possible to preload HSTS for an entire top-level domain (e.g. ".gov"). No top-level domain has yet done this &mdash; but as a comparatively small, centrally managed top-level domain, perhaps someday `.gov` can be the first.
+Zooming out even further: it's technically possible to preload HSTS for an entire top-level domain (e.g. ".gov"), as [Google first did with `.google`](https://chromium.googlesource.com/chromium/src/+/ea9dfef649a309a05c3b5c112150485836fbfcc7%5E%21/net/http/transport_security_state_static.json). As a relatively small, centrally managed top-level domain, perhaps someday `.gov` can get there.
 
 ## Configuration for common web servers
 
