@@ -5,7 +5,7 @@ permalink: /hsts/
 description: "An overview of HTTP Strict Transport Security (HSTS), a lightweight standard that prevents privacy leaks and downgrade attacks."
 ---
 
-**[HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)** (HSTS) is a simple and [widely supported](http://caniuse.com/#search=hsts) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
+**[HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)** (HSTS) is a simple and [widely supported](http://caniuse.com/#feat=stricttransportsecurity) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
 
 When a browser knows that a domain has enabled HSTS, it does two things:
 
@@ -122,7 +122,7 @@ On **Microsoft systems running IIS** (Internet Information Services), there are 
 
 ## Resources
 
-* [Browser support for HSTS](http://caniuse.com/#search=hsts)
+* [Browser support for HSTS](http://caniuse.com/#feat=stricttransportsecurity)
 * [HSTS web developer documentation](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security) maintained by the Mozilla community
 * Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.appspot.com/).
 * ["Upgrading HTTPS in Mid-Air"](http://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
