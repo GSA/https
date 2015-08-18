@@ -25,6 +25,7 @@ The DigitalGov University has two presentations on HTTPS, led by Eric Mill and G
 
 ### HTTPS in .gov
 
+* DigitalGov: [Secure Central Hosting for the Digital Analytics Program](https://www.digitalgov.gov/2015/08/14/secure-central-hosting-for-the-digital-analytics-program/)
 * FTC: [FTC.gov is now HTTPS by default](https://www.ftc.gov/news-events/blogs/techftc/2015/03/ftcgov-now-https-default)
 * Privacy and Civil Liberties Oversight Board: [PCLOB.gov is now HTTPS by default](https://www.pclob.gov/newsroom/20150318.html)
 * CIA: [Statement on CIA Website Enhancement](https://www.cia.gov/news-information/press-releases-statements/press-release-archive-2006/statement-on-cia-website-enhancement.html) from 2006
