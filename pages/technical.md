@@ -61,7 +61,9 @@ A part of the signature process is computing a "hash" of the data included in th
 
 SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://blogs.technet.com/b/pki/archive/2013/11/12/sha1-deprecation-policy.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
 
-While details on browser and OS policies vary, site owners should generally consider SHA-1 to be unsupported by January 2017.
+[NIST has disallowed SHA-1] for digital signature generation after 2013. 
+
+While details on browser and OS policies vary, site owners should generally consider SHA-1 to be technically unsupported by January 2017.
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain is still using a certificate signed with SHA-1.
 * **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to use a certificate chain signed with SHA-2.
