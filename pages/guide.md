@@ -69,6 +69,10 @@ These domains must follow all the same requirements and guidelines as domains us
 
 M-15-13 includes all domains and subdomains that are publicly reachable over HTTP/HTTPS, regardless of agency operational practices.
 
+**What happens to visitors using browsers that don't support HSTS, like older versions of Internet Explorer?**
+
+Browsers that don't support HSTS are simply unaffected by HSTS, so there is no harm in enabling it.
+
 **This site redirects users to HTTPS, but [Pulse](https://pulse.cio.gov) is saying it doesn't enforce HTTPS.**
 
 [Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a <meta refresh> tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
