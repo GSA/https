@@ -9,7 +9,7 @@ description: "An overview of HTTP Strict Transport Security (HSTS), a lightweigh
 
 When a browser knows that a domain has enabled HSTS, it does two things:
 
-* Always uses an `https://` connection, even when clicking on an `http://` link or after typing a domain into the location bar without specifying a protocol.
+* Always uses an `https://` connection, even when clicking on an `http://` link or after typing a domain into the location bar without specifying a scheme.
 * Removes the ability for users to click through warnings about invalid certificates.
 
 A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.
