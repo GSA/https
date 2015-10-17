@@ -5,38 +5,45 @@ permalink: /sni/
 description: "An overview of Server Name Indication (SNI), a TLS extension to allow multiple secure hostnames to be served from a single IP address."
 ---
 
-**[Server Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication)**, often abbreviated **SNI**, is an [extension to TLS](https://tools.ietf.org/html/rfc6066#page-6) that allows multiple hostnames to be served over HTTPS from the same IP address. SNI accomplishes this by providing a mechanism for the client to tell the server which hostname it is trying to connect to.
+**[Server Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication)**, often abbreviated **SNI**, is an [extension to TLS](https://tools.ietf.org/html/rfc6066#page-6) that allows multiple hostnames to be served over HTTPS from the same IP address.
 
-Without SNI, a given IP address is only capable of reliably hosting a single hostname over `https://`.
+A website owner can **require SNI support**, either by allowing their host to do this for them, or by directly consolidating multiple hostnames onto a smaller number of IP addresses. Requiring SNI has the potential to [save significant money](#making-https-cheaper) and resources.
+
+However, a few [legacy clients](#client-support) (notably, Internet Explorer on Windows XP) do not support SNI, and will be cut off if SNI is required.
+
+Website owners are encouraged to **evaluate whether requiring SNI is feasible**:
+
+* For websites accessed primarily by browsers, look at usage by **Internet Explorer 8 and Android 2.3** (and below). If these usage numbers are low, requiring SNI is likely feasible.
+
+* For web services accessed by non-browser clients (e.g. APIs), look at usage by Python 2.7.8 and Java 1.6 (and below), and [any other relevant clients](https://en.wikipedia.org/wiki/Server_Name_Indication#Client_side). APIs with heterogeneous clients may wish to do more sophisticated client detection, or staged rollouts.
+
+See [`analytics.usa.gov`](https://analytics.usa.gov) for an example of a .gov website which requires support for SNI.
+
+## Making HTTPS cheaper
+
+Without SNI, a given IP address is only capable of reliably hosting a single hostname over `https://`. Since [IPv4 addresses are running out](https://en.wikipedia.org/wiki/IPv4_address_exhaustion), IP addresses are expensive to reserve for single domains.
 
 For many web hosts and content delivery networks, requiring that clients support SNI allows secure websites to be more efficiently hosted and can greatly reduce costs.
-
-However, some [legacy clients](#client-support) do not support SNI -- notably, IE on Windows XP -- and so many major services still do not require SNI support.
-
-## Background
-
-If the [server handles traffic for multiple hostnames](https://en.wikipedia.org/wiki/Virtual_hosting#Name-based), then without the client's explicit indication of which hostname it is attempting to connect to, the server may have difficulty determining the appropriate server certificate to present to the client in the TLS handshake.
-
-If a server only ever handles traffic for a single hostname, there's no need for SNI. Similarly, a server may have multiple IP address, each of which is used only for a single hostname/certificate pair. Additionally, a single certificate may be able to cover all the possible hostnames for a given server IP address using [wildcards](https://en.wikipedia.org/wiki/Wildcard_certificate) or [Subject Alternative Names](https://en.wikipedia.org/wiki/SubjectAltName).
-
-However, in many cases, such as [content distribution networks (CDNs)](https://en.wikipedia.org/wiki/Content_delivery_network), the server services far too many unrelated hostnames to reasonably share a single server certificate. Due to the scarcity of IPv4 addresses, it is also long-term untenable to simply acquire a new IPv4 address for each hostname. Therefore, client SNI support is extremely useful.
-
-Thus, it can be highly desirable for servers to depend on client SNI support. All modern browsers support SNI, but some older browsers on older OSes (notably IE6 and Android versions before Honeycomb) do not. Depending on what clients are necessary to support, servers may or may not be able to depend on client SNI support.
-
-## SNI privacy considerations
-
-SNI is sent by browsers to servers in the clear -- i.e., it is sent before the TLS/SSL handshake is sending encrypted data. This can pose privacy problems in some cases where the domain or a subdomain may themselves reveal sensitive information. For example, 'contraception.foo.gov' or 'suicide-help.foo.gov' may reveal to passive eavesdroppers that the client is seeking potentially stigmatizing health-related information. Care should be taken in provisioning domains and subdomains to avoid leaking sensitive information through SNI.
 
 ## Client support
 
 The most commonly used clients without support for SNI are:
 
-* Internet Explorer on Windows XP
+* Internet Explorer 8 (and below) on Windows XP
 * Some versions of Python 2 (fixed in 2.7.9)
 * The default browser in Android 2.3 and earlier
 
 Additionally, some enterprise networks may not yet be configured for SNI support.
 
-Note that Internet Explorer 6 on Windows XP has already been rendered nearly unusable by the [POODLE vulnerability](https://en.wikipedia.org/wiki/POODLE), which caused many major websites to disable support for [SSLv3](/technical-guidelines/#ssl-and-tls).
-
 For specific detail on client support for SNI, refer to [Wikipedia](https://en.wikipedia.org/wiki/Server_Name_Indication#Client_side).
+
+## Privacy considerations
+
+SNI is sent by browsers to servers "in the clear" -- it is not part of the encrypted TLS handshake. When a domain or a subdomain itself reveal sensitive information (e.g. 'contraception.foo.gov' or 'suicide-help.foo.gov'), this can reveal that information to passive eavesdroppers. 
+
+Whether SNI is enabled for their websites or not, website managers should consider all domains and subdomains as unencrypted over HTTPS, and account for this when provisioning domains and subdomains.
+
+## Resources
+
+* See ["If you can read this, you're SNIing"](https://www.mnot.net/blog/2014/05/09/if_you_can_read_this_youre_sniing) for an example of a site that will hard-fail when accessed by a client that does not support SNI.
+* [Wikipedia page for SNI](https://en.wikipedia.org/wiki/Server_Name_Indication)
