@@ -35,12 +35,6 @@ The most commonly used clients without support for SNI are:
 
 Additionally, some enterprise networks may not yet be configured for SNI support. To evaluate support on a network, try visiting [`analytics.usa.gov`](https://analytics.usa.gov) or [`mnot.net`](https://www.mnot.net/blog/2014/05/09/if_you_can_read_this_youre_sniing).
 
-## Privacy considerations
-
-SNI is sent by browsers to servers "in the clear" -- it is not part of the encrypted TLS handshake. When a domain or a subdomain itself reveal sensitive information (e.g. 'contraception.foo.gov' or 'suicide-help.foo.gov'), this can reveal that information to passive eavesdroppers. 
-
-Whether SNI is enabled for their websites or not, website managers should consider all domains and subdomains as unencrypted over HTTPS, and account for this when provisioning domains and subdomains.
-
 ## Resources
 
 * See ["If you can read this, you're SNIing"](https://www.mnot.net/blog/2014/05/09/if_you_can_read_this_youre_sniing) for an example of a site that will hard-fail when accessed by a client that does not support SNI.
