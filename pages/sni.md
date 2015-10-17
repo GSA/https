@@ -33,9 +33,7 @@ The most commonly used clients without support for SNI are:
 * Some versions of Python 2 (fixed in 2.7.9)
 * The default browser in Android 2.3 and earlier
 
-Additionally, some enterprise networks may not yet be configured for SNI support.
-
-For specific detail on client support for SNI, refer to [Wikipedia](https://en.wikipedia.org/wiki/Server_Name_Indication#Client_side).
+Additionally, some enterprise networks may not yet be configured for SNI support. To evaluate support on a network, try visiting [`analytics.usa.gov`](https://analytics.usa.gov) or [`mnot.net`](https://www.mnot.net/blog/2014/05/09/if_you_can_read_this_youre_sniing).
 
 ## Privacy considerations
 
