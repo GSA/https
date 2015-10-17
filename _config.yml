@@ -44,12 +44,12 @@ navigation:
   url: /faq/
 - text: Strict Transport Security
   url: /hsts/
+- text: Server Name Indication
+  url: /sni/
 - text: Technical Guidelines
   url: /technical-guidelines/
 - text: Mixed Content
   url: /mixed-content/
-- text: Server Name Indication
-  url: /sni/
 - text: Migrating APIs
   url: /apis/
 - text: Resources
