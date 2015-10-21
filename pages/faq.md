@@ -59,6 +59,18 @@ These are all possible, but for most attackers they are very difficult and requi
 
 By contrast, plain HTTP connections can be easily intercepted and modified by anyone involved in the network connection, and so attacks can be carried out at large scale and at low cost.
 
+## Why are domain names unencrypted over HTTPS today?
+
+This is primarily to support **[Server Name Indication](/sni/)** (SNI), a TLS extension that allows multiple hostnames to be served over HTTPS from one IP address. 
+
+The SNI extension was introduced in 2003 to allow HTTPS deployment to scale more easily and cheaply, but it does mean that the hostname is sent by browsers to servers "in the clear" so that the receiving IP address knows which certificate to present to the client. 
+
+When a domain or a subdomain itself reveals sensitive information (e.g. 'contraception.foo.gov' or 'suicide-help.foo.gov'), this can reveal that information to passive eavesdroppers.
+
+From a network privacy perspective, DNS also "leaks" hostnames in the clear across the network today (even when DNSSEC is used). There are ongoing efforts in the network standards community to encrypt both the SNI hostname and DNS lookups, but as of late 2015, nothing has been deployed to support these goals.
+
+Most clients support SNI today, and site owners are encouraged to [evaluate the feasibility of requiring SNI support](/sni/), to save money and resources. However, whether SNI support is required to access for a specific website or not, a website's owner should consider their hostnames to be unencrypted over HTTPS, and account for this when provisioning domains and subdomains.
+
 ### Why isn't DNSSEC good enough?
 
 [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) attempts to guarantee that domain names are resolved to correct IP addresses.
