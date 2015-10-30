@@ -48,7 +48,7 @@ In forward secret connections, the server and client create a temporary key for 
 
 In TLS, forward secrecy is provided by choosing ciphersuites that include the [DHE](https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange) and [ECDHE](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) key exchanges.
 
-**Note:** Current drafts of TLS 1.3, the next version of TLS, require new connections to use employ forward secrecy by [removing support for RSA and static DH key exchange](https://tools.ietf.org/html/draft-ietf-tls-tls13-02#section-1.2).
+**Note:** Current drafts of TLS 1.3, the next version of TLS, require new connections to use employ forward secrecy by [removing support for static RSA and DH key exchange](https://tools.ietf.org/html/draft-ietf-tls-tls13-02#section-1.2).
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain offers little or no forward secrecy.
 * **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to offer robust forward secrecy.
