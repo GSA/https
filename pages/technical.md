@@ -61,7 +61,7 @@ The certificate authority's trusted root certificate (which is included with you
 
 A part of the signature process is computing a "hash" of the data included in the certificate. This can be done using a standard hashing algorithm, such as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) or [SHA-2](https://en.wikipedia.org/wiki/SHA-2).
 
-SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://blogs.technet.com/b/pki/archive/2013/11/12/sha1-deprecation-policy.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
+SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://blogs.technet.com/b/pki/archive/2013/11/12/sha1-deprecation-policy.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
 
 [NIST has disallowed SHA-1](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) for digital signature generation after 2013. 
 
