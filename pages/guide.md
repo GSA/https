@@ -75,6 +75,6 @@ Browsers that don't support HSTS are simply unaffected by HSTS, so there is no h
 
 **This site redirects users to HTTPS, but [Pulse](https://pulse.cio.gov) is saying it doesn't enforce HTTPS.**
 
-[Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a <meta refresh> tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
+[Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a &lt;meta refresh&gt; tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
 
 Sites that are reachable on both a root domain (`http://agency.gov`) and their www subdomain (`http://www.agency.gov`) should perform a redirect to HTTPS in both cases. Redirecting one but not the other could also cause Pulse to indicate that a domain does not enforce HTTPS.
