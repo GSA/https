@@ -39,7 +39,7 @@ Additionally, attackers can still analyze encrypted HTTPS traffic for "side chan
 
 In general, migrating to HTTPS improves website SEO and intelligence.
 
-* As of August 2014, Google [uses HTTPS as a ranking signal](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html), which can improve search rankings.
+* As of August 2014, Google [uses HTTPS as a ranking signal](https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html), which can improve search rankings.
 * Migrating to HTTPS will improve analytics about web traffic referred from HTTPS websites, as referrer information [is not passed from HTTPS websites to HTTP websites](https://stackoverflow.com/a/1361720/16075).
 
 To make the migration as smooth as possible, and avoid taking a SEO hit:
