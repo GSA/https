@@ -42,7 +42,7 @@ In general:
 
 * Certificates can be valid for anywhere from years to days. In general, **shorter-lived certificates offer a better security posture**, since the impact of key compromise is less severe. Automating the issuance and renewal of certificates is an overall best practice, and can make the adoption of shorter-lived certificates more practical.
 
-* Agencies should **[avoid certificates signed with SHA-1](/technical-guidelines/#signature-algorithms)**, and CAs are forbidden from issuing them entirely as of January 1, 2016. Any existing certificates signed with SHA-1 should be replaced immediately, as browsers are quickly moving to remove support for the SHA-1 algorithm.
+* Agencies should [avoid certificates signed with SHA-1](/technical-guidelines/#signature-algorithms), and CAs are forbidden from issuing them entirely as of January 1, 2016. **Any existing certificates signed with SHA-1 should be replaced immediately**, as browsers are quickly moving to remove support for the SHA-1 algorithm.
 
 As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
 
