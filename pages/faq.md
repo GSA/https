@@ -5,6 +5,17 @@ permalink: /faq/
 description: "Frequently asked questions about HTTPS: what it does, and what it doesn't do."
 ---
 
+Below are some frequently asked questions and answers about HTTPS.
+
+* [What does HTTPS do?](#what-does-https-do?)
+* [What information does HTTPS protect?](#what-information-does-https-protect?)
+* [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect?)
+* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo?)
+* [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
+* [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
+* [Why isn't DNSSEC good enough?](#why-isnt-dnssec-good-enough?)
+* [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing?)
+
 ### What does HTTPS do?
 
 When properly configured, an HTTPS connection guarantees three things:
@@ -61,15 +72,15 @@ By contrast, plain HTTP connections can be easily intercepted and modified by an
 
 ## Why are domain names unencrypted over HTTPS today?
 
-This is primarily to support **[Server Name Indication](/sni/)** (SNI), a TLS extension that allows multiple hostnames to be served over HTTPS from one IP address. 
+This is primarily to support **[Server Name Indication](/sni/)** (SNI), a TLS extension that allows multiple hostnames to be served over HTTPS from one IP address.
 
-The SNI extension was introduced in 2003 to allow HTTPS deployment to scale more easily and cheaply, but it does mean that the hostname is sent by browsers to servers "in the clear" so that the receiving IP address knows which certificate to present to the client. 
+The SNI extension was introduced in 2003 to allow HTTPS deployment to scale more easily and cheaply, but it does mean that the hostname is sent by browsers to servers "in the clear" so that the receiving IP address knows which certificate to present to the client.
 
 When a domain or a subdomain itself reveals sensitive information (e.g. 'contraception.foo.gov' or 'suicide-help.foo.gov'), this can reveal that information to passive eavesdroppers.
 
 From a network privacy perspective, DNS also "leaks" hostnames in the clear across the network today (even when DNSSEC is used). There are ongoing efforts in the network standards community to encrypt both the SNI hostname and DNS lookups, but as of late 2015, nothing has been deployed to support these goals.
 
-Most clients support SNI today, and site owners are encouraged to [evaluate the feasibility of requiring SNI support](/sni/), to save money and resources. However, whether SNI support is required to access for a specific website or not, a website's owner should consider their hostnames to be unencrypted over HTTPS, and account for this when provisioning domains and subdomains.
+Most clients support SNI today, and site owners are encouraged to [evaluate the feasibility of requiring SNI support](/sni/), to save money and resources. However, whether SNI support is required to access a specific website or not, a website's owner should consider their hostnames to be unencrypted over HTTPS, and account for this when provisioning domains and subdomains.
 
 ### Why isn't DNSSEC good enough?
 
