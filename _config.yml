@@ -42,6 +42,8 @@ navigation:
   url: /guide/
 - text: FAQ
   url: /faq/
+- text: Certificates
+  url: /certificates/
 - text: Strict Transport Security
   url: /hsts/
 - text: Server Name Indication
