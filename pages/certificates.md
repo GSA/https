@@ -8,7 +8,7 @@ description: "Guidance around certificates for use in HTTPS."
 Frequently asked questions and answers about HTTPS certificates and certificate authorities.
 
 * [What are certificates and certificate authorities?](#what-are-certificates-and-certificate-authorities?)
-* [What kind of rules and oversight are certificate authorities subject to?](#what-kind-of-rules-and-oversight-are-certificate-authorities-subject-to?)
+* [What kind of rules and oversight are certificate authorities subject to?](#what-rules-and-oversight-are-certificate-authorities-subject-to?)
 * [Does the US government operate a publicly trusted certificate authority?](#does-the-us-government-operate-a-publicly-trusted-certificate-authority?)
 * [Are there federal restrictions on acceptable certificate authorities to use?](#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use?)
 * [Then how can I limit which CAs can issue certificates for a domain?](#then-how-can-i-limit-which-cas-can-issue-certificates-for-a-domain?)
@@ -32,7 +32,21 @@ Web browsers are generally set to trust a pre-selected list of certificate autho
 
 When a website presents a certificate to a browser during an HTTPS connection, the browser uses the information and signature in the certificate to confirm that a CA it trusts has decided to trust the website the browser is connecting to.
 
-## What kind of rules and oversight are certificate authorities subject to?
+## What kind of certificate should I get for my domain?
+
+There are many kinds of certificates in use in the federal government today, and the right one may depend on a system's technical architecture or an agency's business policies.
+
+In general:
+
+* "Domain Validation" (DV) certificates are usually less expensive and more amenable to automation than "Extended Validation" (EV) certificates. EV certificates generally result in the domain owner's name appearing in the browser URL bar of visitors. **Ordinary DV certificates are completely acceptable for government use.**
+
+* Certificates can be valid for anywhere from years to days. In general, **shorter-lived certificates offer a better security posture**, since the impact of key compromise is less severe. Automating the issuance and renewal of certificates is an overall best practice, and can make the adoption of shorter-lived certificates more practical.
+
+* Agencies should **[avoid certificates signed with SHA-1](/technical-guidelines/#signature-algorithms)**, and CAs are forbidden from issuing them entirely as of January 1, 2016. Any existing certificates signed with SHA-1 should be replaced immediately, as browsers are quickly moving to remove support for the SHA-1 algorithm.
+
+As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
+
+## What rules and oversight are certificate authorities subject to?
 
 Since 2012, all major browsers and certificate authorities participate in the **[CA/Browser Forum](https://cabforum.org). Though self-regulated, the CA/Browser Forum is effectively the governing body for publicly trusted certificate authorities.
 
