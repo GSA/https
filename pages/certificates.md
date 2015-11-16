@@ -2,7 +2,7 @@
 layout: page
 title: Certificates
 permalink: /certificates/
-description: "Guidance around certificates for use in HTTPS."
+description: "FAQ on certificates and certificate authorities for agencies migrating to HTTPS."
 ---
 
 Frequently asked questions and answers about HTTPS certificates and certificate authorities.
