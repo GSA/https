@@ -66,7 +66,7 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 No, not as of late 2015, and this is unlikely to change in the near future.
 
 The [Federal PKI](http://www.idmanagement.gov/federal-public-key-infrastructure) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/).
-s
+
 The Federal PKI has an [open application](https://bugzilla.mozilla.org/show_bug.cgi?id=478418) to the Mozilla Trusted Root Program. However, even if the Federal PKI's application is accepted, it will take a significant amount of time for the Federal PKI's root certificate to propagate widely around the world.
 
 ## Are there federal restrictions on acceptable certificate authorities to use?
