@@ -105,9 +105,9 @@ The strength of Certificate Transparency increases as more CAs publish more cert
 
 Domain owners can [use HPKP](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning) in one of two ways:
 
-* The `Public-Key-Pins` header contains a list of SHA-256 hashes of public key information corresponding to client, intermediate, or root certificates. [Supporting browsers](http://caniuse.com/#search=hpkp) will hard-fail on certificates whose validated chain does not contain at least one of the listed keys. The domain owner can list a URI that browsers can POST to with error information when a hard-fail occurs.
+* The `Public-Key-Pins` header contains a list of SHA-256 hashes of public key information corresponding to client, intermediate, or root certificates. [Supporting browsers](http://caniuse.com/#search=hpkp) **will hard-fail** on certificates whose validated chain does not contain at least one of the listed keys. The domain owner can list a URI that browsers can POST to with error information when a hard-fail occurs.
 
-* The `Public-Key-Pins-Report-Only` HTTP header contains the same information, but will not fail or show users an error if a pinning violation is detected. Browsers will report detected violations to a given URI. This is
+* The `Public-Key-Pins-Report-Only` HTTP header contains the same information, but **will not fail or show users an error** if a pinning violation is detected. Browsers will report detected violations to a given URI.
 
 Using `Public-Key-Pins` is **potentially dangerous**, and mistakes can lead to a site being rendered entirely inaccessible for weeks or months.
 
