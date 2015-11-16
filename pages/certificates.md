@@ -43,13 +43,13 @@ In general:
 
 * Certificates can be valid for anywhere from years to days. In general, **shorter-lived certificates offer a better security posture**, since the impact of key compromise is less severe. Automating the issuance and renewal of certificates is an overall best practice, and can make the adoption of shorter-lived certificates more practical.
 
-* Agencies should [avoid certificates signed with SHA-1](/technical-guidelines/#signature-algorithms), and CAs are forbidden from issuing them entirely as of January 1, 2016. **Any existing certificates signed with SHA-1 should be replaced immediately**, as browsers are quickly moving to remove support for the SHA-1 algorithm.
+* Agencies [should not use certificates signed with SHA-1](/technical-guidelines/#signature-algorithms), and CAs are forbidden from issuing them entirely as of January 1, 2016. **Any existing certificates signed with SHA-1 should be replaced immediately**, as browsers are quickly moving to remove support for the SHA-1 algorithm.
 
 As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
 
 ## What rules and oversight are certificate authorities subject to?
 
-Since 2012, all major browsers and certificate authorities participate in the **[CA/Browser Forum](https://cabforum.org). Though self-regulated, the CA/Browser Forum is effectively the governing body for publicly trusted certificate authorities.
+Since 2012, all major browsers and certificate authorities participate in the **[CA/Browser Forum](https://cabforum.org)**. Though self-regulated, the CA/Browser Forum is effectively the governing body for publicly trusted certificate authorities.
 
 The CA/B Forum produces the **[Baseline Requirements](https://cabforum.org/baseline-requirements-documents/)** (BRs), a set of technical and procedural policies that all CAs must adhere to. These policies are determined through a [formal voting process](https://cabforum.org/ballots/) of browsers and CAs. The BRs are enforced through a combination of technical measures, a system of standard third-party audits, and the overall community's attention to publicly visible certificates.
 
