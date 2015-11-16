@@ -8,7 +8,8 @@ description: "FAQ on certificates and certificate authorities for agencies migra
 Frequently asked questions and answers about HTTPS certificates and certificate authorities.
 
 * [What are certificates and certificate authorities?](#what-are-certificates-and-certificate-authorities?)
-* [What kind of rules and oversight are certificate authorities subject to?](#what-rules-and-oversight-are-certificate-authorities-subject-to?)
+* [What kind of certificate should I get for my domain?](#what-kind-of-certificate-should-i-get-for-my-domain?)
+* [What rules and oversight are certificate authorities subject to?](#what-rules-and-oversight-are-certificate-authorities-subject-to?)
 * [Does the US government operate a publicly trusted certificate authority?](#does-the-us-government-operate-a-publicly-trusted-certificate-authority?)
 * [Are there federal restrictions on acceptable certificate authorities to use?](#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use?)
 * [Then how can I limit which CAs can issue certificates for a domain?](#then-how-can-i-limit-which-cas-can-issue-certificates-for-a-domain?)
