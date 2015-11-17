@@ -59,7 +59,7 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 
 * The current [Baseline Requirements](https://cabforum.org/baseline-requirements-documents/)
 * [CAB/Forum voting record](https://cabforum.org/ballots/)
-* [Mozilla revoking an ANSII intermediate](https://blog.mozilla.org/security/2013/12/09/revoking-trust-in-one-anssi-certificate/) after ANSII was found to have violated the BRs by inappropriately issuing a intermediate certificate for use in network monitoring.
+* [Mozilla revoking an ANSSI intermediate](https://blog.mozilla.org/security/2013/12/09/revoking-trust-in-one-anssi-certificate/) after ANSSI was found to have violated the BRs by inappropriately issuing a intermediate certificate for use in network monitoring.
 * [Google requiring Symantec to employ Certificate Transparency](https://googleonlinesecurity.blogspot.com/2015/10/sustaining-digital-certificate-security.html) after Symantec was found to have violated the BRs by misissuing certificates.
 
 ## Does the US government operate a publicly trusted certificate authority?
