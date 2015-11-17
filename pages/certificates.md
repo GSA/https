@@ -25,13 +25,13 @@ Technically, a certificate is a file that contains:
 
 * The domain(s) it is authorized to represent.
 * A numeric "public key" that mathematically corresponds to a "private key" held by the website owner.
-* A cryptographic signature by a certificate authority (CA) that vouches for the relationship between the private key and the authorized domain(s).
-* Other technical information, such when the certificate expires, and how extensively the domain was validated.
+* A cryptographic signature by a certificate authority (CA) that vouches for the relationship between the keypair and the authorized domain(s).
+* Other technical information, such when the certificate expires, what algorithm the CA used to sign it, and how extensively the domain was validated.
 * Optionally, information about a person or organization that owns the domain(s).
 
 Web browsers are generally set to trust a pre-selected list of certificate authorities (CAs), and the browser can verify that any signature it sees comes from a CA in that list. The list of trusted CAs is set either by the underlying operating system or by the browser itself.
 
-When a website presents a certificate to a browser during an HTTPS connection, the browser uses the information and signature in the certificate to confirm that a CA it trusts has decided to trust the website the browser is connecting to.
+When a website presents a certificate to a browser during an HTTPS connection, the browser uses the information and signature in the certificate to confirm that a CA it trusts has decided to trust the information in the certificate.
 
 ## What kind of certificate should I get for my domain?
 
@@ -97,7 +97,7 @@ The strength of Certificate Transparency increases as more CAs publish more cert
 #### Certificate Transparency Resources
 
 * [Google CT FAQ](https://www.certificate-transparency.org/faq)
-* [RFC 6962](https://tools.ietf.org/html/rfc6962), the official standard
+* [RFC 6962](https://tools.ietf.org/html/rfc6962), the experimental standard for CT
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Certificate_Transparency) for CT
 
 ### HTTP Public Key Pinning
