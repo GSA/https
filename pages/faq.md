@@ -13,7 +13,7 @@ Below are some frequently asked questions and answers about HTTPS.
 * [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo?)
 * [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
 * [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
-* [Why isn't DNSSEC good enough?](#why-isnt-dnssec-good-enough?)
+* [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough?)
 * [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing?)
 
 ### What does HTTPS do?
