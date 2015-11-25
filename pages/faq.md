@@ -10,6 +10,7 @@ Below are some frequently asked questions and answers about HTTPS.
 * [What does HTTPS do?](#what-does-https-do?)
 * [What information does HTTPS protect?](#what-information-does-https-protect?)
 * [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect?)
+* [How does HTTPS relate to HTTP/2?](#___)
 * [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo?)
 * [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
 * [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
@@ -45,6 +46,22 @@ This is the same for all HTTP methods (GET, POST, PUT, etc.). The URL path and q
 While HTTPS encrypts the entire HTTP request and response, the DNS resolution and connection setup can reveal other information, such as the full domain or subdomain and the originating IP address, as shown above.
 
 Additionally, attackers can still analyze encrypted HTTPS traffic for "side channel" information. This can include the time spent on site, or the relative size of user input.
+
+### How does HTTPS relate to HTTP/2?
+
+HTTP/2 (finalized in [2015](https://tools.ietf.org/html/rfc7540)) is a backwards-compatible update to HTTP/1.1 (finalized in [1999](https://tools.ietf.org/html/rfc2616)) that is optimized for the modern web.
+
+HTTP/2 includes many features that can drastically speed up website performance, and emerged from the advancements Google demonstrated with [SPDY](https://blog.chromium.org/2009/11/2x-faster-web.html) in 2009.
+
+While HTTP/2 does not require the use of encryption in its formal spec, every major browser that has implemented HTTP/2 has only implemented support for encrypted connections, and no major browser is working on support for HTTP/2 over unencrypted connections.
+
+This means that in practice, **the major performance benefits of HTTP/2 first require the use of HTTPS.**
+
+For more information:
+
+* [HTTP/2 Working Group FAQ](https://http2.github.io/faq/)
+* [RFC 7540](https://tools.ietf.org/html/rfc7540), the final spec
+* [HTTP/2 Implementation Status](https://www.mnot.net/blog/2015/06/15/http2_implementation_status), by Mark Nottingham (working group chair)
 
 ### How does migrating to HTTPS affect search engine optimization (SEO)?
 
