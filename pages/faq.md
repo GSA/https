@@ -10,7 +10,7 @@ Below are some frequently asked questions and answers about HTTPS.
 * [What does HTTPS do?](#what-does-https-do?)
 * [What information does HTTPS protect?](#what-information-does-https-protect?)
 * [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect?)
-* [How does HTTPS relate to HTTP/2?](#___)
+* [How does HTTPS relate to HTTP/2?](#how-does-https-relate-to-http/2?)
 * [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo?)
 * [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
 * [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
