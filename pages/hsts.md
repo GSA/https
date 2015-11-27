@@ -82,7 +82,7 @@ An example of a valid HSTS header for preloading:
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-While you can't hardcode the entire internet into a big list, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for the near future. As the [web transitions fully to HTTPS](https://w3ctag.github.io/web-https/) over the long-term, and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
+While you can't hardcode the entire internet into a big list, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for the near future. As the [web transitions fully to HTTPS](http://www.w3.org/2001/tag/doc/web-https) over the long-term, and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
 
 ## HSTS as a forcing function
 
