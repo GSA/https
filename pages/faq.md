@@ -10,7 +10,7 @@ Below are some frequently asked questions and answers about HTTPS.
 * [What does HTTPS do?](#what-does-https-do?)
 * [What information does HTTPS protect?](#what-information-does-https-protect?)
 * [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect?)
-* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo?)
+* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-(seo)?)
 * [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
 * [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
 * [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough?)
@@ -51,7 +51,7 @@ Additionally, attackers can still analyze encrypted HTTPS traffic for "side chan
 In general, migrating to HTTPS improves website SEO and intelligence.
 
 * As of August 2014, Google [uses HTTPS as a ranking signal](https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html), which can improve search rankings.
-* Migrating to HTTPS will improve analytics about web traffic referred from HTTPS websites, as referrer information [is not passed from HTTPS websites to HTTP websites](https://stackoverflow.com/a/1361720/16075).
+* Migrating to HTTPS will improve analytics about web traffic referred from HTTPS websites, as referrer information [is not passed from HTTPS websites to HTTP websites](https://stackoverflow.com/questions/1361705/is-http-header-referer-sent-when-going-to-a-http-page-from-a-https-page/1361720#1361720).
 
 To make the migration as smooth as possible, and avoid taking a SEO hit:
 
