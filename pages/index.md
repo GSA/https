@@ -55,7 +55,7 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 **[Strict Transport Security](/hsts/):** Websites and services available over HTTPS must enable HTTP Strict Transport Security (HSTS) to instruct compliant browsers to assume HTTPS going forward. This reduces insecure redirects, and protects users against attacks that attempt to downgrade connections to plain HTTP. Once HSTS is in place, domains can be submitted to a ["preload list"](https://hstspreload.appspot.com) used by all major browsers to ensure the HSTS policy is in effect at all times.
 
-**Domain Name System Security (DNSSEC):** The new policy outlined in this Memorandum does not rescind or conflict with M-08-23, ["Securing the Federal Government's Domain Name System Infrastructure"](http://georgewbush-whitehouse.archives.gov/omb/memoranda/fy2008/m08-23.pdf). Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP. HTTPS provides this additional security.
+**Domain Name System Security (DNSSEC):** The new policy outlined in this Memorandum does not rescind or conflict with M-08-23, ["Securing the Federal Government's Domain Name System Infrastructure"](https://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2008/m08-23.pdf). Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP. HTTPS provides this additional security.
 
 ## Cost Effective Implementation
 
