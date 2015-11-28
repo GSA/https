@@ -82,7 +82,7 @@ An example of a valid HSTS header for preloading:
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-While you can't hardcode the entire internet into a big list, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for the near future. As the [web transitions fully to HTTPS](https://w3ctag.github.io/web-https/) over the long-term, and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
+While you can't hardcode the entire internet into a big list, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for the near future. As the [web transitions fully to HTTPS](http://www.w3.org/2001/tag/doc/web-https) over the long-term, and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
 
 ## HSTS as a forcing function
 
@@ -125,5 +125,5 @@ On **Microsoft systems running IIS** (Internet Information Services), there are 
 * [Browser support for HSTS](http://caniuse.com/#feat=stricttransportsecurity)
 * [HSTS web developer documentation](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security) maintained by the Mozilla community
 * Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.appspot.com/).
-* ["Upgrading HTTPS in Mid-Air"](http://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
+* ["Upgrading HTTPS in Mid-Air"](https://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
 * ["The first .gov domains hardcoded into your browser as all-HTTPS"](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/), by 18F.
