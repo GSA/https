@@ -53,7 +53,7 @@ Since 2012, all major browsers and certificate authorities participate in the **
 
 The CA/B Forum produces the **[Baseline Requirements](https://cabforum.org/baseline-requirements-documents/)** (BRs), a set of technical and procedural policies that all CAs must adhere to. These policies are determined through a [formal voting process](https://cabforum.org/ballots/) of browsers and CAs. The BRs are enforced through a combination of technical measures, standard third-party audits, and the overall community's attention to publicly visible certificates.
 
-The Baseline Requirements only constrain CAs -- they do not constrain browser behavior. Since browser vendors ultimately decide which certificates their browser will trust, they are the enforcers and adjudicators of BR violations. If a CA is found to be in violation of the Baseline Requirements, a browser may punish that CA's ability to issue certificates that that browser will trust, up to and including expulsion from that browser's trust store.
+The Baseline Requirements only constrain CAs -- they do not constrain browser behavior. Since browser vendors ultimately decide which certificates their browser will trust, they are the enforcers and adjudicators of BR violations. If a CA is found to be in violation of the Baseline Requirements, a browser may penalize or inhibit that CA's ability to issue certificates that that browser will trust, up to and including expulsion from that browser's trust store.
 
 #### CA / Browser Resources
 
