@@ -1,11 +1,13 @@
 ---
 layout: page
-title: HTTPS FAQ
+title: Introduction to HTTPS
 permalink: /faq/
-description: "Frequently asked questions about HTTPS: what it does, and what it doesn't do."
+description: "An introduction to HTTPS, and frequently asked questions."
 ---
 
 Below are some frequently asked questions and answers about HTTPS.
+
+For an in-depth introduction (no technical background required), check out the DigitalGov University presentation, **["An Introduction to HTTPS"](https://www.youtube.com/watch?v=d2GmcPYWm5k)**, to learn what HTTPS is and how it protects web services and users.
 
 * [What does HTTPS do?](#what-does-https-do?)
 * [What information does HTTPS protect?](#what-information-does-https-protect?)

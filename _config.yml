@@ -40,7 +40,7 @@ navigation:
   url: /everything/
 - text: Compliance Guide
   url: /guide/
-- text: FAQ
+- text: Introduction to HTTPS
   url: /faq/
 - text: Certificates
   url: /certificates/
