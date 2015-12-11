@@ -111,7 +111,7 @@ However, DNS resolution is just one aspect of securely communicating on the inte
 
 * No major web browsers inform the user when DNSSEC validation fails, limiting its strength and enforceability.
 
-HTTPS guarantees the confidentiality and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies.
+HTTPS guarantees the confidentiality and integrity of communication between client and server, and web browsers have rigorous and evolving HTTPS enforcement policies. However, DNSSEC is an important component of providing assurance of *authenticity*, particularly for traffic that does not utilize HTTP, HTTPS, and HTTP2 protocols.
 
 ### How does HTTPS protect against DNS spoofing?
 
