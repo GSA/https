@@ -72,7 +72,7 @@ The Federal PKI has an [open application](https://bugzilla.mozilla.org/show_bug.
 
 The Federal PKI has ["cross-certified" other agencies and commercial CAs](http://www.idmanagement.gov/entities-cross-certified-federal-bridge), which means their roots will be trusted by clients that trust the Federal PKI. However, none of these roots are _publicly trusted_. Even when a publicly trusted commercial CA is cross-certified with the Federal PKI, they maintain complete separation between their publicly trusted roots and their Federal PKI cross-certified roots.
 
-As a result, there is not currently a viable way to obtain an individual certificate that is issued or trusted by the Federal PKI, and also trusted by the general public.
+As a result, there is not currently a viable way to obtain an individual HTTPS certificate that is issued or trusted by the Federal PKI, and also trusted by the general public.
 
 ## Are there federal restrictions on acceptable certificate authorities to use?
 
