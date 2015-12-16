@@ -44,7 +44,7 @@ navigation:
   url: /faq/
 - text: Certificates
   url: /certificates/
-- text: Strict Transport Security
+- text: HTTP Strict Transport Security
   url: /hsts/
 - text: Server Name Indication
   url: /sni/
