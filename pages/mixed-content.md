@@ -5,11 +5,11 @@ permalink: /mixed-content/
 description: "Strategies for dealing with mixed content when upgrading a website from HTTP to HTTPS."
 ---
 
-When an HTTPS website references insecure (HTTP) resources, this is called **[mixed content](http://www.w3.org/TR/mixed-content/)**.
+When an HTTPS website references insecure (HTTP) resources, this is called **[mixed content](https://w3c.github.io/webappsec-mixed-content/)**.
 
 Browsers prevent an HTTPS website from loading most insecure resources, like fonts, scripts, etc. Migrating an existing website from HTTP to HTTPS means identifying and fixing or replacing mixed content.
 
-[Mixed content](http://www.w3.org/TR/mixed-content/) comes in two varieties:
+[Mixed content](https://w3c.github.io/webappsec-mixed-content/) comes in two varieties:
 
 **Active** mixed content includes resources that can greatly change the behavior of a website, such as JavaScript, CSS, fonts, and iframes. Browsers refuse to load active mixed content, which often results in affected pages being completely unstyled or broken. Browsers treat these very aggressively because of the consequences if they were compromised. For example, a single compromised Javascript file compromises the entire website, regardless of how other resources are loaded.
 
@@ -24,7 +24,7 @@ In Chrome, a website indicator for passive mixed content looks like this:
 Every website's mixed content situation will be different, but the general approach is:
 
 * Enable `https://` for your website, but don't force a redirect. Continue to present the `http://` version as the canonical URL to search engines.
-* Identify the most obvious and widespread pieces of mixed content by loading your website in a browser over `https://` and observing breakages. Chrome and Firefox will log any mixed content warnings to the console, which should point out necessary site-wide changes. Use these to [secure your resource links](#linking-to-resources-securely).
+* Identify the most obvious and widespread pieces of mixed content by loading your website in a browser over `https://` and observing breakages. Chrome, Opera, and Firefox will log any mixed content warnings to the console, which should point out necessary site-wide changes. Use these to [secure your resource links](#linking-to-resources-securely).
 * After fixing them, tackle the long tail by [scanning your code](#scanning-your-code) and [crawling your website](#crawling-your-website).
 * Finally, force the redirect to HTTPS, [turn on HSTS](/hsts/), and tell search engines that your new URL starts with `https://`.
 
@@ -129,7 +129,7 @@ When a website is accessible over `http://`, loading other insecure resources do
 
 Incorporating or loading content from third party domains creates an additional attack vector.
 
-Even if a page has all page elements loaded over HTTPS, variations in HTTPS configurations could result in security vulnerabilities. For example, if 'foo.gov' loads a page element over HTTPS from 'bar.com' but 'bar.com' is not as fastidious with it's HTTPS/TLS configuration, the page element from 'bar.com' may allow injection of malicious software into the page.
+Even if a page has all page elements loaded over HTTPS, variations in HTTPS configurations could result in security vulnerabilities. For example, if 'foo.gov' loads a page element over HTTPS from 'bar.com' but 'bar.com' is not as fastidious with its HTTPS/TLS configuration, the page element from 'bar.com' may allow injection of malicious software into the page.
 
 For example, if 'bar.com' uses a TLS configuration that is known to be weak, a malicious network adversary may be able to modify or replace the page element to inject software that could read the page contents or, potentially, exploit browser vulnerabilities and accomplish more global access to the client device. Accordingly, just as it's important to regularly evaluate the HTTPS/TLS configuration of US government websites, it will be important to also evaluate the configurations of the domains that serve third-party page elements.
 
