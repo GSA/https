@@ -37,7 +37,7 @@ Most commonly used third party services, such as Google Analytics or AddThis, **
 Other services may require manual updates, but have an `https://` version ready:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 ```
 
 Generally speaking, for content on your own domain, stick to site-relative URLs wherever possible:
