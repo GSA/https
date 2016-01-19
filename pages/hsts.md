@@ -110,12 +110,6 @@ On **Apache**, you would apply a `Header` directive to always set the HSTS heade
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 ```
 
-Similarly, with **Caddy**, you would add a `header` directive to always set the HSTS header:
-
-```
-header / Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-```
-
 On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central "web.config" file for configuration. For IIS 7.0 and up, the code is as follows:
 
 ```
@@ -125,6 +119,20 @@ On **Microsoft systems running IIS** (Internet Information Services), there are 
   </customHeaders>
 </httpProtocol>
 ```
+
+Similarly, with **Caddy**, you would add a `header` directive to always set the HSTS header:
+
+```
+header / Strict-Transport-Security
+```
+
+Generally, you want to set a custom HTTP header for `Strict-Transport-Security` with the value `max-age=31536000; includeSubDomains; preload` (or some variant).
+
+Here are some links to do that with other less common web servers:
+
+* [Caddy](https://caddyserver.com/docs/header)
+* [Haproxy](http://www.haproxy.com/doc/aloha/7.0/haproxy/http_rewriting.html#set-a-header-in-the-response)
+* [Lighttpd](http://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv)
 
 ## Resources
 
