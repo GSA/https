@@ -55,7 +55,7 @@ Refer complainants to your dedicated page in your documentation and encourage th
 
 Announce any blackout tests ahead of time. Optional: Pick a deadline for when you will turn off the HTTP API and include this in your announcement.
 
-If you had no complaints, try a longer blackout, such as as a few days to a week. (This is especially helpful if you have no analytics and are relying on complaints as a metric.)
+If you had no complaints, try a longer blackout, such as a few days to a week. (This is especially helpful if you have no analytics and are relying on complaints as a metric.)
 
 You can conduct multiple blackouts if your analytics show they make a good improvement the number of integrators using HTTPS over HTTP, but be mindful of diminishing returns.
 
