@@ -94,7 +94,7 @@ However, domain owners have some options to reduce the risk or impact of misissu
 
 **[Certificate Transparency](https://en.wikipedia.org/wiki/Certificate_Transparency)** (CT) allows domain owners to **detect missuance of certificates after the fact**.
 
-CT that allows CAs to publish some or all of the publicly trusted certificates that they issue to one or more public logs. Multiple organizations run CT logs, and it is possible to automatically monitor the logs for any certificates that are issued for any domains of interest.
+CT allows CAs to publish some or all of the publicly trusted certificates that they issue to one or more public logs. Multiple organizations run CT logs, and it is possible to automatically monitor the logs for any certificates that are issued for any domains of interest.
 
 Comodo has released an [open source](https://github.com/crtsh) Certificate Transparency log viewer that they operate at [crt.sh](https://crt.sh). For example, it is possible to see [all recent certificates for whitehouse.gov](https://crt.sh/?q=whitehouse.gov), and [details of specific certificates](https://crt.sh/?id=7976268).
 
