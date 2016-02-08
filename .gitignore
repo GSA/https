@@ -5,4 +5,5 @@ todo.txt
 .jekyll-metadata
 /vendor
 .ruby-version
+*.pyc
 
