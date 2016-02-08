@@ -15,6 +15,7 @@ environment = "production"
 branch = "master"
 port = 4000
 
+env.hosts = ["site@https"]
 env.use_ssh_config = True
 
 home = "/home/site"
