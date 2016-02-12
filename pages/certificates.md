@@ -26,7 +26,7 @@ Technically, a certificate is a file that contains:
 * The domain(s) it is authorized to represent.
 * A numeric "public key" that mathematically corresponds to a "private key" held by the website owner.
 * A cryptographic signature by a certificate authority (CA) that vouches for the relationship between the keypair and the authorized domain(s).
-* Other technical information, such when the certificate expires, what algorithm the CA used to sign it, and how extensively the domain was validated.
+* Other technical information, such as when the certificate expires, what algorithm the CA used to sign it, and how extensively the domain was validated.
 * Optionally, information about a person or organization that owns the domain(s).
 
 Web browsers are generally set to trust a pre-selected list of certificate authorities (CAs), and the browser can verify that any signature it sees comes from a CA in that list. The list of trusted CAs is set either by the underlying operating system or by the browser itself.
