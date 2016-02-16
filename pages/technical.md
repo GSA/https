@@ -11,6 +11,7 @@ This page covers some relevant technical concepts relevant to the **strength and
 * [Forward secrecy](#forward-secrecy)
 * [Signature algorithms](#signature-algorithms), such as SHA-1 and SHA-2
 * [RC4](#rc4), a common but insecure cipher
+* [A complete certificate chain](#a-complete-certificate-chain)
 
 ### SSL and TLS
 
@@ -78,3 +79,18 @@ Due to the serious flaw in RC4, and the fact that the BEAST attack has been miti
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain employs the RC4 cipher.
 * **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to avoid using the RC4 cipher.
+
+### A complete certificate chain
+
+In addition to the certificate itself, you should provide a "chain" of intermediate certificates that give the connecting browser or client enough information to connect the certificate to a trusted root certificate.
+
+Failing to provide intermediates could prevent various browsers and clients from successfully connecting to your service, especially mobile browsers and non-browser clients (such as cURL, and tools based on libcurl).
+
+Some browsers will attempt to automatically download missing intermediates, or may have them cached from a previous connection, and so it can be easy to miss this problem during initial configuration.
+
+In general:
+
+* You **do not** need to serve the trusted root that the certificate chains to. The client will compare the chain to a local root store, so serving the root will only waste bytes and slow the connection.
+* You **do** need to serve any intermediate certificates that connect your web server certificate to the trusted root.
+
+Web servers vary in how they are configured to serve intermediates, but it should generally be straightforward.
