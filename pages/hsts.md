@@ -20,11 +20,16 @@ In its simplest form, the policy tells a browser to enable HSTS for that exact d
 Strict-Transport-Security: max-age=31536000;
 ```
 
-In its **strongest and recommended form**, the HSTS policy includes all subdomains, and indicates a willingness to be ["preloaded"](#hsts-preloading) into browsers:
+In its **strongest and recommended form**, the HSTS policy **includes all subdomains**, and indicates a willingness to be ["preloaded"](#hsts-preloading) into browsers:
 
 ```
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
+
+When using this form, bear in mind:
+
+* The policy should be deployed at `https://domain.gov`, _not_ `https://www.domain.gov`.
+* **All subdomains** associated with the parent domain must support HTTPS. (They do not have to each have their own HSTS policy.)
 
 See below for examples of **[how to set an HSTS policy in common web servers](#configuration-for-common-web-servers)**.
 
