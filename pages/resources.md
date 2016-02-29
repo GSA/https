@@ -20,6 +20,7 @@ The DigitalGov University has two presentations on HTTPS, led by Eric Mill and G
 ### Tools
 
 * [`crt.sh`](https://crt.sh) - An [open source](https://github.com/crtsh) public viewer for Certificate Transparency logs. For example, you can view [all publicly logged whitehouse.gov certificates](https://crt.sh/?q=whitehouse.gov).
+* [`certlint`](https://github.com/awslabs/certlint) - An open source tool that reviews x.509 certificates for compliance with CA/Browser Forum requirements and various RFCs.
 * [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the API for [SSL Labs](https://www.ssllabs.com/ssltest/), a universally referenced HTTPS evaluation and grading tool for public-facing websites.
 * [`site-inspector`](https://github.com/benbalter/site-inspector) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
 * [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
