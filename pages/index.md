@@ -73,7 +73,7 @@ In order to promote the efficient and effective deployment of HTTPS, the timefra
 
 This Memorandum requires that Federal agencies deploy HTTPS on their domains using the following guidelines.
 
-* Newly developed websites and services at all Federal agency domains or subdomains must adhere to this policy upon launch.
+* Newly developed websites and services at [all Federal agency domains or subdomains](/guide/#compliance-faq) must adhere to this policy upon launch.
 * For existing websites and services, agencies should prioritize deployment using a risk-based analysis. Web services that involve an exchange of personally identifiable information (PII), where the content is unambiguously sensitive in nature, or where the content receives a high-level of traffic should receive priority and migrate as soon as possible.
 * Agencies must make all existing websites and services <a name="footnote-source-3"></a>accessible through a secure connection [[3]](#footnote-3) (HTTPS-only, with HSTS) by December 31, 2016.
 * The use of HTTPS is encouraged on <a name="footnote-source-4"></a>intranets [[4]](#footnote-4), but not explicitly required.

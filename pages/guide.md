@@ -61,6 +61,16 @@ This approach allows agencies the flexibility to focus only on publicly accessib
 
 ## Compliance FAQ
 
+**What does "all Federal agency domains or subdomains" include?**
+
+Domains and subdomains, in the context of M-15-13, refer to hostnames that are publicly accessible via HTTP or HTTPS.
+
+**Domain** refers to hostnames that are directly registerable. Some examples include `gsa.gov`, `whitehouse.gov`, `dodig.mil`, or `fs.fed.us`.
+
+**Subdomain** refers to any hostname that is a child of a registerable domain, and may be of any length. Some examples include `www.gsa.gov`, `planthardiness.ars.usda.gov`, `www.fia.fs.fed.us`, or `www.usar.army.mil`.
+
+Federally operated domains do not all end in `.gov`, `.mil`, or `.fed.us`. Some may end in `.com`, `.org`, `.us`, or other suffixes. Any federally operated domain is covered by M-15-13.
+
 **What about domains that are only used to redirect visitors to other websites?**
 
 These domains must follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
