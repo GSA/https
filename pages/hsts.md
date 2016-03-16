@@ -130,8 +130,8 @@ Generally, you want to set a custom HTTP header for `Strict-Transport-Security` 
 Here are some links to do that with other less common web servers:
 
 * [Caddy](https://caddyserver.com/docs/header)
-* [Haproxy](http://www.haproxy.com/doc/aloha/7.0/haproxy/http_rewriting.html#set-a-header-in-the-response)
-* [Lighttpd](http://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv)
+* [Haproxy](https://www.haproxy.com/doc/aloha/7.0/haproxy/http_rewriting.html#set-a-header-in-the-response)
+* [Lighttpd](https://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv)
 
 ## Resources
 
