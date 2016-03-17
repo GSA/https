@@ -24,6 +24,7 @@ The DigitalGov University has two presentations on HTTPS, led by Eric Mill and G
 * [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the API for [SSL Labs](https://www.ssllabs.com/ssltest/), a universally referenced HTTPS evaluation and grading tool for public-facing websites.
 * [`site-inspector`](https://github.com/benbalter/site-inspector) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
 * [`mixed-content-scan`](https://github.com/bramus/mixed-content-scan) - Command line tool for walking over a website and scanning for the use of insecure resources.
+* [HTTPS Checker](https://www.ecommerce.co.uk/httpschecker.html) - Desktop app (Windows, Mac & Linux support) for finding Mixed content issues on a site.
 
 ### HTTPS in .gov
 
