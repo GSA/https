@@ -103,7 +103,7 @@ Sites that are reachable on both a root domain (`http://agency.gov`) and their w
 
 ### Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?
 
-No. This very narrow class of services, that provide CRL and OCSP information for the purposes of verifying the revocation status of certificates used to make _other_ HTTPS connections, should abide by industry best practices and their respective specifications.
+No. This very narrow class of services, that provide CRL and OCSP information for the purposes of verifying the revocation status of certificates used to make other HTTPS connections, should abide by industry best practices and their respective specifications.
 
 For CRL, [RFC 5280](https://tools.ietf.org/html/rfc5280) says:
 
