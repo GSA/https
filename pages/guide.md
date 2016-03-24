@@ -19,6 +19,7 @@ This page provides implementation guidance for agencies by the White House Offic
   * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally?)
   * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer?)
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https?)
+  * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https?)
 
 
 ## Compliance and best practice checklist
@@ -99,3 +100,21 @@ Browsers that don't support HSTS are simply unaffected by HSTS, so there is no h
 [Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a &lt;meta refresh&gt; tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
 
 Sites that are reachable on both a root domain (`http://agency.gov`) and their www subdomain (`http://www.agency.gov`) should perform a redirect to HTTPS in both cases. Redirecting one but not the other could also cause Pulse to indicate that a domain does not enforce HTTPS.
+
+### Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?
+
+No. This very narrow class of services, that provide CRL and OCSP information for the purposes of verifying the revocation status of certificates used to make other HTTPS connections, should abide by industry best practices and their respective specifications.
+
+For CRL, [RFC 5280](https://tools.ietf.org/html/rfc5280) says:
+
+```
+CAs SHOULD NOT include URIs that specify https, ldaps, or similar schemes in extensions.  CAs that include an https URI in one of these extensions MUST ensure that the server's certificate can be validated without using the information that is pointed to by the URI.  Relying parties that choose to validate the server's certificate when obtaining information pointed to by an https URI in the cRLDistributionPoints, authorityInfoAccess, or subjectInfoAccess extensions MUST be prepared for the possibility that this will result in unbounded recursion.
+```
+
+For OCSP, [RFC 6960](https://tools.ietf.org/html/rfc6960) says:
+
+```
+Where privacy is a requirement, OCSP transactions exchanged using HTTP MAY be protected using either Transport Layer Security/Secure Socket Layer (TLS/SSL) or some other lower-layer protocol.
+```
+
+Agencies are encouraged to operate OCSP and CRL services via hostnames specifically reserved for those services, so that other related information and functionality can be served securely and privately.
