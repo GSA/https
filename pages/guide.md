@@ -11,6 +11,15 @@ This applies to all public domains and subdomains operated by the federal govern
 
 This page provides implementation guidance for agencies by the White House Office of Management and Budget, as agencies manage the transition to HTTPS by December 31, 2016.
 
+* [Compliance and best practice checklist](#compliance-and-best-practice-checklist)
+* [Options for HSTS compliance](#options-for-hsts-compliance)
+* [Compliance FAQ](#compliance-faq)
+  * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include?)
+  * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites?)
+  * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally?)
+  * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer?)
+  * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https?)
+
 
 ## Compliance and best practice checklist
 
@@ -61,7 +70,9 @@ This approach allows agencies the flexibility to focus only on publicly accessib
 
 ## Compliance FAQ
 
-**What does "all Federal agency domains or subdomains" include?**
+Answers to other common compliance questions appear below.
+
+### What does "all Federal agency domains or subdomains" include?
 
 Domains and subdomains, in the context of M-15-13, refer to hostnames that are publicly accessible via HTTP or HTTPS.
 
@@ -71,19 +82,19 @@ Domains and subdomains, in the context of M-15-13, refer to hostnames that are p
 
 Federally operated domains do not all end in `.gov`, `.mil`, or `.fed.us`. Some may end in `.com`, `.org`, `.us`, or other suffixes. Any federally operated domain is covered by M-15-13.
 
-**What about domains that are only used to redirect visitors to other websites?**
+### What about domains that are only used to redirect visitors to other websites?
 
 These domains must follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
 
-**What about domains that are technically public, but in practice are only used internally?**
+### What about domains that are technically public, but in practice are only used internally?
 
 M-15-13 includes all domains and subdomains that are publicly reachable over HTTP/HTTPS, regardless of agency operational practices.
 
-**What happens to visitors using browsers that don't support HSTS, like older versions of Internet Explorer?**
+### What happens to visitors using browsers that don't support HSTS, like older versions of Internet Explorer?
 
 Browsers that don't support HSTS are simply unaffected by HSTS, so there is no harm in enabling it.
 
-**This site redirects users to HTTPS, but [Pulse](https://pulse.cio.gov) is saying it doesn't enforce HTTPS.**
+### This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?
 
 [Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a &lt;meta refresh&gt; tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
 
