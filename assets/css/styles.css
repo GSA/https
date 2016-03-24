@@ -38,7 +38,7 @@ h1 {
   line-height: 1.3em; }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 2em;
+  margin-top: 2.0em;
   line-height: 1.2em; }
 
 h2:before, h3:before, h4:before, h5:before, h6:before {
@@ -46,8 +46,8 @@ h2:before, h3:before, h4:before, h5:before, h6:before {
   display: block;
   position: relative;
   width: 0;
-  height: 4em;
-  margin-top: -4em; }
+  height: 4.6em;
+  margin-top: -4.6em; }
 
 /** Overall structure, desktop and mobile */
 header {
@@ -134,6 +134,9 @@ li h4 {
 
 li p {
   margin-top: 0; }
+
+ul > li > ul {
+  margin-top: 10px; }
 
 /* Navigation */
 aside p {
