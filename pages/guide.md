@@ -116,3 +116,5 @@ For OCSP, [RFC 6960](https://tools.ietf.org/html/rfc6960) says:
 ```
 Where privacy is a requirement, OCSP transactions exchanged using HTTP MAY be protected using either Transport Layer Security/Secure Socket Layer (TLS/SSL) or some other lower-layer protocol.
 ```
+
+Agencies are encouraged to operate OCSP and CRL services via hostnames specifically reserved for those services, so that other related information and functionality can be served securely and privately.
