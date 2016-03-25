@@ -64,7 +64,7 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 
 ## Does the US government operate a publicly trusted certificate authority?
 
-No, not as of late 2015, and this is unlikely to change in the near future.
+No, not as of early 2016, and this is unlikely to change in the near future.
 
 The [Federal PKI](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwP) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, as well as a wide variety of devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
 
