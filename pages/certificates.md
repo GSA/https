@@ -43,7 +43,7 @@ In general:
 
 * Certificates can be valid for anywhere from years to days. In general, **shorter-lived certificates offer a better security posture**, since the impact of key compromise is less severe. Automating the issuance and renewal of certificates is an overall best practice, and can make the adoption of shorter-lived certificates more practical.
 
-* Agencies [should not use certificates signed with SHA-1](/technical-guidelines/#signature-algorithms), and CAs are forbidden from issuing them entirely as of January 1, 2016. **Any existing certificates signed with SHA-1 should be replaced immediately**, as browsers are quickly moving to remove support for the SHA-1 algorithm.
+* Agencies [should not use certificates signed with SHA-1](/technical-guidelines/#signature-algorithms), and commercial CAs are forbidden from issuing them entirely as of January 1, 2016. **Any existing certificates signed with SHA-1 should be replaced immediately**, as browsers are quickly moving to remove support for the SHA-1 algorithm.
 
 As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
 
@@ -64,7 +64,7 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 
 ## Does the US government operate a publicly trusted certificate authority?
 
-No, not as of late 2015, and this is unlikely to change in the near future.
+No, not as of early 2016, and this is unlikely to change in the near future.
 
 The [Federal PKI](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwP) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, as well as a wide variety of devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
 
@@ -120,7 +120,7 @@ Using `Public-Key-Pins` is **powerful but potentially dangerous**, as mistakes c
 
 Using `Public-Key-Pins-Report-Only` is very safe, and can provide useful information to detect potential certificate misissuance or attacks on users.
 
-Like [HSTS](/hsts/), HPKP only takes effect once the browser has visited the site once and received the HPKP header over a secure connection. HPKP preloading is possible, but as of 2015 this requires special manual coordination with browsers to do.
+Like [HSTS](/hsts/), HPKP only takes effect once the browser has visited the site once and received the HPKP header over a secure connection. HPKP preloading is possible, but as of 2016 this requires special manual coordination with browsers to do.
 
 **Note:** As currently implemented in [Chrome](https://www.chromium.org/Home/chromium-security/security-faq#TOC-How-does-key-pinning-interact-with-local-proxies-and-filters-) and [Firefox](https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning#How_to_use_pinning), pinning rules can be overridden by locally installed root certificates. This allows device owners -- and attackers who are able to install a local root -- to intercept or modify traffic even when a web service uses HPKP.
 
