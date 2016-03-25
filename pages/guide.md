@@ -115,3 +115,5 @@ In practice, to deploy HSTS while using federally issued certificates, an agency
 
 * Federally issued certificates may be practical for web services whose users can be consistently expected to trust the issuing federal certificate authority (CA). Users whose devices do not trust the issuing CA will experience a connection failure and be unable to use the web service.
 * Federally issued certificates will not be practical for web services whose users may not always be expected to trust the issuing federal certificate authority. These web services will likely require the use of a certificate from a publicly trusted (commercial) CA.
+
+Whatever strategy an agency employs to manage the use of federally issued certificates, it should allow the practical deployment of [HSTS](/hsts/) across all of its publicly accessible websites and web services.
