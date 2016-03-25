@@ -19,6 +19,7 @@ This page provides implementation guidance for agencies by the White House Offic
   * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally?)
   * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer?)
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https?)
+  * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service?)
 
 
 ## Compliance and best practice checklist
@@ -99,3 +100,18 @@ Browsers that don't support HSTS are simply unaffected by HSTS, so there is no h
 [Pulse](https://pulse.cio.gov) looks for server-side redirects, using an appropriate HTTP response code. Sites that use client-side redirects -- such as a &lt;meta refresh&gt; tag or JavaScript -- will not be seen as redirects. To meet the M-15-13 requirement of enforcing HTTPS, agencies should employ server-side redirects (or alternatively, disable HTTP access altogether).
 
 Sites that are reachable on both a root domain (`http://agency.gov`) and their www subdomain (`http://www.agency.gov`) should perform a redirect to HTTPS in both cases. Redirecting one but not the other could also cause Pulse to indicate that a domain does not enforce HTTPS.
+
+### What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?
+
+There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use?) agencies might use to meet the requirements of M-15-13.
+
+However, M-15-13 requires agencies to do more than just redirect HTTP traffic to HTTPS. It also requires agencies to enable **[HTTP Strict Transport Security](/hsts/)** (HSTS), as [described above](#options-for-hsts-compliance). HSTS ensures that HTTPS is always used, and protects users from several common vulnerabilities.
+
+One important effect of HSTS is that it **disables the ability for users to click through certificate warnings** in supporting browsers. This means that **agencies cannot instruct users to click through certificate warnings** to use their web service while also complying with M-15-13.
+
+This is also consistent with security best practices, as instructing users to click through certificate warnings defeats the point of HTTPS, and will subject users to potential network attacks.
+
+In practice, to deploy HSTS while using federally issued certificates, an agency will likely need to separate its web services by hostname, based on their expected audience:
+
+* Federally issued certificates may be practical for web services whose users can be consistently expected to trust the issuing federal certificate authority (CA). Users whose devices do not trust the issuing CA will experience a connection failure and be unable to use the web service.
+* Federally issued certificates will not be practical for web services whose users may not always be expected to trust the issuing federal certificate authority. These web services will likely require the use of a certificate from a publicly trusted (commercial) CA.
