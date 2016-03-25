@@ -120,7 +120,7 @@ Using `Public-Key-Pins` is **powerful but potentially dangerous**, as mistakes c
 
 Using `Public-Key-Pins-Report-Only` is very safe, and can provide useful information to detect potential certificate misissuance or attacks on users.
 
-Like [HSTS](/hsts/), HPKP only takes effect once the browser has visited the site once and received the HPKP header over a secure connection. HPKP preloading is possible, but as of 2015 this requires special manual coordination with browsers to do.
+Like [HSTS](/hsts/), HPKP only takes effect once the browser has visited the site once and received the HPKP header over a secure connection. HPKP preloading is possible, but as of 2016 this requires special manual coordination with browsers to do.
 
 **Note:** As currently implemented in [Chrome](https://www.chromium.org/Home/chromium-security/security-faq#TOC-How-does-key-pinning-interact-with-local-proxies-and-filters-) and [Firefox](https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning#How_to_use_pinning), pinning rules can be overridden by locally installed root certificates. This allows device owners -- and attackers who are able to install a local root -- to intercept or modify traffic even when a web service uses HPKP.
 
