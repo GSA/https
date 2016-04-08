@@ -64,15 +64,15 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 
 ## Does the US government operate a publicly trusted certificate authority?
 
-No, not as of early 2016, and this is unlikely to change in the near future.
+Yes, but it is not trusted by all public browsers.
 
-The [Federal PKI](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwP) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, as well as a wide variety of devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
+The [Federal PKI](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwP) root is trusted by Microsoft and Apple browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, as well as a wide variety of devices and operating systems. This means that the Federal PKI is able to issue certificates for use in TLS/HTTPS that are trusted by some browsers and operating systems, but may give a different user experience based on the browser that is used.
 
-The Federal PKI has an [open application](https://bugzilla.mozilla.org/show_bug.cgi?id=478418) to the Mozilla Trusted Root Program. However, even if the Federal PKI's application is accepted, it will take a significant amount of time for the Federal PKI's root certificate to actually be shipped onto devices and propagate widely around the world.
+The Federal PKI has an [open application](https://bugzilla.mozilla.org/show_bug.cgi?id=478418) to the Mozilla Trusted Root Program. However, even if the Federal PKI's application is accepted, it may take a significant amount of time for the Federal PKI's root certificate to actually be shipped onto devices and propagate widely around the world.
 
-The Federal PKI has [cross-certified other agencies and commercial CAs](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwR), which means their certificates will be trusted by clients that trust the Federal PKI. However, none of these roots are _publicly trusted_. Even when a publicly trusted commercial CA is cross-certified with the Federal PKI, they maintain complete separation between their publicly trusted certificates and their Federal PKI cross-certified certificates.
+The Federal PKI has [cross-certified other agencies and commercial CAs](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwR), which means their certificates will be trusted by clients that trust the Federal PKI and some of these roots are _publicly trusted_. It is dependent on the Federal PKI Partner CA if it maintains a separation between their publicly trusted certificates and their Federal PKI cross-certified certificates. A list of availabe [Federal PKI Partners](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000XRrC) is available on IDManagement.gov with contact information if an agency has a requirement to use Federal PKI certificates.
 
-As a result, there is not currently a viable way to obtain an individual certificate for use in TLS/HTTPS that is issued or trusted by the Federal PKI, and also trusted by the general public.
+There is a viable way to obtain an individual certificate for use in TLS/HTTPS that is issued or trusted by the Federal PKI and also trusted by the general public, but it may impact the user experience based on the browser or operating system.
 
 ## Are there federal restrictions on acceptable certificate authorities to use?
 
