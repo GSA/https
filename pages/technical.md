@@ -19,7 +19,7 @@ HTTPS today uses **Transport Layer Security**, or **TLS**. TLS is a network prot
 
 Earlier, less secure versions of this protocol were called **Secure Sockets Layer**, or **SSL)**.
 
-SSL and TLS perform the same function, and TLS is a direct successor and replacement for TLS. Because of its early ubiquity, "SSL" is frequently used today to generically refer to TLS/HTTPS. However, all versions of SSL as a protocol are now considered insecure for modern use.
+SSL and TLS perform the same function, and TLS is a direct successor and replacement for SSL. Because of its early ubiquity, "SSL" is frequently used today to generically refer to TLS/HTTPS. However, all versions of SSL as a protocol are now considered insecure for modern use.
 
 The major versions of SSL/TLS in use today are:
 
