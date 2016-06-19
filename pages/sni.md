@@ -13,7 +13,7 @@ However, a few [legacy clients](#client-support) (notably, Internet Explorer on 
 
 Website owners are encouraged to **evaluate whether requiring SNI is feasible**:
 
-* For websites accessed primarily by browsers, look at usage by **Internet Explorer 8 and Android 2.3** (and below). If these usage numbers are low, requiring SNI is likely feasible.
+* For websites accessed primarily by browsers, look at usage by **Internet Explorer on Windows XP**, and **Android 2.3** (and below). If these usage numbers are low, requiring SNI is likely feasible.
 
 * For web services accessed by non-browser clients (e.g. APIs), look at usage by Python 2.7.8 and Java 1.6 (and below), and [any other relevant clients](https://en.wikipedia.org/wiki/Server_Name_Indication#Client_side). APIs with heterogeneous clients may wish to do more sophisticated client detection, or staged rollouts.
 
