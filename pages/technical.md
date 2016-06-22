@@ -86,11 +86,13 @@ In addition to the certificate itself, you should provide a "chain" of intermedi
 
 Failing to provide intermediates could prevent various browsers and clients from successfully connecting to your service, especially mobile browsers and non-browser clients (such as cURL, and tools based on libcurl).
 
-Some browsers will attempt to automatically download missing intermediates, or may have them cached from a previous connection, and so it can be easy to miss this problem during initial configuration.
+Some browsers will cache intermediates from a previous connection or attempt to automatically download missing intermediates that are presented in a certificate's [Authority Information Access](https://tools.ietf.org/html/rfc5280#section-4.2.2.1) extension, and so it can be easy to miss this problem during initial configuration. Though most browsers have an option to inspect the certificates on a site, they vary in whether they show the exact certificates the server presented or a chain as reconstructed through the fetching of an intermediate listed in the AIA extension. 
 
 In general:
 
 * You **do not** need to serve the trusted root that the certificate chains to. The client will compare the chain to a local root store, so serving the root will only waste bytes and slow the connection.
-* You **do** need to serve any intermediate certificates that connect your web server certificate to the trusted root.
+* You **do** need to serve any intermediate certificates that connect your web server certificate to the trusted root. Doing so removes the potential for problems caused by the variation in how clients facilitate trust verification.
 
 Web servers vary in how they are configured to serve intermediates, but it should generally be straightforward.
+
+* **[What's My Chain Cert?](https://whatsmychaincert.com/)** can help determine if any intermediate certificates are not being served.
