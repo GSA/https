@@ -38,5 +38,5 @@ The DigitalGov University has two presentations on HTTPS, led by Eric Mill and G
 
 * Washington Post: [Your browser may soon force you to connect securely to some U.S. government Web sites](https://www.washingtonpost.com/news/the-switch/wp/2015/02/11/your-browser-may-soon-force-you-to-connect-securely-to-some-u-s-government-web-sites/)
 * Washington Post: [The federal government's online privacy watchdog just made its Web site more secure](https://www.washingtonpost.com/news/the-switch/wp/2015/03/06/the-federal-governments-online-privacy-watchdog-just-made-its-web-site-more-secure/)
-* E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](http://e-pluribusunum.org/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
+* E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](https://e-pluribusunum.org/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
 * Motherboard: [Whitehouse.gov Is Now Secure By Default, Signaling a Trend in Government](https://motherboard.vice.com/read/whitehouse-site-is-now-secure-by-default-signaling-a-trend-in-government)
