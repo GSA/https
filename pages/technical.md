@@ -62,7 +62,7 @@ The certificate authority's trusted root certificate (which is included with you
 
 A part of the signature process is computing a "hash" of the data included in the certificate. This can be done using a standard hashing algorithm, such as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) or [SHA-2](https://en.wikipedia.org/wiki/SHA-2).
 
-SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
+SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
 
 [NIST has disallowed SHA-1](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) for digital signature generation after 2013.
 
@@ -73,7 +73,7 @@ While details on browser and OS policies vary, site owners should generally cons
 
 ### RC4
 
-There are a number of ciphers available to a TLS connection, and one of those is [RC4](https://en.wikipedia.org/wiki/RC4) (also known as ARC4 or ARCFOUR). RC4 was a popular cipher due to being a fast cipher which was not vulnerable to the [BEAST](https://community.qualys.com/blogs/securitylabs/2011/10/17/mitigating-the-beast-attack-on-tls) attack. However, in 2013 it was announced that [RC4 had a serious flaw](http://www.isg.rhul.ac.uk/tls/) that would make it possible for a determined attacker to decrypt data encrypted with RC4 in TLS.
+There are a number of ciphers available to a TLS connection, and one of those is [RC4](https://en.wikipedia.org/wiki/RC4) (also known as ARC4 or ARCFOUR). RC4 was a popular cipher due to being a fast cipher which was not vulnerable to the [BEAST](https://blog.qualys.com/ssllabs/2011/10/17/mitigating-the-beast-attack-on-tls) attack. However, in 2013 it was announced that [RC4 had a serious flaw](http://www.isg.rhul.ac.uk/tls/) that would make it possible for a determined attacker to decrypt data encrypted with RC4 in TLS.
 
 Due to the serious flaw in RC4, and the fact that the BEAST attack has been mitigated by all modern browsers, all HTTPS sites should be configured to use ciphers other than RC4.
 
