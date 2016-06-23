@@ -35,7 +35,7 @@ See below for examples of **[how to set an HSTS policy in common web servers](#c
 
 ## Background
 
-Strict Transport Security was [proposed in 2009](https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html), motivated by [Moxie Marlinspike's demonstration](http://www.thoughtcrime.org/software/sslstrip/) of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and [finalized as RFC 6797 in 2012](https://tools.ietf.org/html/rfc6797).
+Strict Transport Security was [proposed in 2009](https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html), motivated by [Moxie Marlinspike's demonstration](https://moxie.org/software/sslstrip/) of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and [finalized as RFC 6797 in 2012](https://tools.ietf.org/html/rfc6797).
 
 The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:
 
