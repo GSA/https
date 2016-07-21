@@ -80,8 +80,6 @@ There are no government-wide rules limiting what CAs federal domains can use.
 
 It is important to understand that, while there may be technical or business reasons for an agency to limit which CAs it uses, **there is no security benefit** to limiting CAs through internal policies alone. Browsers will trust certificates acquired from any publicly trusted CA, and so limiting CA usage internally will not limit the CAs from which an attacker may obtain a forged certificate.
 
-As an analogy: consider a New York company which insists its employees only show New York photo IDs when gaining access to the secure facilities of other US companies or governments. This company's policy alone will not stop someone with a Pennsylvania ID from gaining access while pretending to work for this New York company. For this to be effective, every secure facility in the country must also know to insist on New York IDs for this company, and must enforce this rule.
-
 In practice, federal agencies use a wide variety of publicly trusted commercial CAs and privately trusted enterprise CAs to secure their web services.
 
 ## Then how can I limit which CAs can issue certificates for a domain?
