@@ -11,15 +11,18 @@ The HTTPS-Help listserv is a support forum for anyone with a `.gov` or `.mil` em
 
 ### Learning
 
-The DigitalGov University has two presentations on HTTPS, led by Eric Mill and Gray Brooks from the General Services Administration.
+The DigitalGov University has several presentations on HTTPS from the General Services Administration:
 
-* **[An Introduction to HTTPS for Beginners](https://www.youtube.com/watch?v=d2GmcPYWm5k)**. This introduction runs a little over an hour, and covers how HTTP and the web work, what HTTPS does to help, and [why we should use it for everything](/everything/).
+* **[An Introduction to HTTPS for Beginners](https://www.youtube.com/watch?v=d2GmcPYWm5k)** (June 2015), by Eric Mill and Gray Brooks. This introduction runs a little over an hour, and covers how HTTP and the web work, what HTTPS does to help, and [why we should use it for everything](/everything/).
 
-* **[Implementing HTTPS](https://www.youtube.com/watch?v=rnM2qAfEG-M)**. A more detailed explanation of how HTTPS works, how to migrate a website to HTTPS, the [technical concepts](/technical-guidelines/) you should be aware of when implementing HTTPS, and new and upcoming advances in HTTPS.
+* **[Implementing HTTPS](https://www.youtube.com/watch?v=rnM2qAfEG-M)** (July 2015), by Eric Mill and Gray Brooks. A more detailed explanation of how HTTPS works, how to migrate a website to HTTPS, the [technical concepts](/technical-guidelines/) you should be aware of when implementing HTTPS, and new and upcoming advances in HTTPS.
+
+* **[Migrating to HTTPS](https://www.youtube.com/watch?v=X5H8JRULDOo) (July 2016), by Eric Mill and Timothy Badaczewski. This presentation covers common issues common to federal HTTPS migrations, including: [HTTP Strict Transport Security](/hsts/) (HSTS), [getting certificates](/certificates/), [mixed content](/mixed-content/), and [search engine optimization](/faq/#how-does-migrating-to-https-affect-search-engine-optimization-(seo)%3f) (SEO).
 
 ### Tools
 
-* [`crt.sh`](https://crt.sh) - An [open source](https://github.com/crtsh) public viewer for Certificate Transparency logs. For example, you can view [all publicly logged whitehouse.gov certificates](https://crt.sh/?q=whitehouse.gov).
+* [`crt.sh`](https://crt.sh) - An [open source](https://github.com/crtsh) public viewer for [Certificate Transparency](/certificates/#certificate-transparency) logs. For example, you can view [all publicly logged whitehouse.gov certificates](https://crt.sh/?q=whitehouse.gov).
+* [`certspotter`](https://github.com/SSLMate/certspotter) - An open source tool for monitoring issuance of certificates that appear in [Certificate Transparency](/certificates/#certificate-transparency) logs.
 * [`certlint`](https://github.com/awslabs/certlint) - An open source tool that reviews x.509 certificates for compliance with CA/Browser Forum requirements and various RFCs.
 * [`ssllabs-scan`](https://github.com/ssllabs/ssllabs-scan) - Command line tool for the API for [SSL Labs](https://www.ssllabs.com/ssltest/), a universally referenced HTTPS evaluation and grading tool for public-facing websites.
 * [`site-inspector`](https://github.com/benbalter/site-inspector) - Scan a domain for various web/HTTP-related properties, including HTTPS support.
@@ -33,10 +36,3 @@ The DigitalGov University has two presentations on HTTPS, led by Eric Mill and G
 * CIA: [Statement on CIA Website Enhancement](https://www.cia.gov/news-information/press-releases-statements/press-release-archive-2006/statement-on-cia-website-enhancement.html) from 2006
 * 18F: [Why we use HTTPS for every .gov we make](https://18f.gsa.gov/2014/11/13/why-we-use-https-in-every-gov-website-we-make/)
 * 18F: [The first .gov domains hardcoded into your browser as all-HTTPS](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/)
-
-### News
-
-* Washington Post: [Your browser may soon force you to connect securely to some U.S. government Web sites](https://www.washingtonpost.com/news/the-switch/wp/2015/02/11/your-browser-may-soon-force-you-to-connect-securely-to-some-u-s-government-web-sites/)
-* Washington Post: [The federal government's online privacy watchdog just made its Web site more secure](https://www.washingtonpost.com/news/the-switch/wp/2015/03/06/the-federal-governments-online-privacy-watchdog-just-made-its-web-site-more-secure/)
-* E Pluribus Unum: [White House moves WhiteHouse.gov to HTTPS by default, tying privacy to security](https://e-pluribusunum.org/2015/03/11/white-house-moves-whitehouse-gov-to-https-by-default-tying-privacy-to-security/)
-* Motherboard: [Whitehouse.gov Is Now Secure By Default, Signaling a Trend in Government](https://motherboard.vice.com/read/whitehouse-site-is-now-secure-by-default-signaling-a-trend-in-government)
