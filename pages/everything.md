@@ -33,7 +33,6 @@ The internet's standards bodies, web browsers, major tech companies, and the int
 
 * The W3C's Technical Architecture Group has found that [the web should actively prefer secure connections](https://www.w3.org/2001/tag/doc/web-https) and transition entirely to HTTPS.
 * The IETF has said that [pervasive monitoring is an attack](https://datatracker.ietf.org/doc/rfc7258/), and the Internet Architecture Board (the IETF's parent organization) recommends that [new protocols use encryption by default](https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/).
-* Google has begun to [favor HTTPS websites in search rankings](https://security.googleblog.com/2014/08/https-as-ranking-signal_6.html).
 * The Chrome and [Firefox](https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/) security teams are working on [gradually marking plain HTTP as non-secure](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure).
 
 Ultimately, the goal of the internet community is to establish encryption as the norm, and to phase out unencrypted connections.
