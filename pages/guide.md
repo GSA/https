@@ -81,6 +81,18 @@ M-15-13 requires secure connections for **websites and web services**, which mea
 
 M-15-13 does not address the use of DNS or DNSSEC, FTP or SFTP, or any other non-HTTP network protocol.
 
+### Do I need to shut off port 80?
+
+No. [M-15-13 states](https://https.cio.gov/#footnote-3):
+
+> Allowing HTTP connections for the sole purpose of redirecting clients to HTTPS connections is acceptable and encouraged.
+
+Agencies may employ port 80 for the purpose of redirecting clients to a secure connection.
+
+Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/]) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
+
+HSTS mitigates the security impact of connections over port 80, while allowing agencies the flexibility to continue redirecting legacy clients or clients which have not yet received an HSTS policy for the target domain.
+
 ### What does "all Federal agency domains or subdomains" include?
 
 Domains and subdomains, in the context of M-15-13, refer to hostnames that are publicly accessible via HTTP or HTTPS.
