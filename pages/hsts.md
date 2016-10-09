@@ -69,15 +69,24 @@ In the above example, the browser will remember the HSTS policy for 180 days. Th
 
 ## HSTS Preloading
 
-Since it's just an HTTP header, HSTS is very easy to add to a domain.
+For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
 
-However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain.
+In addition, in many cases, **there may never be a first visit** to `https://domain.gov`. For example:
 
-To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome's HSTS preload list.
+* Many federal websites redirect directly from `http://domain.gov` to `https://www.domain.gov`.
+* Many federal domains that are used solely for redirects will redirect from `http://source.gov` directly to `https://destination.gov`.
+
+In either case, `https://domain.gov` is never visited, meaning connecting clients will never see an HSTS policy with an `includeSubDomains` directive that applies to the whole zone.
+
+To solve this problem, the Chrome security team created an **"HSTS preload list"**: a [list of domains](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json) baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit.
+
+Firefox, Safari, Opera, and Edge also incorporate Chrome's HSTS preload list, making this feature shared across major browsers.
+
+## How to preload a domain
 
 The Chrome security team allows anyone to [submit their domain to the list](https://hstspreload.appspot.com/), provided it meets the following requirements:
 
-* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`) -- especially the `www` subdomain, if a DNS record for it exists.
+* HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`) -- especially the `www` subdomain, if a DNS record for it exists. This necessarily includes any subdomains in use solely on intranets.
 * The HSTS policy includes all subdomains, with a long `max-age`, and a `preload` flag to indicate that the domain owner consents to preloading.
 * The website redirects from HTTP to HTTPS, at least on the root domain.
 
@@ -87,7 +96,9 @@ An example of a valid HSTS header for preloading:
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-While you can't hardcode the entire internet into a big list, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for the near future. As the [web transitions fully to HTTPS](https://www.w3.org/2001/tag/doc/web-https) over the long-term, and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
+In the long term, as the [web transitions fully to HTTPS](https://www.w3.org/2001/tag/doc/web-https) and browsers can start phasing out plain HTTP and defaulting to HTTPS, the HSTS preload list (and HSTS itself) may eventually become unnecessary.
+
+Until that time, the HSTS preload list is a simple, effective mechanism for locking down HTTPS for an entire domain.
 
 ## HSTS as a forcing function
 
