@@ -14,13 +14,15 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Compliance and best practice checklist](#compliance-and-best-practice-checklist)
 * [Options for HSTS compliance](#options-for-hsts-compliance)
 * [Compliance FAQ](#compliance-faq)
-  * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include?)
-  * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites?)
-  * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally?)
-  * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer?)
-  * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https?)
-  * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https?)
-  * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service?)
+  * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13%3f)
+  * [Do I need to shut off port 80?](do-i-need-to-shut-off-port-80%3f)
+  * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include%3f)
+  * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites%3f)
+  * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally%3f)
+  * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer%3f)
+  * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
+  * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https%3f)
+  * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service%3f)
 
 
 ## Compliance and best practice checklist
@@ -74,6 +76,24 @@ This approach allows agencies the flexibility to focus only on publicly accessib
 
 Answers to other common compliance questions appear below.
 
+### What protocols are covered by M-15-13?
+
+M-15-13 requires secure connections for **websites and web services**, which means **only HTTP-based protocols**. This includes all federal websites, as well as federally operated HTTP-based APIs.
+
+M-15-13 does not address the use of DNS or DNSSEC, FTP or SFTP, or any other non-HTTP network protocol.
+
+### Do I need to shut off port 80?
+
+**No.** [M-15-13 states](https://https.cio.gov/#footnote-3):
+
+> Allowing HTTP connections for the sole purpose of redirecting clients to HTTPS connections is acceptable and encouraged.
+
+Agencies may employ port 80 for the sole purpose of redirecting clients to a secure connection.
+
+Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/]) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
+
+HSTS mitigates the security impact of connections over port 80, while allowing agencies the flexibility to continue redirecting legacy clients or clients which have not yet received an HSTS policy for the target domain.
+
 ### What does "all Federal agency domains or subdomains" include?
 
 Domains and subdomains, in the context of M-15-13, refer to hostnames that are publicly accessible via HTTP or HTTPS.
@@ -123,7 +143,7 @@ Agencies are encouraged to operate OCSP and CRL services via hostnames specifica
 
 ### What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?
 
-There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use?) agencies might use to meet the requirements of M-15-13.
+There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use%3f) agencies might use to meet the requirements of M-15-13.
 
 However, M-15-13 requires agencies to do more than just redirect HTTP traffic to HTTPS. It also requires agencies to enable **[HTTP Strict Transport Security](/hsts/)** (HSTS), as [described above](#options-for-hsts-compliance). HSTS ensures that HTTPS is always used, and protects users from several common vulnerabilities.
 
