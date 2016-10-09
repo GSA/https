@@ -14,6 +14,7 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Compliance and best practice checklist](#compliance-and-best-practice-checklist)
 * [Options for HSTS compliance](#options-for-hsts-compliance)
 * [Compliance FAQ](#compliance-faq)
+  * [What protocols are covered by M-15-13?](#__)
   * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include?)
   * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites?)
   * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally?)
@@ -73,6 +74,12 @@ This approach allows agencies the flexibility to focus only on publicly accessib
 ## Compliance FAQ
 
 Answers to other common compliance questions appear below.
+
+### What protocols are covered by M-15-13?
+
+M-15-13 requires secure connections for **websites and web services**, which means protocols that employ HTTP and HTTPS. This includes all federal websites, as well as federally operated HTTP-based APIs.
+
+M-15-13 does not address the use of DNS or DNSSEC, FTP or SFTP, or any other non-HTTP network protocol.
 
 ### What does "all Federal agency domains or subdomains" include?
 
