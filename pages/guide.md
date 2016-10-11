@@ -15,7 +15,7 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Options for HSTS compliance](#options-for-hsts-compliance)
 * [Compliance FAQ](#compliance-faq)
   * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13%3f)
-  * [Do I need to shut off port 80?](do-i-need-to-shut-off-port-80%3f)
+  * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80%3f)
   * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include%3f)
   * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites%3f)
   * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally%3f)
