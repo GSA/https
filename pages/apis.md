@@ -5,6 +5,15 @@ permalink: /apis/
 description: "An outline of the process for migrating a web API from HTTP to HTTPS."
 ---
 
+Examples of federal agency API HTTPS migrations:
+
+* NIH posted a **[detailed HTTPS migration plan for their NCBI APIs](https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml)** that involves 301 redirects for GET/HEAD, 403 responses for other methods, helping to patch community client libraries, and a series of staged blackouts.
+
+* The [api.data.gov platform](https://api.data.gov), which hosts a number of client APIs that proxy through its service, offered its client APIs a **[variety of HTTPS transition options](https://github.com/18F/api.data.gov/issues/34#issuecomment-87524112)**, and restricted HTTP usage of most APIs right away for new API keys. The api.data.gov platform also implemented certificate issuance/renewal by making an [open source nginx/openresty module in Lua](https://github.com/GUI/lua-resty-auto-ssl) that automates the process.
+
+
+## Introduction
+
 All APIs should use and require HTTPS to [help guarantee](/faq/) **confidentiality**, **authenticity**, and **integrity**.
 
 HTTPS provides a stronger guarantee that a client is communicating with the real API and receiving back authentic contents. It also enhances privacy for applications and users using the API. For APIs that support cross-origin request sharing (CORS) or JSONP requests, it also ensures the requests are not blocked as [mixed content](/mixed-content/).
