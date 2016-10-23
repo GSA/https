@@ -9,15 +9,16 @@ Below are some frequently asked questions and answers about HTTPS.
 
 For an in-depth introduction (no technical background required), check out the DigitalGov University presentation, **["An Introduction to HTTPS"](https://www.youtube.com/watch?v=d2GmcPYWm5k)**, to learn what HTTPS is and how it protects web services and users.
 
-* [What does HTTPS do?](#what-does-https-do?)
-* [What information does HTTPS protect?](#what-information-does-https-protect?)
-* [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect?)
-* [How does HTTPS relate to HTTP/2?](#how-does-https-relate-to-http/2?)
-* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-(seo)?)
-* [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection?)
-* [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today?)
-* [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough?)
-* [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing?)
+* [What does HTTPS do?](#what-does-https-do%3f)
+* [What information does HTTPS protect?](#what-information-does-https-protect%3f)
+* [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect%3f)
+* [How does HTTPS relate to HTTP/2?](#how-does-https-relate-to-http/2%3f)
+* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-(seo)%3f)
+* [How can an HTTPS site keep sending referrer information to linked HTTP sites?](#how-can-an-https-site-keep-sending-referrer-information-to-linked-http-sites%3f)
+* [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection%3f)
+* [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today%3f)
+* [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough%3f)
+* [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing%3f)
 
 ### What does HTTPS do?
 
@@ -67,7 +68,7 @@ For more information:
 
 ### How does migrating to HTTPS affect search engine optimization (SEO)?
 
-In general, migrating to HTTPS improves website SEO and intelligence.
+In general, migrating to HTTPS improves a website's own SEO and analytics.
 
 * As of August 2014, Google [uses HTTPS as a ranking signal](https://security.googleblog.com/2014/08/https-as-ranking-signal_6.html), which can improve search rankings.
 * Migrating to HTTPS will improve analytics about web traffic referred from HTTPS websites, as referrer information [is not passed from HTTPS websites to HTTP websites](https://stackoverflow.com/questions/1361705/is-http-header-referer-sent-when-going-to-a-http-page-from-a-https-page/1361720#1361720).
@@ -76,6 +77,22 @@ To make the migration as smooth as possible, and avoid taking a SEO hit:
 
 * Use a **proper 301 redirect** to redirect users from `http://` to `https://`. **Do not use a 302 redirect**, as this may negatively impact search rankings.
 * Use the [canonical link element](https://en.wikipedia.org/wiki/Canonical_link_element) (`<link rel="canonical">`) to inform search engines that the "canonical" URL for a website uses `https://`.
+
+### How can an HTTPS site keep sending referrer information to linked HTTP sites?
+
+By default, when a user is on an HTTPS website and clicks a link to an HTTP website, browsers will not send a `Referer` header to the HTTP website. This is [defined in the HTTP 1.1 specification](https://tools.ietf.org/html/rfc2616#section-15.1.3), and is designed to avoid exposing HTTPS URLs that would otherwise have remained protected by the guarantees of HTTPS.
+
+However, this means that if a website migrates to HTTPS, any HTTP sites it links to will stop seeing referrer data from the HTTPS website. This can be a disincentive to migrate to HTTPS, as it deprives linked HTTP sites of analytics data, and means the HTTPS website won't get "credit" for referring traffic to linked websites.
+
+Website owners who wish to continue sending outbound referrer information to linked HTTP sites can use **[Referrer Policy](https://www.w3.org/TR/referrer-policy/)** to override browser default behavior, while retaining the privacy of HTTPS URLs.
+
+To do this, websites **should use** the [`origin-when-cross-origin`](https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin) policy. The simplest way to do this is by a `<meta>` tag:
+
+```html
+<meta name="referrer" value="origin-when-cross-origin" />
+```
+
+Websites **should not use** the `unsafe-url` policy, as this will cause HTTPS URLs to be exposed on the wire over an HTTP connection, which defeats one of the important privacy and security guarantees of HTTPS.
 
 ### How difficult is it to attack an HTTPS connection?
 
