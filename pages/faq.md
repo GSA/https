@@ -96,6 +96,8 @@ The simplest way to set this policy is by including a `<meta>` tag in the body o
 <meta name="referrer" value="origin-when-cross-origin" />
 ```
 
+The `Referrer-Policy` HTTP header may also be used as an [alternate delivery mechanism](https://www.w3.org/TR/referrer-policy/#referrer-policy-delivery), but this is not widely supported in web browsers (as of late 2016).
+
 Websites **should not use** the `unsafe-url` policy, as this will cause HTTPS URLs to be exposed on the wire over an HTTP connection, which defeats one of the important privacy and security guarantees of HTTPS.
 
 ### How difficult is it to attack an HTTPS connection?
