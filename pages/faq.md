@@ -86,7 +86,7 @@ However, this means that if a website migrates to HTTPS, any HTTP sites it links
 
 Website owners who wish to continue sending outbound referrer information to linked HTTP sites can use **[Referrer Policy](https://www.w3.org/TR/referrer-policy/)** to override browser default behavior, while retaining the privacy of HTTPS URLs.
 
-To do this, websites **should use** the [`origin-when-cross-origin`](https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin) policy. This will allow supporting browsers to send **only the origin** as the `Referer` header when going from an HTTPS site to an HTTP site. 
+To do this, websites **should use** the [`origin-when-cross-origin`](https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin) policy. This will allow supporting browsers to send **only the origin** as the `Referer` header when going from an HTTPS site to an HTTP site.
 
 For example, if a user is on `https://agency.gov/help/aids.html` and clicks a link to `http://moreinformation.com`, then if `origin-when-cross-origin` is set, the browser will make an HTTP request to `http://moreinformation.com` with a `Referer` header of `https://agency.gov`.
 
@@ -95,8 +95,6 @@ The simplest way to set this policy is by including a `<meta>` tag in the body o
 ```html
 <meta name="referrer" value="origin-when-cross-origin" />
 ```
-
-However, some websites may find it easier to use an [alternate delivery mechanism](https://www.w3.org/TR/referrer-policy/#referrer-policy-delivery), such as the `Referrer-Policy` HTTP header.
 
 Websites **should not use** the `unsafe-url` policy, as this will cause HTTPS URLs to be exposed on the wire over an HTTP connection, which defeats one of the important privacy and security guarantees of HTTPS.
 
