@@ -2,7 +2,4 @@
 applications:
 - name: https-site
   memory: 128M
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  env:
-    FORCE_HTTPS: true
-
+  buildpack: staticfile-buildpack
