@@ -19,3 +19,12 @@ notifications:
 branches:
   only:
     - master
+
+ deploy:
+   edge: true
+   provider: cloudfoundry
+   username: "493a147e-7d09-4bb9-8698-819c020787d2"
+   password: "Azwai/EFMGtVvSkIJr4+QCtSaSgnC81L26GqEHJ585Z1XW8TYJDhugBsMJVOdcvmUsdHr877GpKGTCliw7Jd4Oww8eyLPvpoI+5IoyapBFJUQDGNkjLV2S1LafjVXLf3jEh6w4IeSihAiHZ8Cntj0AZgO1H0OA6seuN27uOH6r0="
+   api: https://api.fr.cloud.gov
+   organization: gsa-ogp-pulse
+   space: https

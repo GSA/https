@@ -6,4 +6,4 @@ todo.txt
 /vendor
 .ruby-version
 *.pyc
-
+creds.txt

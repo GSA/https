@@ -7,3 +7,5 @@ gem 'rouge'
 gem 'bourbon'
 gem 'sass'
 gem 'neat'
+
+gem 'travis'
