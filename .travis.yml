@@ -1,30 +1,26 @@
 language: ruby
 rvm:
-  - 2.2.0
-
+- 2.2.0
 sudo: false
 cache: bundler
 git:
   submodules: false
-
 script: bundle exec jekyll b --trace
-
 notifications:
   email:
     recipients:
-      - eric.mill@gsa.gov
+    - eric.mill@gsa.gov
     on_success: change
     on_failure: change
-
 branches:
   only:
-    - master
-
+  - master
 deploy:
   edge: true
   provider: cloudfoundry
-  username: "493a147e-7d09-4bb9-8698-819c020787d2"
-  password: "Azwai/EFMGtVvSkIJr4+QCtSaSgnC81L26GqEHJ585Z1XW8TYJDhugBsMJVOdcvmUsdHr877GpKGTCliw7Jd4Oww8eyLPvpoI+5IoyapBFJUQDGNkjLV2S1LafjVXLf3jEh6w4IeSihAiHZ8Cntj0AZgO1H0OA6seuN27uOH6r0="
+  username: 493a147e-7d09-4bb9-8698-819c020787d2
+  password:
+    secure: Wvzp2V+JZGecfZAUn6QQkp0IV4EEXgefm6a+8TYdCwrIfraBacyEiozKR5XnivHdkAA1IPZT/aAD3ohxfKEb9xU0oFk4vWe7eoRKn8NieYXmEr4S2VEvYH9T4xkbiwXWc8yvKG1ZgSpa8sLFlbop5w1ZDCD1tmM1Yx2q4aU+4LA=
   api: https://api.fr.cloud.gov
   organization: gsa-ogp-pulse
   space: https
