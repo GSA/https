@@ -20,7 +20,7 @@ deploy:
   provider: cloudfoundry
   username: ef1f7c3e-e635-40f0-951b-e0b3b87fdfb1
   password:
-    secure: dCTEfTqfUFEWWTvg+CPO52lyBPH8Q3te7A8hmRRWNHQvgb6ooxA5k9lKcbDiwq19REESHi0+a31ij3Rn4D9800Eo8IqojfMFitMaa2hujyqtNLiySFA/Hr5mN+RBshNn2aJ0CHJZostpHa/FJ3pVoIOxtlnmZvzc1ZPrXvPQHbs=
+    secure: "dCTEfTqfUFEWWTvg+CPO52lyBPH8Q3te7A8hmRRWNHQvgb6ooxA5k9lKcbDiwq19REESHi0+a31ij3Rn4D9800Eo8IqojfMFitMaa2hujyqtNLiySFA/Hr5mN+RBshNn2aJ0CHJZostpHa/FJ3pVoIOxtlnmZvzc1ZPrXvPQHbs="
   api: https://api.fr.cloud.gov
   organization: gsa-ogp-pulse
   space: https
