@@ -1,0 +1,14 @@
+name: https.cio.gov
+description: 'Website to support M-15-13 implementation and HTTPS best practices.'
+license: 'https://github.com/GSA/https/blob/master/LICENSE.md'
+openSourceProject: 1
+governmentWideReuseProject: 0
+tags:
+    - https
+    - tls
+    - policy
+    - jekyll
+    - ssl
+    - encryption
+contact:
+    email: https@cio.gov
