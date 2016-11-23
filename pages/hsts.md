@@ -117,7 +117,7 @@ Zooming out even further: it's technically possible to preload HSTS for an entir
 On **nginx**, you would apply an `add_header` command to the appropriate virtual host configuration. This website, `https.cio.gov`, is hosted on nginx, and uses [this batch of HTTPS rules](https://github.com/fisma-ready/nginx/blob/master/ssl/ssl.rules) to set this header:
 
 ```
-add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload';
+add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload; always';
 ```
 
 On **Apache**, you would apply a `Header` directive to always set the HSTS header, like so:
