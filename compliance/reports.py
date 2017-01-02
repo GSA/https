@@ -72,3 +72,87 @@ for date in parent_pasts:
   })
 compliance_csv(reports, "cache/parents-history.csv")
 
+
+cfo_act_groups = [
+    "Department of Agriculture",
+    "Department of Commerce",
+    "Department of Defense",
+    "Department of Education",
+    "Department of Energy",
+    "Department of Health and Human Services",
+    "Department of Homeland Security",
+    "Department of Housing and Urban Development",
+    "Department of the Interior",
+    [
+        "Department of Justice",
+        "Terrorist Screening Center", # (DOJ/FBI) as seen in .gov data
+    ],
+    "Department of Labor",
+    [
+        "Department of State",
+        "Department of State OIG", # seen in .gov data
+    ],
+    "Department of Transportation",
+    "Department of the Treasury",
+    "Department of Veterans Affairs",
+    "Environmental Protection Agency",
+    "National Aeronautics and Space Administration",
+    "U.S. Agency for International Development", # as seen in .gov data
+    "General Services Administration",
+    "National Science Foundation",
+    "Nuclear Regulatory Commission",
+    "Office of Personnel Management",
+    "Small Business Administration",
+    "Social Security Administration"
+]
+
+
+reports = []
+for group in cfo_act_groups:
+  if isinstance(group, str):
+    group = [group]
+
+  reports.append({
+    'type': 'agency parent domains',
+    'name': str.join(", ", group),
+    'files': parents_only,
+    'filter': utils.for_agencies(group)
+  })
+
+
+compliance_csv(reports, "cache/agencies-parents-latest.csv")
+
+
+
+
+# approximation of all subdomains, given data known from 3 sources at 3 junctures
+all_pasts = [
+  ["data/parents-2016-07-15.csv", "data/dap-2016-07-12.csv", "data/censys-2016-08-04.csv"],
+  ["data/parents-2016-12-05.csv", "data/dap-2016-12-05.csv", "data/censys-2016-12-05.csv"],
+  ["data/parents-2016-12-31.csv", "data/dap-2016-12-31.csv", "data/censys-2016-12-31.csv"],
+]
+
+reports = []
+reports.append({
+  'type': 'all domains/subdomains',
+  'name': "2016-08-01", # approximate
+  'files': all_pasts[0],
+  'filter': utils.live_only
+})
+reports.append({
+  'type': 'all domains/subdomains',
+  'name': "2016-12-05",
+  'files': all_pasts[1],
+  'filter': utils.live_only
+})
+reports.append({
+  'type': 'all domains/subdomains',
+  'name': "2016-12-31",
+  'files': all_pasts[2],
+  'filter': utils.live_only
+})
+
+
+compliance_csv(reports, "cache/all-domains-last-6-months.csv")
+
+

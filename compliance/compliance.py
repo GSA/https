@@ -19,8 +19,7 @@ eot_2016_path = "data/eot-2016.csv"
 
 # past scans
 def past(type, date):
-  return ("data/past/%s-%s.csv" % (type, date))
-
+  return ("data/%s-%s.csv" % (type, date))
 
 
 def pct(num, denom):
@@ -88,10 +87,6 @@ parent_pasts = ['2015-06-13',  '2015-06-19',  '2015-06-26',  '2015-07-03',  '201
 dap_pasts = ["2016-07-12", "2016-12-05", "2016-12-31"]
 censys_pasts = ["2016-08-04", "2016-12-05", "2016-12-31"]
 
-# approximation of all subdomains, given data known from 3 sources at 3 junctures
-all_pasts = [
-
-]
 
 
 cfo_act_groups = [
@@ -127,6 +122,7 @@ cfo_act_groups = [
     "Social Security Administration"
 ]
 
+
 reports = []
 for group in cfo_act_groups:
   if isinstance(group, str):
@@ -135,11 +131,11 @@ for group in cfo_act_groups:
   reports.append({
     'type': 'agency parent domains',
     'name': str.join(", ", group),
-    'files': parents_only,
+    'files': all_domains,
     'filter': utils.for_agencies(group)
   })
 
 
-compliance_csv(reports, "cache/agencies-parents-latest.csv")
+compliance_csv(reports, "cache/agencies-subdomains-latest.csv")
 
 
