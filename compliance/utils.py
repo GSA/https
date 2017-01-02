@@ -118,6 +118,14 @@ def compliance_for(pshtt):
 
     return report
 
+# Given a compliance report (e.g. uses=1, enforces=2, hsts=2)
+# return a dict with them turned into labels
+def compliance_labels(report):
+    return {
+        'uses': (report['uses'] >= 1),
+        'enforces': (report['enforces'] >= 2),
+        'hsts': (report['hsts'] >= 2),
+    }
 
 # Given a set of domains, calculate the compliance totals
 # that meet M-15-13 requirements.
@@ -189,9 +197,23 @@ def for_agencies(filter_agencies):
 
     return the_filter
 
+# a specific list of executive branch domains
+# used to filter on DAP-tracked domains
+def specific_executive(list_of_domains):
+
+    def the_filter(pshtt, agency, branch):
+        executive = executive_only(pshtt, agency, branch)
+        return executive and (pshtt['Domain'] in list_of_domains)
+
+    return the_filter
+
 def executive_only(pshtt, agency, branch):
     live = live_only(pshtt, agency, branch)
     return live and (branch == "executive")
+
+def non_executive(pshtt, agency, branch):
+    live = live_only(pshtt, agency, branch)
+    return live and (branch != "executive")
 
 def legislative_only(pshtt, agency, branch):
     live = live_only(pshtt, agency, branch)

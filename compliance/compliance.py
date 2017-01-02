@@ -87,55 +87,11 @@ parent_pasts = ['2015-06-13',  '2015-06-19',  '2015-06-26',  '2015-07-03',  '201
 dap_pasts = ["2016-07-12", "2016-12-05", "2016-12-31"]
 censys_pasts = ["2016-08-04", "2016-12-05", "2016-12-31"]
 
-
-
-cfo_act_groups = [
-    "Department of Agriculture",
-    "Department of Commerce",
-    "Department of Defense",
-    "Department of Education",
-    "Department of Energy",
-    "Department of Health and Human Services",
-    "Department of Homeland Security",
-    "Department of Housing and Urban Development",
-    "Department of the Interior",
-    [
-        "Department of Justice",
-        "Terrorist Screening Center", # (DOJ/FBI) as seen in .gov data
-    ],
-    "Department of Labor",
-    [
-        "Department of State",
-        "Department of State OIG", # seen in .gov data
-    ],
-    "Department of Transportation",
-    "Department of the Treasury",
-    "Department of Veterans Affairs",
-    "Environmental Protection Agency",
-    "National Aeronautics and Space Administration",
-    "U.S. Agency for International Development", # as seen in .gov data
-    "General Services Administration",
-    "National Science Foundation",
-    "Nuclear Regulatory Commission",
-    "Office of Personnel Management",
-    "Small Business Administration",
-    "Social Security Administration"
-]
-
-
 reports = []
-for group in cfo_act_groups:
-  if isinstance(group, str):
-    group = [group]
-
-  reports.append({
-    'type': 'agency parent domains',
-    'name': str.join(", ", group),
-    'files': all_domains,
-    'filter': utils.for_agencies(group)
-  })
-
-
-compliance_csv(reports, "cache/agencies-subdomains-latest.csv")
-
-
+reports.append({
+  'type': 'Most subdomains on 12/31 (all branches)',
+  'name': "2016-12-31",
+  'files': all_domains,
+  'filter': utils.executive_only
+})
+compliance_csv(reports, "cache/all-domains-executive-snapshot.csv")

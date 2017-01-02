@@ -156,3 +156,80 @@ reports.append({
 compliance_csv(reports, "cache/all-domains-last-6-months.csv")
 
 
+
+
+reports = []
+for date in parent_pasts:
+  reports.append({
+    'type': 'parents',
+    'name': date,
+    'files': [past('parents', date)],
+    'filter': utils.cfo_act_only
+  })
+compliance_csv(reports, "cache/cfo-act-parents-history.csv")
+
+
+
+
+reports = []
+reports.append({
+  'type': 'Most subdomains on 12/31 (all branches)',
+  'name': "2016-12-31",
+  'files': all_domains,
+  'filter': utils.cfo_act_only
+})
+compliance_csv(reports, "cache/cfo-act-all-domains-snapshot.csv")
+
+
+
+
+
+reports = []
+reports.append({
+  'type': 'Most subdomains on 12/31 (all branches)',
+  'name': "2016-12-31",
+  'files': all_domains,
+  'filter': utils.live_only
+})
+compliance_csv(reports, "cache/all-domains-snapshot.csv")
+
+
+
+
+# Estimating traffic covered by HTTPS, now (for subdomains)
+# and over time (for parent domains).
+# Load in all DAP-tracked domains with > 1000 visits over the prior 30 days
+analytics_rows = utils.load_domains("data/analytics-domains/all-domains-30-days-2017-01-01.csv", whole_rows=True)
+analytics = {}
+for row in analytics_rows:
+  analytics[row[0].lower()] = int(row[1])
+
+# load the exec branch domains to evaluate against, filter to those included
+data = utils.load_pshtt(
+  all_domains, base_domains,
+  filter=utils.specific_executive(list(analytics.keys()))
+)
+
+# Now go through each one and write out a spreadsheet combining the
+# results for each domain with their visits as recorded in DAP
+
+tracked_domains = list(data.keys())
+tracked_domains.sort()
+
+headers = ["Domain", "Base Domain", "Visits", "Uses HTTPS", "Enforces HTTPS", "HSTS", "Downgrades HTTPS"]
+rows = []
+for domain in tracked_domains:
+  labels = utils.compliance_labels(data[domain]['compliance'])
+
+  rows.append([
+    domain,
+    data[domain]['base_domain'],
+    analytics[domain],
+    labels['uses'],
+    labels['enforces'],
+    labels['hsts'],
+    data[domain]['pshtt']['Downgrades HTTPS']
+  ])
+
+utils.save_csv(headers, rows, "cache/https-by-dap-visits.csv")
+
