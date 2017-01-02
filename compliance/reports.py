@@ -1,3 +1,10 @@
+
+#########################################################
+#
+# Just scratch space, this won't execute or import properly.
+#
+#########################################################
+
 name = "All executive parent domains"
 compliance_stats(name, parents_only, utils.executive_only)
 

@@ -11,15 +11,17 @@ preloaded = set(utils.fetch_preloaded()) & set(base_domains)
 preload_pending = set(utils.fetch_preload_pending()) & set(base_domains)
 
 # paths to scanned data
-parents_path = "../hostnames/scanned/parents-2016-12.csv"
-dap_path = "../hostnames/scanned/dap-2016-12.csv"
-censys_path = "../hostnames/scanned/censys-2016-12.csv"
-eot_2012_path = "../hostnames/scanned/eot-2012.csv"
-eot_2016_path = "../hostnames/scanned/eot-2016.csv"
+parents_path = "data/parents-2016-12-31.csv"
+dap_path = "data/dap-2016-12-31.csv"
+censys_path = "data/censys-2016-12-31.csv"
+eot_2012_path = "data/eot-2012.csv"
+eot_2016_path = "data/eot-2016.csv"
 
 # past scans
 def past(type, date):
-  return ("../hostnames/scanned/past/%s-%s.csv" % (type, date))
+  return ("data/past/%s-%s.csv" % (type, date))
+
+
 
 def pct(num, denom):
   return round((num / denom) * 100)
@@ -139,3 +141,5 @@ for group in cfo_act_groups:
 
 
 compliance_csv(reports, "cache/agencies-parents-latest.csv")
+
+
