@@ -2,4 +2,4 @@
 applications:
 - name: https-site
   memory: 128M
-  buildpack: staticfile-buildpack
+  buildpack: staticfile_buildpack
