@@ -57,7 +57,7 @@ Under either approach, web services used by non-browser clients (e.g. APIs) must
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-* The domain has been successfully [submitted and added to the HSTS preload list](https://hstspreload.appspot.com).
+* The domain has been successfully [submitted and added to the HSTS preload list](https://hstspreload.org).
 * Individual website subdomains are still encouraged to set their own HSTS policies.
 
 HSTS preloading a parent domain allows agencies to avoid inventorying and configuring an HSTS policy for every individual subdomain. However, this approach also automatically includes **all** subdomains present on this domain -- including intranet subdomains. All subdomains will need to support HTTPS in order to remain reachable for use in major browsers.

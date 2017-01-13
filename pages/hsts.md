@@ -84,7 +84,7 @@ Firefox, Safari, Opera, and Edge also incorporate Chrome's HSTS preload list, ma
 
 ## How to preload a domain
 
-The Chrome security team allows anyone to [submit their domain to the list](https://hstspreload.appspot.com/), provided it meets the following requirements:
+The Chrome security team allows anyone to [submit their domain to the list](https://hstspreload.org), provided it meets the following requirements:
 
 * HTTPS is enabled on the root domain (e.g. `https://donotcall.gov`), and **all subdomains** (e.g. `https://www.donotcall.gov`) -- especially the `www` subdomain, if a DNS record for it exists. This necessarily includes any subdomains in use solely on intranets.
 * The HSTS policy includes all subdomains, with a long `max-age`, and a `preload` flag to indicate that the domain owner consents to preloading.
@@ -148,6 +148,6 @@ Here are some links to do that with other web servers:
 
 * [Browser support for HSTS](http://caniuse.com/#feat=stricttransportsecurity)
 * [HSTS web developer documentation](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security) maintained by the Mozilla community
-* Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.appspot.com/).
+* Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.org).
 * ["Upgrading HTTPS in Mid-Air"](https://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
 * ["The first .gov domains hardcoded into your browser as all-HTTPS"](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/), by 18F.
