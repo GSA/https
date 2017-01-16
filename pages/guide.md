@@ -18,6 +18,7 @@ This page provides implementation guidance for agencies by the White House Offic
   * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80%3f)
   * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include%3f)
   * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites%3f)
+  * [Do domains that redirect to other external domains need to redirect internally to HTTPS before redirecting externally?](#do-domains-that-redirect-to-other-external-domains-need-to-redirect-internally-to-https-before-redirecting-externally%3f)
   * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally%3f)
   * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer%3f)
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
@@ -106,13 +107,17 @@ Federally operated domains do not all end in `.gov`, `.mil`, or `.fed.us`. Some 
 
 ### What about domains that are only used to redirect visitors to other websites?
 
-These domains must enable port 443, use and enforce HTTPS, and follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
+These domains must enable port 443 and use properly configured HTTPS.
 
-### Do domains that redirect to an external domain first need to redirect internally to the secure form of itself?
+They must follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
 
-It is not required, for example, to redirect from `http://example.gov:80` to `https://example.gov:443` before redirecting to `https://another-example.gov:443`. However, doing so enables the connecting client to see and cache the HSTS header on `example.gov`, which may not otherwise be seen. 
+### Do domains that redirect to other external domains need to redirect internally to HTTPS before redirecting externally?
 
-Redirecting internally is a [prerequisite to preloading a domain](https://hstspreload.org/#submission-requirements). As only second-level domains can be preloaded, this practice is recommended for second-level domains.
+Not generally, but it is practically required in order to preload a second-level domain.
+
+For example, it is not required by M-15-13 to redirect from `http://example.gov:80` to `https://example.gov:443` before redirecting to `https://another-example.gov:443`. However, doing so enables the connecting client to see and cache the HSTS header on `example.gov`, which it may not otherwise see.
+
+However, doing an internal redirect first **is required** [to automatically preload second-level domains](https://hstspreload.org/#submission-requirements), and so this practice is recommended for second-level domains.
 
 ### What about domains that are technically public, but in practice are only used internally?
 
