@@ -106,7 +106,13 @@ Federally operated domains do not all end in `.gov`, `.mil`, or `.fed.us`. Some 
 
 ### What about domains that are only used to redirect visitors to other websites?
 
-These domains must follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
+These domains must enable port 443, use and enforce HTTPS, and follow all the same requirements and guidelines as domains used to host websites and APIs, including HSTS and preloading.
+
+### Do domains that redirect to an external domain first need to redirect internally to the secure form of itself?
+
+It is not required, for example, to redirect from `http://example.gov:80` to `https://example.gov:443` before redirecting to `https://another-example.gov:443`. However, doing so enables the connecting client to see and cache the HSTS header on `example.gov`, which may not otherwise be seen. 
+
+Redirecting internally is a [prerequisite to preloading a domain](https://hstspreload.org/#submission-requirements). As only second-level domains can be preloaded, this practice is recommended for second-level domains.
 
 ### What about domains that are technically public, but in practice are only used internally?
 
