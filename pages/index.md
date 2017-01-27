@@ -7,13 +7,13 @@ description: "The American people expect government websites to be secure and th
 
 The American people expect government websites to be secure and their interactions with those websites to be private.
 
-This site contains a web-friendly version of the White House Office of Management and Budget memorandum [M-15-13](https://www.whitehouse.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf), **"A Policy to Require Secure Connections across Federal Websites and Web Services"**, and provides technical guidance and best practices to assist in its implementation.
+This site contains a web-friendly version of the White House Office of Management and Budget memorandum [M-15-13](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf), **"A Policy to Require Secure Connections across Federal Websites and Web Services"**, and provides technical guidance and best practices to assist in its implementation.
 
 ## Goal
 
 This Memorandum requires that all publicly accessible Federal websites and <a class="footnote" name="footnote-source-1"></a>web services [[1]](#footnote-1) only provide service through a secure connection.  The strongest privacy and integrity protection currently available for public web connections is [Hypertext Transfer Protocol Secure (HTTPS)](/faq/).
 
-This Memorandum expands upon the material in prior Office of Management and Budget (OMB) guidance found in [M-05-04](https://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2005/m05-04.pdf "Policies for Federal Agency Public Websites") and relates to material in [M-08-23](https://www.whitehouse.gov/sites/default/files/omb/assets/omb/memoranda/fy2008/m08-23.pdf "Securing the Federal Government’s Domain Name System Infrastructure."). It provides guidance to agencies for making the transition to HTTPS and a deadline by which agencies must be in compliance.
+This Memorandum expands upon the material in prior Office of Management and Budget (OMB) guidance found in [M-05-04](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2005/m05-04.pdf "Policies for Federal Agency Public Websites") and relates to material in [M-08-23](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/omb/memoranda/fy2008/m08-23.pdf "Securing the Federal Government’s Domain Name System Infrastructure."). It provides guidance to agencies for making the transition to HTTPS and a deadline by which agencies must be in compliance.
 
 ## Background
 
