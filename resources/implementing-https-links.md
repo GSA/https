@@ -6,7 +6,7 @@ See the [recorded presentation on YouTube](https://www.youtube.com/watch?v=rnM2q
 
 * [https.cio.gov FAQ on HTTPS](https://https.cio.gov/faq/)
 * [Mozilla blog post on deprecating non-secure HTTP](https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/)
-* [OMB Memorandum M-15-13](https://www.whitehouse.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf)
+* [OMB Memorandum M-15-13](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf)
 
 #### How HTTPS Works
 

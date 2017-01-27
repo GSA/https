@@ -5,7 +5,7 @@ permalink: /guide/
 description: "Guide for agencies on implementing the HTTPS transition."
 ---
 
-[M-15-13](https://www.whitehouse.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf) calls for "all publicly accessible Federal websites and web services" to only provide service through a secure connection (HTTPS), and to use [HTTP Strict Transport Security](/hsts/) (HSTS) to ensure this.
+[M-15-13](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf) calls for "all publicly accessible Federal websites and web services" to only provide service through a secure connection (HTTPS), and to use [HTTP Strict Transport Security](/hsts/) (HSTS) to ensure this.
 
 This applies to all public domains and subdomains operated by the federal government, regardless of the domain suffix, as long as they are reachable over HTTP/HTTPS on the public internet.
 
