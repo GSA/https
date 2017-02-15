@@ -19,6 +19,9 @@ The DigitalGov University has several presentations on HTTPS from the General Se
 
 * **[Migrating to HTTPS](https://www.youtube.com/watch?v=X5H8JRULDOo)** (July 2016), by Eric Mill and Timothy Badaczewski. This presentation covers common issues common to federal HTTPS migrations, including: [HTTP Strict Transport Security](/hsts/) (HSTS), [getting certificates](/certificates/), [mixed content](/mixed-content/), and [search engine optimization](/faq/#how-does-migrating-to-https-affect-search-engine-optimization-(seo)%3f) (SEO).
 
+* **[Moving to HTTPS](https://online.marketing/guide/https/)** (October 2016), by Fili Wiese. This guide is focused on how to move to HTTPS from a search engine optimization (SEO) point of view with many code snippets.
+
+
 ### Tools
 
 * [`crt.sh`](https://crt.sh) - An [open source](https://github.com/crtsh) public viewer for [Certificate Transparency](/certificates/#certificate-transparency) logs. For example, you can view [all publicly logged whitehouse.gov certificates](https://crt.sh/?q=whitehouse.gov).
