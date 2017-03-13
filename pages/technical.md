@@ -80,9 +80,6 @@ When configuring servers:
 
 * <a name="rc4"></a>**Avoid RC4.** [RC4](https://en.wikipedia.org/wiki/RC4) was once a popular cipher, but [in 2013 was found to have a critical flaw](http://www.isg.rhul.ac.uk/tls/). Modern browsers no longer support RC4-based ciphersuites, and servers should no longer need to be configured to support RC4.
 
-* **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain employs the RC4 cipher.
-* **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to avoid using the RC4 cipher.
-
 ### A complete certificate chain
 
 In addition to the certificate itself, you should provide a "chain" of intermediate certificates that give the connecting browser or client enough information to connect the certificate to a trusted root certificate.
