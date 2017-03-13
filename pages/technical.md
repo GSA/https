@@ -10,7 +10,7 @@ This page covers some relevant technical concepts relevant to the **strength and
 * [SSL and TLS](#ssl-and-tls)
 * [Forward secrecy](#forward-secrecy)
 * [Signature algorithms](#signature-algorithms), such as SHA-1 and SHA-2
-* [RC4](#rc4), a common but insecure cipher
+* [Strong ciphersuites](#strong-ciphersuites)
 * [A complete certificate chain](#a-complete-certificate-chain)
 
 ### SSL and TLS
@@ -66,14 +66,19 @@ SHA-1 has been shown to have serious weaknesses, and so browser and OS providers
 
 As of January 2016, commercial CAs are forbidden by most root programs from issuing a SHA-1 certificate. As such, obtaining a publicly trusted SHA-1 certificate is no longer feasible. In addition, site owners with an existing SHA-1 certificate should be aware that many browsers and OSes will be disabling SHA-1 support in early 2017.
 
-### RC4
+### Strong ciphersuites
 
-There are a number of ciphers available to a TLS connection, and one of those is [RC4](https://en.wikipedia.org/wiki/RC4) (also known as ARC4 or ARCFOUR). RC4 was a popular cipher due to being a fast cipher which was not vulnerable to the [BEAST](https://blog.qualys.com/ssllabs/2011/10/17/mitigating-the-beast-attack-on-tls) attack. However, in 2013 it was announced that [RC4 had a serious flaw](http://www.isg.rhul.ac.uk/tls/) that would make it possible for a determined attacker to decrypt data encrypted with RC4 in TLS.
+Each TLS handshake makes use of a set of cryptographic primitives, including ciphers and signature algorithms.
 
-Due to the serious flaw in RC4, and the fact that the BEAST attack has been mitigated by all modern browsers, modern browsers no longer support RC4-based ciphersuites. Therefore all HTTPS sites need to be configured to use ciphers other than RC4.
+Which ciphers and algorithms are used in a handshake is a function of client support and preferences, and server support and preferences.
 
-* **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain employs the RC4 cipher.
-* **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to avoid using the RC4 cipher.
+Federal agencies have no control over the primitives supported by major clients used by the public (such as web browsers, cURL, and other common HTTP clients). However, agencies can control the ciphers and algorithms that are supported by their servers (which can also include proxies, load balancers, or content delivery networks).
+
+When configuring servers:
+
+* <a name="sha1-in-handshake"></a>**Avoid SHA-1 in the TLS handshake.** Though there is no known specific vulnerability in the use of SHA-1 as part of the TLS handshake, SHA-1 has already been shown to be [unacceptably weak for use as a signature algorithm for issued certificates](#signature-algorithms). Beginning [with TLS 1.2](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1), servers can and should negotiate the use of a signature algorithm other than SHA-1 for the TLS handshake.
+
+* <a name="rc4"></a>**Avoid RC4.** [RC4](https://en.wikipedia.org/wiki/RC4) was once a popular cipher, but [in 2013 was found to have a critical flaw](http://www.isg.rhul.ac.uk/tls/). Modern browsers no longer support RC4-based ciphersuites, and servers should no longer need to be configured to support RC4.
 
 ### A complete certificate chain
 
@@ -81,7 +86,7 @@ In addition to the certificate itself, you should provide a "chain" of intermedi
 
 Failing to provide intermediates could prevent various browsers and clients from successfully connecting to your service, especially mobile browsers and non-browser clients (such as cURL, and tools based on libcurl).
 
-Some browsers will cache intermediates from a previous connection or attempt to automatically download missing intermediates that are presented in a certificate's [Authority Information Access](https://tools.ietf.org/html/rfc5280#section-4.2.2.1) extension, and so it can be easy to miss this problem during initial configuration. Though most browsers have an option to inspect the certificates on a site, they vary in whether they show the exact certificates the server presented or a chain as reconstructed through the fetching of an intermediate listed in the AIA extension. 
+Some browsers will cache intermediates from a previous connection or attempt to automatically download missing intermediates that are presented in a certificate's [Authority Information Access](https://tools.ietf.org/html/rfc5280#section-4.2.2.1) extension, and so it can be easy to miss this problem during initial configuration. Though most browsers have an option to inspect the certificates on a site, they vary in whether they show the exact certificates the server presented or a chain as reconstructed through the fetching of an intermediate listed in the AIA extension.
 
 In general:
 
