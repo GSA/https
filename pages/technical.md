@@ -76,9 +76,9 @@ Federal agencies have no control over the primitives supported by major clients 
 
 When configuring servers:
 
-* <a name="sha1-in-handshake"></a>**Avoid SHA-1 in the TLS handshake.** Though there is no known specific vulnerability in the use of SHA-1 as part of the TLS handshake, SHA-1 has already been shown to be [unacceptably weak for use as a signature algorithm for issued certificates](#signature-algorithms). Beginning [with TLS 1.2](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1), servers can and should negotiate the use of a signature algorithm other than SHA-1 for the TLS handshake.
+* **Avoid SHA-1 in the TLS handshake.** Though there is no known specific vulnerability in the use of SHA-1 as part of the TLS handshake, SHA-1 has already been shown to be [unacceptably weak for use as a signature algorithm for issued certificates](#signature-algorithms). Beginning [with TLS 1.2](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1), servers can and should negotiate the use of a signature algorithm other than SHA-1 for the TLS handshake.
 
-* <a name="rc4"></a>**Avoid RC4.** [RC4](https://en.wikipedia.org/wiki/RC4) was once a popular cipher, but [in 2013 was found to have a critical flaw](http://www.isg.rhul.ac.uk/tls/). Modern browsers no longer support RC4-based ciphersuites, and servers should no longer need to be configured to support RC4.
+* **Avoid RC4.** [RC4](https://en.wikipedia.org/wiki/RC4) was once a popular cipher, but [in 2013 was found to have a critical flaw](http://www.isg.rhul.ac.uk/tls/). Modern browsers no longer support RC4-based ciphersuites, and servers should no longer need to be configured to support RC4.
 
 ### A complete certificate chain
 
