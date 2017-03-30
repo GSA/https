@@ -9,7 +9,7 @@ description: "Guide for agencies on implementing the HTTPS transition."
 
 This applies to all public domains and subdomains operated by the federal government, regardless of the domain suffix, as long as they are reachable over HTTP/HTTPS on the public internet.
 
-This page provides implementation guidance for agencies by the White House Office of Management and Budget, as agencies manage the transition to HTTPS by December 31, 2016.
+This page provides implementation guidance for agencies by the White House Office of Management and Budget, as agencies manage their transition to HTTPS.
 
 * [Compliance and best practice checklist](#compliance-and-best-practice-checklist)
 * [Options for HSTS compliance](#options-for-hsts-compliance)
