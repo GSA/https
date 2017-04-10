@@ -24,7 +24,8 @@ This page provides implementation guidance for agencies by the White House Offic
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
   * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https%3f)
   * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service%3f)
-
+  * [What about network services with domain names that listen on common web ports, but are not meant to be websites or have web pages?](what-about-network-services-with-domain-names-that-listen-on-common-web-ports,-but-are-not-meant-to-be-websites-or-have-web-pages%3f)
+  * [What about web servers that only respond with code 4xx or 5xx errors?](what-about-web-servers-that-only-respond-with-code-4xx-or-5xx-errors%3f)
 
 ## Compliance and best practice checklist
 
@@ -168,3 +169,13 @@ In practice, to deploy HSTS while using federally issued certificates, an agency
 * Federally issued certificates will not be practical for web services whose users may not always be expected to trust the issuing federal certificate authority. These web services will likely require the use of a certificate from a publicly trusted (commercial) CA.
 
 Whatever strategy an agency employs to manage the use of federally issued certificates, it should allow the practical deployment of [HSTS](/hsts/) across all of its publicly accessible websites and web services.
+
+### What about network services with domain names that listen on common web ports, but are not meant to be websites or have web pages?
+
+For the purposes of M-15-13 compliance, any network service that responds to HTTP requests is in-scope for auditing. The content of a server's response is generally immaterial to compliance auditing criteria, save for the validity of its cryptographic certificates and the presence of appropriate header parameters. Otherwise, a server's intended function and whether or not an actual web page is provided is irrelevant.
+
+### What about web servers that only respond with code 4xx or 5xx errors?
+
+M-13-15 compliance applies to any network service that responds to HTTP requests. A server that responds with 4xx and 5xx status codes, which are perfectly valid HTTP errors, is in-scope for auditing.
+
+Note that a web server that only responds with 5xx status codes may not be functioning as intended and may require additional attention from its administrators.
