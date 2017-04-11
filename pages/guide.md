@@ -16,6 +16,8 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Compliance FAQ](#compliance-faq)
   * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13%3f)
   * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80%3f)
+  * [What about network services with domain names that listen on common web ports, but are not meant to be websites or have web pages?](what-about-network-services-with-domain-names-that-listen-on-common-web-ports,-but-are-not-meant-to-be-websites-or-have-web-pages%3f)
+  * [What about web servers that only respond with code 4xx or 5xx errors?](what-about-web-servers-that-only-respond-with-code-4xx-or-5xx-errors%3f)
   * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include%3f)
   * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites%3f)
   * [Do domains that redirect to other external domains need to redirect internally to HTTPS before redirecting externally?](#do-domains-that-redirect-to-other-external-domains-need-to-redirect-internally-to-https-before-redirecting-externally%3f)
@@ -24,8 +26,6 @@ This page provides implementation guidance for agencies by the White House Offic
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
   * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https%3f)
   * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service%3f)
-  * [What about network services with domain names that listen on common web ports, but are not meant to be websites or have web pages?](what-about-network-services-with-domain-names-that-listen-on-common-web-ports,-but-are-not-meant-to-be-websites-or-have-web-pages%3f)
-  * [What about web servers that only respond with code 4xx or 5xx errors?](what-about-web-servers-that-only-respond-with-code-4xx-or-5xx-errors%3f)
 
 ## Compliance and best practice checklist
 
@@ -92,9 +92,21 @@ M-15-13 does not address the use of DNS or DNSSEC, FTP or SFTP, or any other non
 
 Agencies may employ port 80 for the sole purpose of redirecting clients to a secure connection.
 
+HTTP redirects must use a response code in the 300's that can reliably cause HTTP clients to perform redirects to an HTTPS URI, such as 301 or 302.
+
+The use of error codes in the 400's or 500's **will not** satisfy this requirement.
+
 Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/]) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
 
 HSTS mitigates the security impact of connections over port 80, while allowing agencies the flexibility to continue redirecting legacy clients or clients which have not yet received an HSTS policy for the target domain.
+
+### What about network services that don't actually serve web content?
+
+M-15-13 covers any publicly accessible network service that responds to HTTP requests. This includes network services that don't serve content, but only return HTTP headers, or blank or insubstantial content.
+
+This also includes services that respond to HTTP requests on non-standard ports (ports other than 80 or 443), whether or not those services are included in external scans provided to agencies.
+
+Network services which do not respond to HTTP requests are not included in the scope of M-15-13.
 
 ### What does "all Federal agency domains or subdomains" include?
 
@@ -169,13 +181,3 @@ In practice, to deploy HSTS while using federally issued certificates, an agency
 * Federally issued certificates will not be practical for web services whose users may not always be expected to trust the issuing federal certificate authority. These web services will likely require the use of a certificate from a publicly trusted (commercial) CA.
 
 Whatever strategy an agency employs to manage the use of federally issued certificates, it should allow the practical deployment of [HSTS](/hsts/) across all of its publicly accessible websites and web services.
-
-### What about network services with domain names that listen on common web ports, but are not meant to be websites or have web pages?
-
-For the purposes of M-15-13 compliance, any network service that responds to HTTP requests is in-scope for auditing. The content of a server's response is generally immaterial to compliance auditing criteria, save for the validity of its cryptographic certificates and the presence of appropriate header parameters. Otherwise, a server's intended function and whether or not an actual web page is provided is irrelevant.
-
-### What about web servers that only respond with code 4xx or 5xx errors?
-
-M-13-15 compliance applies to any network service that responds to HTTP requests. A server that responds with 4xx and 5xx status codes, which are perfectly valid HTTP errors, is in-scope for auditing.
-
-Note that a web server that only responds with 5xx status codes may not be functioning as intended and may require additional attention from its administrators.
