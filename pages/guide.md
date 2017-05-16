@@ -24,6 +24,7 @@ This page provides implementation guidance for agencies by the White House Offic
   * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer%3f)
   * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
   * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https%3f)
+  * [How can I avoid breaking XML clients that resolve external DTDs and XML entities over plain HTTP?](#how-can-i-avoid-breaking-xml-clients-that-resolve-external-dtds-and-xml-entities-over-plain-http%3f)
   * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service%3f)
 
 ## Compliance and best practice checklist
@@ -163,6 +164,31 @@ Where privacy is a requirement, OCSP transactions exchanged using HTTP MAY be pr
 
 Agencies are encouraged to operate OCSP and CRL services via hostnames specifically reserved for those services, so that other related information and functionality can be served securely and privately.
 
+### How can I avoid breaking XML clients that resolve external DTDs and XML entities over plain HTTP?
+
+In some specific cases, agencies may host DTDs or other XML entities that cause common XML clients to resolve system identifiers for DOCTYPEs and external entity declarations by fetching `http://` URIs.
+
+This might look like:
+
+```xml
+<!DOCTYPE PUBLIC "//name" SYSTEM "http://example.gov/dtds/example.dtd">
+```
+
+Or:
+
+```xml
+<!ENTITY entityname SYSTEM "http://example.gov/entities/logo.xml">
+```
+
+At this time, most common XML clients are unable to make TLS connections over HTTPS, or are unable to follow redirects from `http://` to `https://`.
+
+For this specific and narrow class of services, agencies should:
+
+* Continue serving the content directly over HTTP. (Don't redirect clients to HTTPS.)
+* Serve the content over HTTPS if directly accessed at an `https://` URI.
+* Enable [HSTS](/hsts/) for the domain as otherwise expected by M-15-13. As with all domains, [preloading of the base domain is encouraged](#options-for-hsts-compliance).
+
+Agencies should also notify their user community to the greatest extent possible that the relevant DTDs and XML entities are now available over `https://` URIs, and that clients and users are strongly encouraged to support and use these URIs.
 
 ### What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?
 
