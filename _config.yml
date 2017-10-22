@@ -1,4 +1,17 @@
-# markdown
+# Site metadata
+title: The HTTPS-Only Standard
+description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
+url: https://https.cio.gov
+
+# DAP, GA, and GitHub
+dap_agency: GSA
+google_analytics_ua: UA-48605964-20
+repo: https://github.com/GSA/https
+
+# Standard
+uswds_path: assets/vendor/uswds
+
+# TODO: get rid of this
 highlighter: rouge
 markdown: redcarpet
 redcarpet:
@@ -7,53 +20,17 @@ redcarpet:
   - with_toc_data
 
 exclude:
+- compliance
+- resources
 - ".ruby-version"
 - ".jekyll-metadata"
 - ".gitignore"
-- ".travis.yml"
 - todo.txt
-- resources
+- Staticfile
 - Gemfile
 - Gemfile.lock
-- Makefile
 - vendor
 - README.md
 - CONTRIBUTING.md
 - LICENSE.md
-- compliance
-
-# Site metadata
-name: The HTTPS-Only Standard
-description: "Resources, best practices, and case studies for deploying HTTPS in the federal government."
-url: https://https.cio.gov
-
-# GitHub information
-org_name: GSA
-repo_name: https
-branch: master
-
-# Navigation
-# List links that should appear in the site sidebar here
-navigation:
-- text: Home
-  url: /
-- text: Why Everything?
-  url: /everything/
-- text: Compliance Guide
-  url: /guide/
-- text: Introduction to HTTPS
-  url: /faq/
-- text: Certificates
-  url: /certificates/
-- text: HTTP Strict Transport Security
-  url: /hsts/
-- text: Migrating APIs
-  url: /apis/
-- text: Server Name Indication
-  url: /sni/
-- text: Technical Guidelines
-  url: /technical-guidelines/
-- text: Mixed Content
-  url: /mixed-content/
-- text: Resources
-  url: /resources/
+- .nvmrc

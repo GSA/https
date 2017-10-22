@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Resources
 permalink: /resources/
 description: "Articles, news, and tools about HTTPS."

@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Compliance Guide
 permalink: /guide/
 description: "Guide for agencies on implementing the HTTPS transition."

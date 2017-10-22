@@ -1,0 +1,40 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="{{ layout.class }} {{ page.class }}">
+
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+{% include header.html %}
+
+<aside class="sidenav sticky">
+  {% include sidenav.html links=site.data.navigation.primary %}
+</aside>
+
+<main id="main-content" class="main-content">
+  <div class="usa-content">
+    {% if page.appendix %}
+      <h2>{{ page.title }}</h2>
+    {% else %}
+      <h1>{{ page.title }}</h1>
+    {% endif %}
+
+    {{ content }}
+  </div>
+
+  {% include footer.html %}
+
+</main>
+
+{% include scripts.html %}
+
+
+</body>
+</html>

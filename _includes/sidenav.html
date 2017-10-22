@@ -1,0 +1,24 @@
+<ul class="usa-sidenav-list">
+  {% for link in include.links %}
+    {% assign _href = link.href %}
+    {% assign _current = false %}
+    {% if link.href == page.url or link.href == page.permalink %}
+      {% assign _current = true %}
+    {% endif %}
+  <li>
+    <a href="{{ _href | relative_url }}"{% if _current %}
+      class="usa-current"{% endif %}>
+      {{ link.text }}
+    </a>
+    {% if _current and page.subnav %}
+    <ul class="usa-sidenav-sub_list">
+      {% for link in page.subnav %}
+        <li>
+          <a href="{{ link.href }}">{{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

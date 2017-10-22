@@ -1,0 +1,313 @@
+// USWDS SASS variable overrides go here, before we import USWDS itself.
+
+$font-path: '../vendor/uswds/fonts';
+$image-path: '../vendor/uswds/img';
+
+@import 'uswds';
+
+/***************************************
+  Begin site customizations.
+****************************************/
+
+.usa-footer-return-to-top {
+  padding-left: 0;
+}
+
+.site-header-navbar {
+  border-bottom: none;
+
+  @include media($nav-width) {
+    height: 8rem;
+    width: 100%;
+    display: block;
+  }
+
+  // Firefox fix so that navbar buttons to align right
+  @-moz-document url-prefix() {
+    @include media($nav-width) {
+      padding-top: 1px;
+    }
+  }
+}
+
+.site-header {
+
+  background-color: $color-primary-darkest;
+
+  @include media($nav-width) {
+    border-bottom: none;
+  }
+
+  .site-logo {
+    margin-left: $site-margins-mobile;
+
+    @include media($nav-width) {
+      margin-left: $site-margins;
+    }
+  }
+
+  .usa-banner {
+    padding-bottom: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    .usa-banner-header {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      p {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    .usa-banner-header {
+      p {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  .usa-banner-inner {
+    max-width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .usa-banner-content {
+    margin-left: 0;
+  }
+
+  .usa-button-list {
+    float: right;
+    display: none;
+    margin-top: -5px;
+
+    @include media($nav-width) {
+      line-height: 8rem;
+      margin-top: 0;
+      display: block;
+      padding-right: $site-margins;
+    }
+
+    li {
+      display: inline;
+      font-family: $font-sans;
+
+      &:last-child .usa-button {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.site-logo {
+  @include media($nav-width) {
+    margin-top: 0;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  em {
+    font-family: $font-serif;
+    font-size: 1.4rem;
+    line-height: 4rem;
+
+    @media screen and (min-width: 951px) {
+      font-size: 2.6rem !important;
+    }
+
+    @include media($nav-width) {
+      font-size: $h2-font-size;
+      line-height: 8rem;
+    }
+  }
+}
+
+// Header -------------- //
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
+
+// Sidebar Nav --------- //
+
+.sidenav {
+  display: none;
+  clear: both;
+
+  @include media($nav-width) {
+    display: block;
+    float: left;
+    height: 100vh;
+    margin-bottom: 525px;
+    margin-top: 0px;
+    padding-right: 1rem;
+    padding-left: 3rem;
+    overflow: auto;
+    top: 0rem;
+    width: $width-nav-sidebar;
+  }
+
+  .lt-ie9 & {
+    width: 25%;
+  }
+
+  .usa-navigation-submenu {
+    &[aria-hidden="false"] {
+      display: block;
+    }
+  }
+}
+
+// Main Content --------- //
+
+.main-content {
+  font-family: $font-serif;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block; // starting: not scrolled
+  position: relative;
+  width: 100%;
+  top: 3rem; // height of disclaimer + navbar on mobile
+
+  padding-top: 0;
+  margin-top: 0;
+
+  padding-right: 3rem;
+  padding-left: 3rem;
+
+  font-size: 1.5rem;
+
+  p, li {
+    line-height: 1.7;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, ul, ol {
+    max-width: 66ch !important;
+  }
+
+  @include media($nav-width) {
+    width: calc(100% - #{$width-nav-sidebar});
+    top: 0;
+  }
+
+  .lt-ie9 & {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 481px) {
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2.2rem;}
+    h3 {font-size: 1.7rem;}
+  }
+
+  h1 {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    padding-bottom: 0px;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em
+  }
+
+  h2 {
+    color: $color-primary-darker;
+  }
+}
+
+@mixin outline-inverse-button {
+  // TODO: Fix this with button mixin
+  .usa-button.usa-button-outline-inverse {
+    box-shadow: inset 0 0 0 2px $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px $color-primary-darker;
+      color: $color-primary-darker;
+    }
+  }
+}
+
+.sidenav-mobile {
+  clear: both;
+
+  @include outline-inverse-button;
+
+  @include media($nav-width) {
+    display: none;
+  }
+
+  .usa-sidenav-sub_list {
+    &[aria-hidden=true] {
+      display: none;
+    }
+  }
+
+  li > button {
+    @include button-unstyled;
+    font-weight: $font-normal;
+    padding: 1.4rem 1.5rem 1rem 1.8rem;
+
+    &:hover {
+      background-color: $color-gray-lightest;
+      color: $color-primary;
+    }
+
+    &[aria-expanded=false] {
+      background-image: url('#{$image-path}/plus-alt.png');
+      background-image: url('#{$image-path}/plus-alt.svg');
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 1rem;
+    }
+
+    &[aria-expanded=true] {
+      background-image: url('#{$image-path}/minus-alt.png');
+      background-image: url('#{$image-path}/minus-alt.svg');
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 1rem;
+    }
+  }
+
+  .usa-button-list {
+    margin-top: 4rem;
+  }
+}
+
+pre {
+  max-width: 80%;
+  font-size: 0.875em;
+  overflow-y: scroll;
+  background-color: #f1f2f2;
+  padding: 10px;
+
+  white-space: pre-wrap;
+  line-height: 14pt;
+}
+
+p > code, li > code {
+  padding: 2px 4px;
+  background-color: #eaeaff;
+  border: 1px solid #d5d5d5;
+  font-size: 10pt;
+  font-family: monospace;
+}
+

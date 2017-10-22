@@ -3,7 +3,10 @@ _site
 .DS_Store
 todo.txt
 .jekyll-metadata
-/vendor
 .ruby-version
 *.pyc
 creds.txt
+node_modules
+/assets/vendor
+/assets/css
+/vendor

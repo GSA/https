@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Migrating APIs to HTTPS
 permalink: /apis/
 description: "An outline of the process for migrating a web API from HTTP to HTTPS."

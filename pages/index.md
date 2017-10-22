@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: The HTTPS-Only Standard
 permalink: /
 description: "The American people expect government websites to be secure and their interactions with those websites to be private. All browsing activity should be considered private and sensitive. This proposed initiative would require the use of HTTPS on all publicly accessible Federal websites and web services."
