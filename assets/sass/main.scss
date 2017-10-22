@@ -32,7 +32,7 @@ $image-path: '../vendor/uswds/img';
 
 .site-header {
 
-  background-color: $color-primary-darkest;
+  background-color: #153E56;
 
   @include media($nav-width) {
     border-bottom: none;
