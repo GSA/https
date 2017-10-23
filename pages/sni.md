@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Server Name Indication
 permalink: /sni/
 description: "An overview of Server Name Indication (SNI), a TLS extension to allow multiple secure hostnames to be served from a single IP address."

@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css?{{ site.time | date: "%Y%m%j%H%M%S" }}" media="screen" />

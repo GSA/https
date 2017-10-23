@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Introduction to HTTPS
 permalink: /faq/
 description: "An introduction to HTTPS, and frequently asked questions."

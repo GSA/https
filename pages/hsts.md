@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: HTTP Strict Transport Security
 permalink: /hsts/
 description: "An overview of HTTP Strict Transport Security (HSTS), a lightweight standard that prevents privacy leaks and downgrade attacks."

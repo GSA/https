@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Technical Guidelines
 permalink: /technical-guidelines/
 description: "Technical guidelines relating to HTTPS strength and quality."

@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Certificates
 permalink: /certificates/
 description: "FAQ on certificates and certificate authorities for agencies migrating to HTTPS."

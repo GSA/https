@@ -18,27 +18,28 @@ The homepage of this site is the final policy. The other pages on [https.cio.gov
 
 ### Developing on the site locally
 
-This site uses [Jekyll](http://jekyllrb.com), [Sass](http://sass-lang.com), [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), and requires **Ruby 2.x**.
+If you're using this repository to run the site locally, instructions follow below.
 
-Install dependencies with Bundler:
+Dependencies:
 
-```
-bundle install
-```
+* **Node 6+** to install USWDS and dependencies
+* **Ruby** and **bundler** to install / run Jekyll
 
-Start up a Sass watcher to keep assets auto-compiled:
+##### First-time setup
 
-```
-make watch
-```
+1. `npm install` to install the USWDS, and Gulp dependencies.
+2. `npm install -g gulp` to let you use the `gulp` CLI directly.
+3. `bundle install` to install Jekyll.
 
-And run the site with Jekyll:
+##### Running the app
 
-```
-bundle exec jekyll serve --watch
-```
+If you'll be editing the Sass/CSS:
 
-If all goes well, visit the site at `http://localhost:4000`.
+* `gulp watch`
+
+To run the app:
+
+* `bundle exec jekyll serve`
 
 ### Public domain
 

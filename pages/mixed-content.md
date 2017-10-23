@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Mixed Content
 permalink: /mixed-content/
 description: "Strategies for dealing with mixed content when upgrading a website from HTTP to HTTPS."

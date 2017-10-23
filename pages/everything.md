@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: base
+
 title: Why HTTPS for Everything?
 permalink: /everything/
 description: "Today, there is no such thing as non-sensitive web traffic. By simply always using HTTPS, both people and browsers can make safer assumptions about secure connections."

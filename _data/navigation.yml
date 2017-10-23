@@ -1,0 +1,48 @@
+
+primary:
+- text: Home
+  href: /
+- text: Why Everything?
+  href: /everything/
+- text: Compliance Guide
+  href: /guide/
+- text: Introduction to HTTPS
+  href: /faq/
+- text: Certificates
+  href: /certificates/
+- text: HTTP Strict Transport Security
+  href: /hsts/
+- text: Migrating APIs
+  href: /apis/
+- text: Server Name Indication
+  href: /sni/
+- text: Technical Guidelines
+  href: /technical-guidelines/
+- text: Mixed Content
+  href: /mixed-content/
+- text: Resources
+  href: /resources/
+
+mobile:
+- text: Home
+  href: /
+- text: Why Everything?
+  href: /everything/
+- text: Compliance Guide
+  href: /guide/
+- text: Introduction to HTTPS
+  href: /faq/
+- text: Certificates
+  href: /certificates/
+- text: HTTP Strict Transport Security
+  href: /hsts/
+- text: Migrating APIs
+  href: /apis/
+- text: Server Name Indication
+  href: /sni/
+- text: Technical Guidelines
+  href: /technical-guidelines/
+- text: Mixed Content
+  href: /mixed-content/
+- text: Resources
+  href: /resources/
