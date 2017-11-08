@@ -127,14 +127,38 @@ On **Apache**, you would apply a `Header` directive to always set the HSTS heade
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 ```
 
-On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central "web.config" file for configuration. For IIS 7.0 and up, the code is as follows:
+On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central `web.config` file for configuration. 
+
+For IIS 7.0 and up, the use the example `web.config` file configuration as follows to handle secure HTTP to HTTPS redirection with HSTS enabled for HTTPS:
 
 ```
-<httpProtocol>
-  <customHeaders>
-    <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload "/>
-  </customHeaders>
-</httpProtocol>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="HTTP to HTTPS redirect" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="off" ignoreCase="true" />
+                    </conditions>
+                    <action type="Redirect" url="https://{HTTP_HOST}/{R:1}"
+                        redirectType="Permanent" />
+                </rule>
+            </rules>
+            <outboundRules>
+                <rule name="Add Strict-Transport-Security when HTTPS" enabled="true">
+                    <match serverVariable="RESPONSE_Strict_Transport_Security"
+                        pattern=".*" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="on" ignoreCase="true" />
+                    </conditions>
+                    <action type="Rewrite" value="max-age=31536000; includeSubDomains; preload" />
+                </rule>
+            </outboundRules>
+        </rewrite>
+    </system.webServer>
+</configuration>
 ```
 
 Generally, you want to set a custom HTTP header for `Strict-Transport-Security` with the value `max-age=31536000; includeSubDomains; preload` (or some variant).
