@@ -129,7 +129,7 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 
 On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central `web.config` file for configuration. 
 
-For IIS 7.0 and up, the use the example `web.config` file configuration as follows to handle secure HTTP to HTTPS redirection with HSTS enabled for HTTPS:
+For IIS 7.0 and up, the example `web.config` file configuration below will handle secure HTTP to HTTPS redirection with HSTS enabled for HTTPS:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
