@@ -10,16 +10,16 @@ Below are some frequently asked questions and answers about HTTPS.
 
 For an in-depth introduction (no technical background required), check out the DigitalGov University presentation, **["An Introduction to HTTPS"](https://www.youtube.com/watch?v=d2GmcPYWm5k)**, to learn what HTTPS is and how it protects web services and users.
 
-* [What does HTTPS do?](#what-does-https-do%3f)
-* [What information does HTTPS protect?](#what-information-does-https-protect%3f)
-* [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect%3f)
-* [How does HTTPS relate to HTTP/2?](#how-does-https-relate-to-http/2%3f)
-* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-(seo)%3f)
-* [How can an HTTPS site keep sending referrer information to linked HTTP sites?](#how-can-an-https-site-keep-sending-referrer-information-to-linked-http-sites%3f)
-* [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection%3f)
-* [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today%3f)
-* [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough%3f)
-* [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing%3f)
+* [What does HTTPS do?](#what-does-https-do)
+* [What information does HTTPS protect?](#what-information-does-https-protect)
+* [What information does HTTPS _not_ protect?](#what-information-does-https-not-protect)
+* [How does HTTPS relate to HTTP/2?](#how-does-https-relate-to-http-2)
+* [How does migrating to HTTPS affect search engine optimization (SEO)?](#how-does-migrating-to-https-affect-search-engine-optimization-seo)
+* [How can an HTTPS site keep sending referrer information to linked HTTP sites?](#how-can-an-https-site-keep-sending-referrer-information-to-linked-http-sites)
+* [How difficult is it to attack an HTTPS connection?](#how-difficult-is-it-to-attack-an-https-connection)
+* [Why are domain names unencrypted over HTTPS today?](#why-are-domain-names-unencrypted-over-https-today)
+* [Why isn't DNSSEC good enough?](#why-isn't-dnssec-good-enough)
+* [How does HTTPS protect against DNS spoofing?](#how-does-https-protect-against-dns-spoofing)
 
 ### What does HTTPS do?
 

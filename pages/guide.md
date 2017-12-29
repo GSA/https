@@ -167,7 +167,7 @@ Agencies are encouraged to operate OCSP and CRL services via hostnames specifica
 
 ### What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?
 
-There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use%3f) agencies might use to meet the requirements of M-15-13.
+There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use) agencies might use to meet the requirements of M-15-13.
 
 However, M-15-13 requires agencies to do more than just redirect HTTP traffic to HTTPS. It also requires agencies to enable **[HTTP Strict Transport Security](/hsts/)** (HSTS), as [described above](#options-for-hsts-compliance). HSTS ensures that HTTPS is always used, and protects users from several common vulnerabilities.
 

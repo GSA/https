@@ -8,12 +8,12 @@ description: "FAQ on certificates and certificate authorities for agencies migra
 
 Frequently asked questions and answers about HTTPS certificates and certificate authorities.
 
-* [What are certificates and certificate authorities?](#what-are-certificates-and-certificate-authorities%3f)
-* [What kind of certificate should I get for my domain?](#what-kind-of-certificate-should-i-get-for-my-domain%3f)
-* [What rules and oversight are certificate authorities subject to?](#what-rules-and-oversight-are-certificate-authorities-subject-to%3f)
-* [Does the US government operate a publicly trusted certificate authority?](#does-the-us-government-operate-a-publicly-trusted-certificate-authority%3f)
-* [Are there federal restrictions on acceptable certificate authorities to use?](#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use%3f)
-* [Then how can I limit which CAs can issue certificates for a domain?](#then-how-can-i-limit-which-cas-can-issue-certificates-for-a-domain%3f)
+* [What are certificates and certificate authorities?](#what-are-certificates-and-certificate-authorities)
+* [What kind of certificate should I get for my domain?](#what-kind-of-certificate-should-i-get-for-my-domain)
+* [What rules and oversight are certificate authorities subject to?](#what-rules-and-oversight-are-certificate-authorities-subject-to)
+* [Does the US government operate a publicly trusted certificate authority?](#does-the-us-government-operate-a-publicly-trusted-certificate-authority)
+* [Are there federal restrictions on acceptable certificate authorities to use?](#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use)
+* [Then how can I limit which CAs can issue certificates for a domain?](#then-how-can-i-limit-which-cas-can-issue-certificates-for-a-domain)
 
 ## What are certificates and certificate authorities?
 
@@ -99,4 +99,3 @@ The strength of Certificate Transparency increases as more CAs publish more cert
 * [Google CT FAQ](https://www.certificate-transparency.org/faq)
 * [RFC 6962](https://tools.ietf.org/html/rfc6962), the experimental standard for CT
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Certificate_Transparency) for CT
-
