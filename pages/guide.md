@@ -102,11 +102,11 @@ HSTS mitigates the security impact of connections over port 80, while allowing a
 
 ### What about network services that don't actually serve web content?
 
-M-15-13 covers any publicly accessible network service that responds to HTTP requests. This includes network services that don't serve content, but only return HTTP headers, or blank or insubstantial content.
+M-15-13 covers any publicly accessible network service that responds to HTTPS or HTTP requests. This includes network services that don't serve content, but only return HTTP headers, or blank or insubstantial content.
 
-This also includes services that respond to HTTP requests on non-standard ports (ports other than 80 or 443), whether or not those services are included in external scans provided to agencies.
+This also includes services that respond to HTTPS or HTTP requests on non-standard ports (ports other than 80 or 443), whether or not those services are included in external scans provided to agencies.
 
-Network services which do not respond to HTTP requests are not included in the scope of M-15-13.
+Network services which do not respond to HTTPS or HTTP requests are not included in the scope of M-15-13.
 
 ### What does "all Federal agency domains or subdomains" include?
 
