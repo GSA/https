@@ -15,17 +15,17 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Compliance and best practice checklist](#compliance-and-best-practice-checklist)
 * [Options for HSTS compliance](#options-for-hsts-compliance)
 * [Compliance FAQ](#compliance-faq)
-  * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13%3f)
-  * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80%3f)
-  * [What about network services that don't actually serve web content?](#what-about-network-services-that-don't-actually-serve-web-content%3f)
-  * [What does "all Federal agency domains or subdomains" include?](#what-does-"all-federal-agency-domains-or-subdomains"-include%3f)
-  * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites%3f)
-  * [Do domains that redirect to other external domains need to redirect internally to HTTPS before redirecting externally?](#do-domains-that-redirect-to-other-external-domains-need-to-redirect-internally-to-https-before-redirecting-externally%3f)
-  * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public,-but-in-practice-are-only-used-internally%3f)
-  * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-don't-support-hsts,-like-older-versions-of-internet-explorer%3f)
-  * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https----why-is-pulse-saying-it-doesn't-enforce-https%3f)
-  * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-(crl,-ocsp)-also-required-to-move-to-https%3f)
-  * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-i'm-using-a-federally-issued-certificate----such-as-from-the-federal-pki-or-department-of-defense----for-my-web-service%3f)
+  * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13)
+  * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80)
+  * [What about network services that don't actually serve web content?](#what-about-network-services-that-dont-actually-serve-web-content)
+  * [What does "all Federal agency domains or subdomains" include?](#what-does-all-federal-agency-domains-or-subdomains-include)
+  * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites)
+  * [Do domains that redirect to other external domains need to redirect internally to HTTPS before redirecting externally?](#do-domains-that-redirect-to-other-external-domains-need-to-redirect-internally-to-https-before-redirecting-externally)
+  * [What about domains that are technically public, but in practice are only used internally?](#what-about-domains-that-are-technically-public-but-in-practice-are-only-used-internally)
+  * [What happens to visitors using browsers that don&rsquo;t support HSTS, like older versions of Internet Explorer?](#what-happens-to-visitors-using-browsers-that-dont-support-hsts-like-older-versions-of-internet-explorer)
+  * [This site redirects users to HTTPS -- why is Pulse saying it doesn't enforce HTTPS?](#this-site-redirects-users-to-https-why-is-pulse-saying-it-doesnt-enforce-https)
+  * [Are federally operated certificate revocation services (CRL, OCSP) also required to move to HTTPS?](#are-federally-operated-certificate-revocation-services-crl-ocsp-also-required-to-move-to-https)
+  * [What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?](#what-if-im-using-a-federally-issued-certificate-such-as-from-the-federal-pki-or-department-of-defense-for-my-web-service)
 
 ## Compliance and best practice checklist
 
@@ -167,7 +167,7 @@ Agencies are encouraged to operate OCSP and CRL services via hostnames specifica
 
 ### What if I'm using a federally issued certificate -- such as from the Federal PKI or Department of Defense -- for my web service?
 
-There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use%3f) agencies might use to meet the requirements of M-15-13.
+There are [no restrictions on acceptable certificate authorities](/certificates/#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use) agencies might use to meet the requirements of M-15-13.
 
 However, M-15-13 requires agencies to do more than just redirect HTTP traffic to HTTPS. It also requires agencies to enable **[HTTP Strict Transport Security](/hsts/)** (HSTS), as [described above](#options-for-hsts-compliance). HSTS ensures that HTTPS is always used, and protects users from several common vulnerabilities.
 
