@@ -5,7 +5,6 @@ resources
 ".gitignore"
 node_modules
 todo.txt
-vendor
 README.md
 CONTRIBUTING.md
 LICENSE.md
