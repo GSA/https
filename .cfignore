@@ -1,0 +1,15 @@
+compliance
+resources
+".ruby-version"
+".jekyll-metadata"
+".gitignore"
+node_modules
+todo.txt
+Staticfile
+Gemfile
+Gemfile.lock
+vendor
+README.md
+CONTRIBUTING.md
+LICENSE.md
+.nvmrc
