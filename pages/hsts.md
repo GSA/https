@@ -40,17 +40,17 @@ Strict Transport Security was [proposed in 2009](https://lists.w3.org/Archives/P
 
 The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:
 
-* When a user types "dccode.gov" into the URL bar, browsers default to using `http://`.
+* When a user types "gsa.gov" into the URL bar, browsers default to using `http://`.
 * A user may click on an old link that mistakenly uses an `http://` URL.
 * A user's network may be hostile and actively rewrite `https://` links to `http://`.
 
 Websites that prefer HTTPS will generally still listen for connections over HTTP in order to redirect the user to the HTTPS URL. For example:
 
 ```
-$ curl --head http://www.facebook.com
+$ curl --head http://github.com
 
 HTTP/1.1 301 Moved Permanently
-Location: https://www.facebook.com/
+Location: https://github.com/
 ```
 
 **This redirect is insecure** and is an opportunity for an attacker to capture information about the visitor (such as cookies from a previous secure session), or to maliciously redirect the user to a phishing site.
@@ -58,15 +58,15 @@ Location: https://www.facebook.com/
 This can be addressed by returning a `Strict-Transport-Security` header whenever the user connects securely. For example:
 
 ```
-$ curl --head https://www.facebook.com
+$ curl --head https://github.com
 
 HTTP/1.1 200 OK
-Strict-Transport-Security: max-age=15552000; preload
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 ```
 
-This enables HSTS for `www.facebook.com`. While HSTS is in effect, clicking any links to `http://www.facebook.com` will cause the browser to issue a request directly for `https://www.facebook.com`.
+This enables HSTS for `github.com`. While HSTS is in effect, clicking any links to `http://github.com` will cause the browser to issue a request directly for `https://github.com`.
 
-In the above example, the browser will remember the HSTS policy for 180 days. The policy is refreshed every time browser sees the header again, so if a user visits `https://www.facebook.com` at least once every 180 days, they'll be indefinitely protected by HSTS.
+In the above example, the browser will remember the HSTS policy for 1 year. The policy is refreshed every time browser sees the header again, so if a user visits `https://github.com` at least once every year, they'll be indefinitely protected by HSTS.
 
 ## HSTS Preloading
 
@@ -127,7 +127,7 @@ On **Apache**, you would apply a `Header` directive to always set the HSTS heade
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 ```
 
-On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central `web.config` file for configuration. 
+On **Microsoft systems running IIS** (Internet Information Services), there are no ".htaccess" files to implement custom headers. IIS applications use a central `web.config` file for configuration.
 
 For IIS 7.0 and up, the example `web.config` file configuration below will handle secure HTTP to HTTPS redirection with HSTS enabled for HTTPS:
 
