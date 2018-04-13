@@ -25,6 +25,7 @@ exclude:
 - ".ruby-version"
 - ".jekyll-metadata"
 - ".gitignore"
+- node_modules
 - todo.txt
 - Staticfile
 - Gemfile
