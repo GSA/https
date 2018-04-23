@@ -1,5 +1,5 @@
 compliance
-resources
+/resources
 ".ruby-version"
 ".jekyll-metadata"
 ".gitignore"
