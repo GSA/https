@@ -1,0 +1,19 @@
+{
+  "command": "/opt/scan/domain-scan/scan /opt/scan/pulse/data/./output/subdomains/gather/results/gathered.csv --scan=pshtt,sslyze --output=/opt/scan/pulse/data/./output/subdomains/scan --sort --meta --lambda --lambda-profile=lambda --workers=900",
+  "duration": "4292.274686",
+  "durations": {
+    "pshtt": {
+      "duration": "3827.002561",
+      "end_time": "2018-04-28T06:04:01.108355Z",
+      "start_time": "2018-04-28T05:00:14.105794Z"
+    },
+    "sslyze": {
+      "duration": "459.443233",
+      "end_time": "2018-04-28T06:11:40.551994Z",
+      "start_time": "2018-04-28T06:04:01.108761Z"
+    }
+  },
+  "end_time": "2018-04-28T06:11:44.387198Z",
+  "scan_uuid": "47a5aefc-5f9d-482c-8f76-4054361bc3c4",
+  "start_time": "2018-04-28T05:00:12.112512Z"
+}
