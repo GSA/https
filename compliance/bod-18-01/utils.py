@@ -128,7 +128,7 @@ def compliance_labels(report):
     }
 
 # Given a set of domains, calculate the compliance totals
-# that meet M-15-13 requirements.
+# that meet BOD 18-01 requirements.
 # Adapted from a snapshot of Pulse code:
 # https://github.com/18F/pulse/blob/0528773b1d39a664ff8f62d655b8bb7c8979874c/data/processing.py#L511-L539
 
@@ -281,7 +281,7 @@ def load_domains(domain_csv, whole_rows=False):
 # Return true if it's a CFO Act agency
 def cfo_act(agency):
     return agency in [
-        "Department of Agriculture",
+        "U.S. Department of Agriculture",
         "Department of Commerce",
         "Department of Defense",
         "Department of Education",
@@ -294,13 +294,13 @@ def cfo_act(agency):
         "Terrorist Screening Center", # (DOJ/FBI) as seen in .gov data
         "Department of Labor",
         "Department of State",
-        "Department of State OIG", # seen in .gov data
+        "Department of State, Office of Inspector General", # seen in .gov data
         "Department of Transportation",
         "Department of the Treasury",
         "Department of Veterans Affairs",
         "Environmental Protection Agency",
         "National Aeronautics and Space Administration",
-        "U.S. Agency for International Development", # as seen in .gov data
+        "U.S. Agency for International Development",
         "General Services Administration",
         "National Science Foundation",
         "Nuclear Regulatory Commission",
