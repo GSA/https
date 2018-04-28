@@ -1,5 +1,0 @@
-{
-  "command": "/opt/scan/domain-scan/gather censys-snapshot,rdns-snapshot,dap,eot2016,other,dotgov --censys-snapshot=https://github.com/GSA/data/raw/master/dotgov-websites/censys-federal-snapshot.csv --rdns-snapshot=https://github.com/GSA/data/raw/master/dotgov-websites/rdns-federal-snapshot.csv --dap=https://analytics.usa.gov/data/live/sites-extended.csv --eot2016=https://github.com/GSA/data/raw/master/end-of-term-archive-csv/eot-2016-seeds.csv --other=https://github.com/GSA/data/raw/master/dotgov-websites/other-websites.csv --dotgov=https://github.com/GSA/data/raw/master/dotgov-domains/current-federal.csv --output=/opt/scan/pulse/data/./output/subdomains/gather --suffix=.gov,.fed.us --parents=https://github.com/GSA/data/raw/master/dotgov-domains/current-federal.csv --ignore-www --sort --debug",
-  "end_time": "2018-04-28T05:00:11.667471Z",
-  "start_time": "2018-04-28T05:00:04.557067Z"
-}
