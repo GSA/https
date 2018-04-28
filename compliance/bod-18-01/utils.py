@@ -193,8 +193,10 @@ def compliance_labels(report):
 def boolean_for(string):
   if string == "False":
     return False
-  else:
+  elif string == "True":
     return True
+  else:
+    return None
 
 # Given a set of domains, calculate the compliance totals
 # that meet BOD 18-01 requirements.
@@ -231,6 +233,7 @@ def compliance_totals(data, preload_pending, preloaded):
 
         if report['rc4']:
             total_report['rc4'] += 1
+
         if report['3des']:
             total_report['3des'] += 1
 
@@ -486,13 +489,19 @@ def load_pshtt_sslyze(pshtts, sslyzes, base_domains, filter=None):
                 for i, cell in enumerate(row):
                     sslyze[headers[i]] = cell
 
-                data[domain]['sslyze'] = sslyze
+                # if no scanned hostname value, then no scan was performed
+                if sslyze["Scanned Hostname"] and sslyze["TLSv1.2"]:
+                    data[domain]['sslyze'] = sslyze
 
 
     # Run each domain through compliance_for, with the pshtt, sslyze,
     # and whether its parent is known to be preloaded
     domains = list(data.keys())
+    domains.sort()
     for domain in domains:
+        # Debugging:
+        # print(domain)
+
         base_domain = base_domain_for(domain)
         if domain == base_domain:
             parent_pshtt = None # Not relevant for base domains themselves.
