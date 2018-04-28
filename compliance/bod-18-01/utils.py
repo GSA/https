@@ -235,9 +235,13 @@ def cfo_act_only_sans_dod(pshtt, agency, branch):
     live = live_only(pshtt, agency, branch)
     return live and cfo_act_sans_dod(agency)
 
-# return base domain for a subdomain
+# Return base domain for a subdomain.
+# Simplified to not use PSL for the federal use case, while handling .fed.us.
 def base_domain_for(subdomain):
-    return str.join(".", subdomain.split(".")[-2:])
+    if subdomain.endswith(".fed.us"):
+        return str.join(".", subdomain.split(".")[-3:])
+    else: # .gov
+        return str.join(".", subdomain.split(".")[-2:])
 
 # save an array of domain names to a CSV at a given path
 def save_domains(domains, path):
@@ -263,7 +267,7 @@ def load_domains(domain_csv, whole_rows=False):
     domains = []
     with open(domain_csv, newline='') as csvfile:
         for row in csv.reader(csvfile):
-            if (not row[0]) or (row[0].lower().startswith("domain")):
+            if (not row[0]) or (row[0].lower() == "domain") or (row[0].lower() == "domain name"):
                 continue
 
             row[0] = row[0].lower()
