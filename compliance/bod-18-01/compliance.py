@@ -73,12 +73,13 @@ def compliance_stats(name, date, filter):
   print("== Direct enforcement ==")
   print("Enforces HTTPS: %i (%i%%)" % (totals['enforces'], pct(totals['enforces'], count)))
   print("Strong HSTS: %i (%i%%)" % (totals['hsts'], pct(totals['hsts'], count)))
+  print("RC4 support: %i (%i%%)" % (totals['rc4'], pct(totals['rc4'], count)))
 
   if date in post_bod:
-    print("RC4 support: %i (%i%%)" % (totals['rc4'], pct(totals['rc4'], count)))
     print("3DES support: %i (%i%%)" % (totals['3des'], pct(totals['3des'], count)))
     print("Free of Known-weak Crypto: %i (%i%%)" % (totals['bod_crypto'], pct(totals['bod_crypto'], count)))
     print("Compliant with BOD 18-01: %i (%i%%)" % (totals['compliant'], pct(totals['compliant'], count)))
+
   elif date in pre_bod:
     print("Compliant with M-15-13: %i (%i%%)" % (totals['m1513'], pct(totals['m1513'], count)))
 
@@ -89,19 +90,23 @@ def compliance_csv(dates, when, filter, path):
     header = [
       "Date", "Total Hostnames",
       "Enforces HTTPS", "HSTS",
-      "Compliant with M-15-13",
+      "M-15-13",
+      "RC4",
       "Enforces HTTPS (%)", "HSTS (%)",
-      "Compliant with M-15-13 (%)",
+      "M-15-13 (%)",
+      "RC4 (%)",
     ]
   elif when == "post":
     header = [
       "Date", "Total Hostnames",
       "Enforces HTTPS", "HSTS",
+      "M-15-13",
       "RC4", "3DES", "Free of SSLv2/SSLv3/RC4/3DES",
-      "Compliant with BOD 18-01",
+      "BOD 18-01",
       "Enforces HTTPS (%)", "HSTS (%)",
+      "M-15-13 (%)",
       "RC4 (%)", "3DES (%)", "Free of SSLv2/SSLv3/RC4/3DES (%)",
-      "Compliant with BOD 18-01 (%)",
+      "BOD 18-01 (%)",
     ]
 
   rows = []
@@ -111,6 +116,7 @@ def compliance_csv(dates, when, filter, path):
   utils.save_csv(header, rows, path)
 
 def compliance_csv_row(date, filter):
+  print("[%s] Running report for row..." % date)
   pshtts, sslyzes = pshtts_and_sslyzes_for(date)
   data = utils.load_pshtt_sslyze(pshtts, sslyzes, base_domains, preloaded, filter=filter)
   totals = utils.compliance_totals(data)
@@ -124,9 +130,11 @@ def compliance_csv_row(date, filter):
       totals['enforces'],
       totals['hsts'],
       totals['m1513'],
+      totals['rc4'],
       pct(totals['enforces'], count),
       pct(totals['hsts'], count),
-      pct(totals['m1513'], count)
+      pct(totals['m1513'], count),
+      pct(totals['rc4'], count),
     ]
   elif date in post_bod:
     return [
@@ -134,22 +142,71 @@ def compliance_csv_row(date, filter):
       count,
       totals['enforces'],
       totals['hsts'],
+      totals['m1513'],
       totals['rc4'],
       totals['3des'],
       totals['bod_crypto'],
       totals['compliant'],
       pct(totals['enforces'], count),
       pct(totals['hsts'], count),
+      pct(totals['m1513'], count),
       pct(totals['rc4'], count),
       pct(totals['3des'], count),
       pct(totals['bod_crypto'], count),
-      pct(totals['compliant'], count)
+      pct(totals['compliant'], count),
     ]
 
 
+# # All executive hostnames pre-BOD.
+# compliance_csv(pre_bod, "pre",
+#   utils.executive_only,
+#   "cache/pre-bod-executive.csv"
+# )
+# # All executive hostnames post-BOD.
+# compliance_csv(post_bod, "post",
+#   utils.executive_only,
+#   "cache/post-bod-executive.csv"
+# )
 
-name = "Most recent (all executive)"
-compliance_stats(name, post_bod[-1], utils.executive_only)
 
-# This should reproduce Pulse top-line stats for a given date.
-compliance_csv([post_bod[-1]], "post", utils.executive_only, "cache/most-recent-post-bod.csv")
+# CFO Act
+compliance_csv(pre_bod, "pre",
+  utils.cfo_act_only,
+  "cache/pre-bod-cfo.csv"
+)
+compliance_csv(post_bod, "post",
+  utils.cfo_act_only,
+  "cache/post-bod-cfo.csv"
+)
+
+# Non-CFO Act
+compliance_csv(pre_bod, "pre",
+  utils.executive_non_cfo_act,
+  "cache/pre-bod-non-cfo.csv"
+)
+compliance_csv(post_bod, "post",
+  utils.executive_non_cfo_act,
+  "cache/post-bod-non-cfo.csv"
+)
+
+# # CFO Act (minus DoD)
+# compliance_csv(pre_bod, "pre",
+#   utils.cfo_act_only_sans_dod,
+#   "cache/pre-bod-cfo-no-dod.csv"
+# )
+# compliance_csv(post_bod, "post",
+#   utils.cfo_act_only_sans_dod,
+#   "cache/post-bod-cfo-no-dod.csv"
+# )
+
+# # DoD only
+# compliance_csv(pre_bod, "pre",
+#   utils.for_agencies(["Department of Defense"]),
+#   "cache/pre-bod-dod.csv"
+# )
+# compliance_csv(post_bod, "post",
+#   utils.for_agencies(["Department of Defense"]),
+#   "cache/post-bod-dod.csv"
+# )
+
+
