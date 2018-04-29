@@ -185,7 +185,8 @@ def compliance_labels(report):
         'enforces': (report['enforces'] >= 2),
         'hsts': (report['hsts'] >= 2),
         'bod_crypto': (report['bod_crypto'] == 1),
-        'compliant': (report['compliant']),
+        'compliant': report['compliant'],
+        'm1513': report['m1513'],
         'rc4': report['rc4'],
         '3des': report['3des']
     }
@@ -203,12 +204,13 @@ def boolean_for(string):
 # Adapted from a snapshot of Pulse code:
 # https://github.com/18F/pulse/blob/0528773b1d39a664ff8f62d655b8bb7c8979874c/data/processing.py#L511-L539
 
-def compliance_totals(data, preload_pending, preloaded):
+def compliance_totals(data):
     total_report = {
         'enforces': 0,
         'hsts': 0,
         'bod_crypto': 0,
         'compliant': 0,
+        'm1513': 0,
         'rc4': 0,
         '3des': 0
     }
@@ -230,6 +232,9 @@ def compliance_totals(data, preload_pending, preloaded):
 
         if report['compliant']:
             total_report['compliant'] += 1
+
+        if report['m1513']:
+            total_report['m1513'] += 1
 
         if report['rc4']:
             total_report['rc4'] += 1
@@ -442,7 +447,7 @@ def load_pshtt_sslyze(pshtts, sslyzes, base_domains, preloaded, filter=None):
                 domain = row[0].lower()
                 base_domain = base_domain_for(domain)
                 if not base_domains.get(base_domain):
-                    print("[load_pshtt] Skipping %s, not a federal domain." % domain)
+                    # print("[load_pshtt] Skipping %s, not a (current) federal domain." % domain)
                     continue
 
                 agency = base_domains[base_domain]["agency"]
@@ -489,8 +494,8 @@ def load_pshtt_sslyze(pshtts, sslyzes, base_domains, preloaded, filter=None):
                 for i, cell in enumerate(row):
                     sslyze[headers[i]] = cell
 
-                # if no scanned hostname value, then no scan was performed
-                if sslyze["Scanned Hostname"] and sslyze["TLSv1.2"]:
+                # if no TLSv1.2 value, then no scan was performed
+                if sslyze["TLSv1.2"]:
                     data[domain]['sslyze'] = sslyze
 
 

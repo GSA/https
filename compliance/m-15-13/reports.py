@@ -8,13 +8,13 @@
 name = "All executive parent domains"
 compliance_stats(name, parents_only, utils.executive_only)
 
-name ="All executive CFO Act parent domains"
+name = "All executive CFO Act parent domains"
 compliance_stats(name, parents_only, utils.cfo_act_only)
 
-name ="All executive CFO Act (minus DoD) parent domains"
+name = "All executive CFO Act (minus DoD) parent domains"
 compliance_stats(name, parents_only, utils.cfo_act_only_sans_dod)
 
-name ="All executive non-CFO-Act parent domains"
+name = "All executive non-CFO-Act parent domains"
 compliance_stats(name, parents_only, utils.executive_non_cfo_act)
 
 
@@ -24,13 +24,13 @@ compliance_stats(name, subdomains, utils.live_only)
 name = "All executive subdomains"
 compliance_stats(name, subdomains, utils.executive_only)
 
-name ="All executive CFO Act subdomains"
+name = "All executive CFO Act subdomains"
 compliance_stats(name, subdomains, utils.cfo_act_only)
 
-name ="All executive CFO Act (minus DoD) subdomains"
+name = "All executive CFO Act (minus DoD) subdomains"
 compliance_stats(name, subdomains, utils.cfo_act_only_sans_dod)
 
-name ="All executive non-CFO-Act subdomains"
+name = "All executive non-CFO-Act subdomains"
 compliance_stats(name, subdomains, utils.executive_non_cfo_act)
 
 # agency = "General Services Administration"
