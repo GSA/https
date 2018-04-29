@@ -3,10 +3,8 @@
 import utils
 
 ## Todo for DHS:
-# * combine parents + subdomains data
-# * factor in preloading of parents into HSTS
-# * load in sslyze data too
 # * download all data from S3
+# * compare data across all dates
 
 ## Todo for me:
 # * pre-bod path and post-bod path
