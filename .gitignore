@@ -12,3 +12,5 @@ node_modules
 /assets/css
 /vendor
 /compliance/*/cache
+/compliance/*/data
+/compliance/*/*.gz
