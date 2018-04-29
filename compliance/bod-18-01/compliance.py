@@ -45,7 +45,7 @@ def pct(num, denom):
 
 def compliance_stats(name, date, filter):
   pshtts, sslyzes = pshtts_and_sslyzes_for(date)
-  data = utils.load_pshtt_sslyze(pshtts, sslyzes, base_domains, filter=filter)
+  data = utils.load_pshtt_sslyze(pshtts, sslyzes, base_domains, preloaded, filter=filter)
   totals = utils.compliance_totals(data, preload_pending, preloaded)
 
   count = len(data.keys())

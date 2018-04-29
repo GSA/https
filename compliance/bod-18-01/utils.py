@@ -17,7 +17,7 @@ import json
 #
 # borrows the pulse.cio.gov code for calculating conclusions:
 # https://github.com/18F/pulse/blob/0528773b1d39a664ff8f62d655b8bb7c8979874c/data/processing.py#L408-L509
-def compliance_for(pshtt, sslyze, parent_pshtt=None):
+def compliance_for(pshtt, sslyze, parent_preloaded=False):
   report = {}
   # assumes that HTTPS would be technically present, with or without issues
   if (pshtt["Downgrades HTTPS"] == "True"):
@@ -83,7 +83,7 @@ def compliance_for(pshtt, sslyze, parent_pshtt=None):
 
   # If this is a subdomain, it can be considered as having HSTS, via
   # the preloading of its parent.
-  if parent_pshtt and (parent_pshtt["HSTS Preloaded"] == "True"):
+  if parent_preloaded:
     hsts = 3 # Yes, via preloading
 
   # Otherwise, without HTTPS there can be no HSTS for the domain directly.
@@ -428,7 +428,7 @@ def download(url, destination):
 # Load one or more pshtt scan files, and turn them into a dict.
 # If sending in multiple paths, send from oldest to newest, as
 # later scan results for the same domain will overwrite older ones.
-def load_pshtt_sslyze(pshtts, sslyzes, base_domains, filter=None):
+def load_pshtt_sslyze(pshtts, sslyzes, base_domains, preloaded, filter=None):
     data = {}
 
     for path in pshtts:
@@ -504,13 +504,11 @@ def load_pshtt_sslyze(pshtts, sslyzes, base_domains, filter=None):
 
         base_domain = base_domain_for(domain)
         if domain == base_domain:
-            parent_pshtt = None # Not relevant for base domains themselves.
-        elif data.get(base_domain) is None:
-            parent_pshtt = None # Not known, I guess.
+            parent_preloaded = False # Not relevant for base domains themselves.
         else:
-            parent_pshtt = data[base_domain]['pshtt']
+            parent_preloaded = (base_domain in preloaded)
 
-        data[domain]['compliance'] = compliance_for(data[domain]['pshtt'], data[domain].get('sslyze'), parent_pshtt)
+        data[domain]['compliance'] = compliance_for(data[domain]['pshtt'], data[domain].get('sslyze'), parent_preloaded)
 
     return data
 
