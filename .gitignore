@@ -1,3 +1,4 @@
+.~lock*
 .sass-cache
 _site
 .DS_Store
@@ -10,3 +11,6 @@ node_modules
 /assets/vendor
 /assets/css
 /vendor
+/compliance/*/cache
+/compliance/*/data
+/compliance/*/*.gz
