@@ -17,6 +17,7 @@ This page provides implementation guidance for agencies by the White House Offic
 * [Compliance FAQ](#compliance-faq)
   * [What protocols are covered by M-15-13?](#what-protocols-are-covered-by-m-15-13)
   * [Do I need to shut off port 80?](#do-i-need-to-shut-off-port-80)
+  * [If I turn off plain HTTP on my server entirely, do I still need HSTS?](#if-i-turn-off-plain-http-on-my-server-entirely-do-i-still-need-hsts)
   * [What about network services that don't actually serve web content?](#what-about-network-services-that-dont-actually-serve-web-content)
   * [What does "all Federal agency domains or subdomains" include?](#what-does-all-federal-agency-domains-or-subdomains-include)
   * [What about domains that are only used to redirect visitors to other websites?](#what-about-domains-that-are-only-used-to-redirect-visitors-to-other-websites)
@@ -99,6 +100,16 @@ The use of error codes in the 400's or 500's **will not** satisfy this requireme
 Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/]) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
 
 HSTS mitigates the security impact of connections over port 80, while allowing agencies the flexibility to continue redirecting legacy clients or clients which have not yet received an HSTS policy for the target domain.
+
+### If I turn off plain HTTP on my server entirely, do I still need HSTS?
+
+**Yes.** Turning off HTTP support is not sufficient to prevent attacks that downgrade web browsers to plain HTTP.
+
+During an attack, it doesn't matter whether the "real" server has disabled HTTP. If the client can be coaxed into initiating a plain HTTP connection -- such as when a user clicks an `http://` link, or types a URL into their browser manually -- then a local attacker can respond to that connection attempt from their own server and establish their own connection.
+
+HSTS specifically instructs web browsers to never initiate plain HTTP connections. If a user clicks an `http://` or types in an `http://` URL, HSTS causes the browser to first rewrite the URL to use `https://` before initiating the connection.
+
+For this reason, HSTS is necessary to effectively prevent downgrade attacks, even if plain HTTP connections are unsupported on the server.
 
 ### What about network services that don't actually serve web content?
 
