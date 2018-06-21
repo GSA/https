@@ -107,7 +107,7 @@ HSTS mitigates the security impact of connections over port 80, while allowing a
 
 During an attack, it doesn't matter whether the "real" server has disabled HTTP. If the client can be coaxed into initiating a plain HTTP connection -- such as when a user clicks an `http://` link, or types a URL into their browser manually -- then a local attacker can respond to that connection attempt from their own server and establish their own connection.
 
-HSTS specifically instructs web browsers to never initiate plain HTTP connections. If a user clicks an `http://` or types in an `http://` URL, HSTS causes the browser to first rewrite the URL to use `https://` before initiating the connection.
+HSTS specifically instructs web browsers to never initiate plain HTTP connections. If a user clicks an `http://` link or types in an `http://` URL, HSTS causes the browser to first rewrite the URL to use `https://` before initiating the connection.
 
 For this reason, HSTS is necessary to effectively prevent downgrade attacks, even if plain HTTP connections are unsupported on the server.
 
