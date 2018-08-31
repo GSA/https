@@ -43,7 +43,7 @@ In general:
 
 * Agencies **[should immediately replace certificates signed with SHA-1](/technical-guidelines/#signature-algorithms)**, as browsers are quickly moving to remove support for the SHA-1 algorithm. Commercial CAs are forbidden from issuing them entirely as of January 1, 2016.
 
-As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
+As a general matter, certificates from any commercial CA will meet the few [NIST technical requirements](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) that relate to certificates.
 
 ## What rules and oversight are certificate authorities subject to?
 
