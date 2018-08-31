@@ -174,5 +174,5 @@ Here are some links to do that with other web servers:
 * [Browser support for HSTS](https://caniuse.com/#feat=stricttransportsecurity)
 * [HSTS web developer documentation](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security) maintained by the Mozilla community
 * Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.org).
-* ["Upgrading HTTPS in Mid-Air"](https://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
+* ["Upgrading HTTPS in Mid-Air"](https://www.cs.princeton.edu/research/techreps/TR-986-15) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
 * ["The first .gov domains hardcoded into your browser as all-HTTPS"](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/), by 18F.
