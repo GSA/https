@@ -6,7 +6,7 @@ permalink: /hsts/
 description: "An overview of HTTP Strict Transport Security (HSTS), a lightweight standard that prevents privacy leaks and downgrade attacks."
 ---
 
-**[HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)** (HSTS) is a simple and [widely supported](http://caniuse.com/#feat=stricttransportsecurity) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
+**[HTTP Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)** (HSTS) is a simple and [widely supported](https://caniuse.com/#feat=stricttransportsecurity) standard to protect visitors by ensuring that their browsers _always_ connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from `http://` to `https://` URLs.
 
 When a browser knows that a domain has enabled HSTS, it does two things:
 
@@ -171,8 +171,8 @@ Here are some links to do that with other web servers:
 
 ## Resources
 
-* [Browser support for HSTS](http://caniuse.com/#feat=stricttransportsecurity)
+* [Browser support for HSTS](https://caniuse.com/#feat=stricttransportsecurity)
 * [HSTS web developer documentation](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security) maintained by the Mozilla community
 * Chrome's [HSTS preload list](https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json), and their [submission form](https://hstspreload.org).
-* ["Upgrading HTTPS in Mid-Air"](https://www.internetsociety.org/sites/default/files/01_4_0.pdf) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
+* ["Upgrading HTTPS in Mid-Air"](https://www.cs.princeton.edu/research/techreps/TR-986-15) - A paper analyzing the current detailed practice of HSTS and [HTTP Public Key Pinning](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning), as of November 2014.
 * ["The first .gov domains hardcoded into your browser as all-HTTPS"](https://18f.gsa.gov/2015/02/09/the-first-gov-domains-hardcoded-into-your-browser-as-all-https/), by 18F.
