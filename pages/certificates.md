@@ -64,13 +64,11 @@ The Baseline Requirements only constrain CAs -- they do not constrain browser be
 
 No, not as of early 2016, and this is unlikely to change in the near future.
 
-The [Federal PKI](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwP) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, many Android devices, and a variety of other devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
+The [Federal PKI](https://fpki.idmanagement.gov) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, many Android devices, and a variety of other devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
 
-The Federal PKI has an [open application](https://bugzilla.mozilla.org/show_bug.cgi?id=478418) to the Mozilla Trusted Root Program. However, even if the Federal PKI's application is accepted, it will take a significant amount of time for the Federal PKI's root certificate to actually be shipped onto devices and propagate widely around the world.
+The Federal PKI has [cross-certified other commercial CAs](https://fpki.idmanagement.gov/tools/fpkigraph/), which means their certificates will be trusted by clients that trust the Federal PKI. However, even when a publicly trusted commercial CA is cross-certified with the Federal PKI, they are expected to maintain complete separation between their publicly trusted certificates and their Federal PKI cross-certified certificates.
 
-The Federal PKI has [cross-certified other agencies and commercial CAs](https://www.idmanagement.gov/IDM/s/article_content_old?tag=a0Gt0000000SfwR), which means their certificates will be trusted by clients that trust the Federal PKI. However, none of these roots are _publicly trusted_. Even when a publicly trusted commercial CA is cross-certified with the Federal PKI, they are expected to maintain complete separation between their publicly trusted certificates and their Federal PKI cross-certified certificates.
-
-As a result, there is not currently a viable way to obtain an individual certificate for use in TLS/HTTPS that is issued or trusted by the Federal PKI, and also trusted by the general public.
+As a result, there is not currently a viable way to obtain a certificate for use in TLS/HTTPS that is issued or trusted by the Federal PKI, and also trusted by the general public.
 
 ## Are there federal restrictions on acceptable certificate authorities to use?
 
