@@ -66,8 +66,6 @@ No, not as of early 2016, and this is unlikely to change in the near future.
 
 The [Federal PKI](https://fpki.idmanagement.gov) root is trusted by some browsers and operating systems, but is not contained in the [Mozilla Trusted Root Program](https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/). The Mozilla Trusted Root Program is used by Firefox, many Android devices, and a variety of other devices and operating systems. This means that the Federal PKI is not able to issue certificates for use in TLS/HTTPS that are trusted widely enough to secure a web service used by the general public.
 
-The Federal PKI and Mozilla have [closed the application](https://bugzilla.mozilla.org/show_bug.cgi?id=478418) to include the Federal PKI root in the Mozilla Trusted Root Program. 
-
 The Federal PKI has [cross-certified other commercial CAs](https://fpki.idmanagement.gov/tools/fpkigraph/), which means their certificates will be trusted by clients that trust the Federal PKI. However, even when a publicly trusted commercial CA is cross-certified with the Federal PKI, they are expected to maintain complete separation between their publicly trusted certificates and their Federal PKI cross-certified certificates.
 
 As a result, there is not currently a viable way to obtain a certificate for use in TLS/HTTPS that is issued or trusted by the Federal PKI, and also trusted by the general public.
