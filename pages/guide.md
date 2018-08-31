@@ -97,7 +97,7 @@ HTTP redirects must use a response code in the 300's that can reliably cause HTT
 
 The use of error codes in the 400's or 500's **will not** satisfy this requirement.
 
-Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/]) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
+Note that while connections to port 80 are insecure, even for redirects, the use of [HSTS](/hsts/) will instruct supporting HTTP clients to automatically redirect themselves from port 80 to port 443, without attempting to connect to port 80 over the network.
 
 HSTS mitigates the security impact of connections over port 80, while allowing agencies the flexibility to continue redirecting legacy clients or clients which have not yet received an HSTS policy for the target domain.
 
