@@ -25,7 +25,7 @@ SSL and TLS perform the same function, and TLS is a direct successor and replace
 The major versions of SSL/TLS in use today are:
 
 * **SSLv3:** [Released in 1996.](https://tools.ietf.org/html/rfc6101) **Considered to be insecure** after the [POODLE](https://www.openssl.org/~bodo/ssl-poodle.pdf) attack was published in 2014. Turning off SSLv3 effectively removes support for Internet Explorer 6.
-* **TLSv1.0:** - [Released in 1999.](https://tools.ietf.org/html/rfc2246) Used widely today to support [some older clients](https://www.ssllabs.com/ssltest/clients.html), like IE8 and Android 4.3 and below. [NIST Special Publication 800-52](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) disallows TLSv1.0 for government-facing systems.
+* **TLSv1.0:** - [Released in 1999.](https://tools.ietf.org/html/rfc2246) Used widely today to support [some older clients](https://www.ssllabs.com/ssltest/clients.html), like IE8 and Android 4.3 and below. [NIST Special Publication 800-52](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) disallows TLSv1.0 for government-facing systems.
 * **TLSv1.1:** - [Released in 2006.](https://tools.ietf.org/html/rfc4346) An improvement over TLSv1.0, but was quickly superseded by TLSv1.2.
 * **TLSv1.2:** - [Released in 2008.](https://tools.ietf.org/html/rfc5246) This is the strongest form of TLS today, and is widely supported by modern browsers.
 
@@ -35,7 +35,7 @@ It is possible for an attacker to interfere with the negotiation process and att
 
 A downgrade attack can be prevented by using **[TLS Fallback SCSV](https://tools.ietf.org/html/rfc7507)**, a TLS extension proposed in 2014 and which is enabled by default in newer versions of OpenSSL.
 
-For more details of NIST recommendations, read [NIST Special Publication 800-52](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf).
+For more details of NIST recommendations, read [NIST Special Publication 800-52](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf).
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain still offers insecure SSLv3, or when a domain does not yet offer TLSv1.2.
 * **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to support TLSv1.0, TLSv1.1, and TLSv1.2, and has TLS Fallback SCSV enabled.
@@ -61,9 +61,9 @@ The HTTPS/TLS security model uses "certificates" to guarantee authenticity. Thes
 
 The certificate authority's trusted root certificate (which is included with your OS or browser) is used to sign an intermediary certificate, which is used to sign your website's certificate. There may be more than one intermediary certificate in the chain. A part of the signature process is computing a "hash" of the data included in the certificate. This can be done using a standard hashing algorithm, such as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) or [SHA-2](https://en.wikipedia.org/wiki/SHA-2).
 
-SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
+SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
 
-[NIST has disallowed SHA-1](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) for digital signature generation after 2013.
+[NIST has disallowed SHA-1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) for digital signature generation after 2013.
 
 As of January 2016, commercial CAs are forbidden by most root programs from issuing a SHA-1 certificate. As such, obtaining a publicly trusted SHA-1 certificate is no longer feasible. In addition, site owners with an existing SHA-1 certificate should be aware that many browsers and OSes will be disabling SHA-1 support in early 2017.
 
