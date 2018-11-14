@@ -75,7 +75,7 @@ For a user to take advantage of HSTS, their browser does have to see the HSTS he
 In addition, in many cases, **there may never be a first visit** to `https://domain.gov`. For example:
 
 * Many federal websites redirect directly from `http://domain.gov` to `https://www.domain.gov`.
-* Many federal domains that are used solely for redirects will redirect from `http://source.gov` directly to `https://destination.gov`.
+* Many federal domains that are used solely for redirects will redirect from `http://domain.gov` directly to `https://destination.gov`.
 
 In either case, `https://domain.gov` is never visited, meaning connecting clients will never see an HSTS policy with an `includeSubDomains` directive that applies to the whole zone.
 
