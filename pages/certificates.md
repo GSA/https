@@ -14,6 +14,7 @@ Frequently asked questions and answers about HTTPS certificates and certificate 
 * [Does the US government operate a publicly trusted certificate authority?](#does-the-us-government-operate-a-publicly-trusted-certificate-authority)
 * [Are there federal restrictions on acceptable certificate authorities to use?](#are-there-federal-restrictions-on-acceptable-certificate-authorities-to-use)
 * [Then how can I limit which CAs can issue certificates for a domain?](#then-how-can-i-limit-which-cas-can-issue-certificates-for-a-domain)
+* [How can I find out when any certificate is issued for a domain?](#how-can–i–find-out-when-any-certificate–is-issued-for-a-domain)
 
 ## What are certificates and certificate authorities?
 
@@ -82,18 +83,45 @@ In practice, federal agencies use a wide variety of publicly trusted commercial 
 
 There is no simple and 100% effective way to force all browsers to only trust certificates for your domain that have been issued from a certain CA. In general, the strength of HTTPS on today's internet depends on the overall standards, competence, and accountability of the entire CA system.
 
-However, domain owners can use **Certificate Transparency** to reduce the risk or impact of misissued or fraudulent certificates.
+However, domain owners can use **DNS Certification Authority Authorization** to publish a list of approved CAs.
 
-**[Certificate Transparency](https://en.wikipedia.org/wiki/Certificate_Transparency)** (CT) allows domain owners to **detect missuance of certificates after the fact**.
+In addition, domain owners can use **Certificate Transparency** (see question below) to monitor and discover certificates issued by any CA.
+
+**[DNS Certification Authority Authorization](https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization)** (CAA) allows domain owners to publish DNS records containing a list of the Certificate Authorities permitted to issue certificates for their domain.
+
+All major CAs participate in CAA and promise to verify CAA DNS records before issuing certificates. Each CA should refuse to issue certificates for a domain name that publishes a CAA record that excludes the CA.
+
+This is only a promise, so a non-compliant or compromised CA could still issue certificates for any domain name even in violation of CAA. But such mis-issuance would be more likely to be detected with CAA in place.
+
+The standard DNS is not secure, so CAA records could be suppressed or spoofed by an attacker in a privileged network position unless DNSSEC is in use by the domain owner and validated by each CA issuer.
+
+CAA can be paired with Certificate Transparency log monitoring to detect occurences of mis-issuance.
+
+#### CAA Resources
+
+* [Wikipedia entry](https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization) for CAA
+* [RFC 6844](https://tools.ietf.org/html/rfc6844), the standard for CAA
+* [CAA Record Generator](https://sslmate.com/caa/)
+
+## How can I find out when any certificate is issued for a domain?
+
+Domain owners can use **Certificate Transparency** to promptly discover any certificates issued for a domain, whether legitimate or fraudulent.
+
+**[Certificate Transparency](https://en.wikipedia.org/wiki/Certificate_Transparency)** (CT) allows domain owners to **detect mis-issuance of certificates after the fact**.
 
 CT allows CAs to publish some or all of the publicly trusted certificates that they issue to one or more public logs. Multiple organizations run CT logs, and it is possible to automatically monitor the logs for any certificates that are issued for any domains of interest.
 
 Comodo has released an [open source](https://github.com/crtsh) Certificate Transparency log viewer that they operate at [crt.sh](https://crt.sh). For example, it is possible to see [all recent certificates for whitehouse.gov](https://crt.sh/?q=whitehouse.gov), and [details of specific certificates](https://crt.sh/?id=7976268).
 
-The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. Certificate Transparency is not currently a requirement for CAs -- however, as the use of CT increases, so does the viability of requiring CT for publicly issued certificates.
+The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. [Google Chrome requires Certificate Transparency for all new certificates](https://groups.google.com/a/chromium.org/forum/#!msg/ct-policy/wHILiYf31DE/iMFmpMEkAQAJ) issued after 30 April 2018. As a result, most CAs now submit new certificates to CT logs by default.
+
+However, a CA may still issue new certificates without disclosing them to a CT log. These certificates will not be trusted by Chrome but they may be trusted by other browsers.
+
+Chrome also exempts private CAs from the transparency rules, so private CAs that do not chain up to any public root may still issue certificates without submitting them to CT logs.
 
 #### Certificate Transparency Resources
 
 * [Google CT FAQ](https://www.certificate-transparency.org/faq)
 * [RFC 6962](https://tools.ietf.org/html/rfc6962), the experimental standard for CT
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Certificate_Transparency) for CT
+* [Cert Spotter](https://github.com/SSLMate/certspotter), an open source CT log monitor
