@@ -26,7 +26,7 @@ For an in-depth introduction (no technical background required), check out the D
 When properly configured, an HTTPS connection guarantees three things:
 
 * **Confidentiality.** The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.
-* **Authenticity.** The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".
+* **Authenticity.** The visitor is talking to the "real" website, and not to an impersonator or through a person-in-the-middle.
 * **Integrity.** The data sent between the visitor and the website has not been tampered with or modified.
 
 A plain HTTP connection can be easily monitored, modified, and impersonated.
@@ -87,7 +87,7 @@ However, this means that if a website migrates to HTTPS, any HTTP sites it links
 
 Website owners who wish to continue sending outbound referrer information to linked HTTP sites can use **[Referrer Policy](https://www.w3.org/TR/referrer-policy/)** to override browser default behavior, while retaining the privacy of HTTPS URLs.
 
-To do this, websites **should use** the [`origin-when-cross-origin`](https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin) policy. This will allow supporting browsers to send **only the origin** as the `Referer` header. This limited referral information applies even if both sites use HTTPS. 
+To do this, websites **should use** the [`origin-when-cross-origin`](https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin) policy. This will allow supporting browsers to send **only the origin** as the `Referer` header. This limited referral information applies even if both sites use HTTPS.
 
 For example, if a user is on `https://agency.gov/help/aids.html` and clicks a link to `https://moreinformation.com`, then if `origin-when-cross-origin` is set, the browser will make an HTTP request to `https://moreinformation.com` with a `Referer` header of `https://agency.gov`.
 
