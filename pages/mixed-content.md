@@ -120,7 +120,7 @@ Some resources:
 
 ## Why do browsers block mixed content?
 
-If mixed content were not blocked, an attacker could control the main website by conducting a MITM attack against any of its active resources.
+If mixed content were not blocked, an attacker could control the main website by conducting an attack against any of its active resources.
 
 Even with passive content like images, attackers can manipulate what the page looks like, and so the yellow-lock icon is intended to communicate that security has been weakened and user confidence should be reduced. In addition, an attacker will be able to read any cookies for that domain which do have the `Secure` flag, and set cookies.
 
