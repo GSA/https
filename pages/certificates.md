@@ -113,9 +113,9 @@ CT allows CAs to publish some or all of the publicly trusted certificates that t
 
 Comodo has released an [open source](https://github.com/crtsh) Certificate Transparency log viewer that they operate at [crt.sh](https://crt.sh). For example, it is possible to see [all recent certificates for whitehouse.gov](https://crt.sh/?q=whitehouse.gov), and [details of specific certificates](https://crt.sh/?id=7976268).
 
-The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. [Google Chrome requires Certificate Transparency for all new certificates](https://groups.google.com/a/chromium.org/forum/#!msg/ct-policy/wHILiYf31DE/iMFmpMEkAQAJ) issued after 30 April 2018. As a result, most CAs now submit new certificates to CT logs by default.
+The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. [Google Chrome requires Certificate Transparency](https://groups.google.com/a/chromium.org/forum/#!msg/ct-policy/wHILiYf31DE/iMFmpMEkAQAJ) for all new certificates issued after 30 April 2018. [Apple Safari requires Certificate Transparency](https://support.apple.com/en-us/HT205280) for all new certificates issued after 15 October 2018. As a result, most CAs now submit new certificates to CT logs by default.
 
-However, a CA may still issue new certificates without disclosing them to a CT log. These certificates will not be trusted by Chrome but they may be trusted by other browsers.
+However, a CA may still issue new certificates without disclosing them to a CT log. These certificates will not be trusted by Chrome or Safari, but they may be trusted by other browsers.
 
 Chrome also exempts private CAs from the transparency rules, so private CAs that do not chain up to any public root may still issue certificates without submitting them to CT logs.
 
