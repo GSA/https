@@ -125,3 +125,4 @@ Chrome also exempts private CAs from the transparency rules, so private CAs that
 * [RFC 6962](https://tools.ietf.org/html/rfc6962), the experimental standard for CT
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Certificate_Transparency) for CT
 * [Cert Spotter](https://github.com/SSLMate/certspotter), an open source CT log monitor
+* [U.S. Federal PKI page on Chrome CT enforcement](https://fpki.idmanagement.gov/announcements/chromect/)
