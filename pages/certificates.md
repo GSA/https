@@ -95,7 +95,7 @@ This is only a promise, so a non-compliant or compromised CA could still issue c
 
 The standard DNS is not secure, so CAA records could be suppressed or spoofed by an attacker in a privileged network position unless DNSSEC is in use by the domain owner and validated by each CA issuer.
 
-CAA can be paired with Certificate Transparency log monitoring to detect occurences of mis-issuance.
+CAA can be paired with Certificate Transparency log monitoring to detect occurrences of mis-issuance.
 
 #### CAA Resources
 
@@ -113,11 +113,11 @@ CT allows CAs to publish some or all of the publicly trusted certificates that t
 
 Comodo has released an [open source](https://github.com/crtsh) Certificate Transparency log viewer that they operate at [crt.sh](https://crt.sh). For example, it is possible to see [all recent certificates for whitehouse.gov](https://crt.sh/?q=whitehouse.gov), and [details of specific certificates](https://crt.sh/?id=7976268).
 
-The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. [Google Chrome requires Certificate Transparency](https://groups.google.com/a/chromium.org/forum/#!msg/ct-policy/wHILiYf31DE/iMFmpMEkAQAJ) for all new certificates issued after 30 April 2018. [Apple Safari requires Certificate Transparency](https://support.apple.com/en-us/HT205280) for all new certificates issued after 15 October 2018. As a result, most CAs now submit new certificates to CT logs by default.
+The strength of Certificate Transparency increases as more CAs publish more certificates to public CT logs. [Google Chrome requires Certificate Transparency](https://groups.google.com/a/chromium.org/forum/#!msg/ct-policy/wHILiYf31DE/iMFmpMEkAQAJ) for all new certificates issued after 30 April 2018. [Apple platforms, including Safari, require Certificate Transparency](https://support.apple.com/en-us/HT205280) for all new certificates issued after 15 October 2018. As a result, most CAs now submit new certificates to CT logs by default.
 
 However, a CA may still issue new certificates without disclosing them to a CT log. These certificates will not be trusted by Chrome or Safari, but they may be trusted by other browsers.
 
-Chrome also exempts private CAs from the transparency rules, so private CAs that do not chain up to any public root may still issue certificates without submitting them to CT logs.
+Chrome also exempts private CAs from these transparency rules, so private CAs that do not chain up to any public root may still issue certificates without submitting them to CT logs.
 
 #### Certificate Transparency Resources
 
