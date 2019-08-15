@@ -38,7 +38,7 @@ There are many kinds of certificates in use in the federal government today, and
 
 In general:
 
-* "Domain Validation" (DV) certificates are usually less expensive and more amenable to automation than "Extended Validation" (EV) certificates. EV certificates generally result in the domain owner's name appearing in the browser URL bar visitors see. **Ordinary DV certificates are completely acceptable for government use.**
+* "Domain Validation" (DV) certificates are usually less expensive and more amenable to automation than "Extended Validation" (EV) certificates. **Ordinary DV certificates are completely acceptable for government use.**
 
 * Certificates can be valid for anywhere from years to days. In general, **shorter-lived certificates offer a better security posture**, since the impact of key compromise is less severe. Automating the issuance and renewal of certificates is an overall best practice, and can make the adoption of shorter-lived certificates more practical.
 
