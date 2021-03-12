@@ -1,5 +1,0 @@
----
-applications:
-- name: https-site
-  memory: 128M
-  buildpack: staticfile_buildpack
