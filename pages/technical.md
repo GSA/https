@@ -27,7 +27,8 @@ The major versions of SSL/TLS in use today are:
 * **SSLv3:** [Released in 1996.](https://tools.ietf.org/html/rfc6101) **Considered to be insecure** after the [POODLE](https://www.openssl.org/~bodo/ssl-poodle.pdf) attack was published in 2014. Turning off SSLv3 effectively removes support for Internet Explorer 6.
 * **TLSv1.0:** - [Released in 1999.](https://tools.ietf.org/html/rfc2246) Used widely today to support [some older clients](https://www.ssllabs.com/ssltest/clients.html), like IE8 and Android 4.3 and below. [NIST Special Publication 800-52](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) disallows TLSv1.0 for government-facing systems.
 * **TLSv1.1:** - [Released in 2006.](https://tools.ietf.org/html/rfc4346) An improvement over TLSv1.0, but was quickly superseded by TLSv1.2.
-* **TLSv1.2:** - [Released in 2008.](https://tools.ietf.org/html/rfc5246) This is the strongest form of TLS today, and is widely supported by modern browsers.
+* **TLSv1.2:** - [Released in 2008.](https://tools.ietf.org/html/rfc5246) Improved on the TLSv1.1 specification with major differences listed in the RFC, [section 1.2](https://datatracker.ietf.org/doc/html/rfc5246#section-1.2).
+* **TLSv1.3**: - [Released in 2018.](https://tools.ietf.org/html/rfc8446) This is the strongest form of TLS today, and is widely supported by modern browsers. Improved on the TLSv1.2 specification with major differences listed in the RFC, [section 1.2](https://datatracker.ietf.org/doc/html/rfc8446#section-1.2).
 
 Typically, browsers and servers support multiple versions, and will attempt to negotiate the strongest mutually supported version.
 
