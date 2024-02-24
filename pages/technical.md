@@ -10,7 +10,6 @@ This page covers some relevant technical concepts relevant to the **strength and
 
 * [SSL and TLS](#ssl-and-tls)
 * [Forward secrecy](#forward-secrecy)
-* [Signature algorithms](#signature-algorithms), such as SHA-1 and SHA-2
 * [Strong ciphersuites](#strong-ciphersuites)
 * [A complete certificate chain](#a-complete-certificate-chain)
 
@@ -54,18 +53,6 @@ In TLS, forward secrecy is provided by choosing ciphersuites that include the [D
 
 * **[The Pulse HTTPS dashboard for .gov domains](https://pulse.cio.gov/https/domains/)** will note when a domain offers little or no forward secrecy.
 * **[https.cio.gov is configured](https://www.ssllabs.com/ssltest/analyze.html?d=https.cio.gov)** to offer robust forward secrecy.
-
-### Signature algorithms
-
-The HTTPS/TLS security model uses "certificates" to guarantee authenticity. These certificates are cryptographically "signed" by a trusted certificate authority.
-
-The certificate authority's trusted root certificate (which is included with your OS or browser) is used to sign an intermediary certificate, which is used to sign your website's certificate. There may be more than one intermediary certificate in the chain. A part of the signature process is computing a "hash" of the data included in the certificate. This can be done using a standard hashing algorithm, such as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) or [SHA-2](https://en.wikipedia.org/wiki/SHA-2).
-
-SHA-1 has been shown to have serious weaknesses, and so browser and OS providers like [Google](https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html), [Microsoft](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx), and [Mozilla](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/) have announced timelines to deprecate SHA-1 in favor of the SHA-2 family of algorithms.
-
-[NIST has disallowed SHA-1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf) for digital signature generation after 2013.
-
-As of January 2016, commercial CAs are forbidden by most root programs from issuing a SHA-1 certificate. As such, obtaining a publicly trusted SHA-1 certificate is no longer feasible. In addition, site owners with an existing SHA-1 certificate should be aware that many browsers and OSes will be disabling SHA-1 support in early 2017.
 
 ### Strong ciphersuites
 
