@@ -8,13 +8,13 @@ description: "The American people expect government websites to be secure and th
 
 The American people expect government websites to be secure and their interactions with those websites to be private.
 
-This site contains a web-friendly version of the White House Office of Management and Budget memorandum [M-15-13](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2015/m-15-13.pdf), **"A Policy to Require Secure Connections across Federal Websites and Web Services"**, and provides technical guidance and best practices to assist in its implementation.
+This site contains a web-friendly version of the White House Office of Management and Budget memorandum [M-15-13](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2015/m-15-13.pdf), **"A Policy to Require Secure Connections across Federal Websites and Web Services"**, and provides technical guidance and best practices to assist in its implementation.
 
 ## Goal
 
 This Memorandum requires that all publicly accessible Federal websites and <a class="footnote" name="footnote-source-1"></a>web services [[1]](#footnote-1) only provide service through a secure connection.  The strongest privacy and integrity protection currently available for public web connections is [Hypertext Transfer Protocol Secure (HTTPS)](/faq/).
 
-This Memorandum expands upon the material in prior Office of Management and Budget (OMB) guidance found in [M-05-04](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2005/m05-04.pdf "Policies for Federal Agency Public Websites") and relates to material in [M-08-23](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2008/m08-23.pdf "Securing the Federal Government’s Domain Name System Infrastructure."). It provides guidance to agencies for making the transition to HTTPS and a deadline by which agencies must be in compliance.
+This Memorandum expands upon the material in prior Office of Management and Budget (OMB) guidance found in [M-05-04](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2005/m05-04.pdf "Policies for Federal Agency Public Websites") and relates to material in [M-08-23](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2008/m08-23.pdf "Securing the Federal Government’s Domain Name System Infrastructure."). It provides guidance to agencies for making the transition to HTTPS and a deadline by which agencies must be in compliance.
 
 ## Background
 
@@ -56,7 +56,7 @@ HTTPS only guarantees the integrity of the connection between two systems, not t
 
 **[Strict Transport Security](/hsts/):** Websites and services available over HTTPS must enable HTTP Strict Transport Security (HSTS) to instruct compliant browsers to assume HTTPS going forward. This reduces insecure redirects, and protects users against attacks that attempt to downgrade connections to plain HTTP. Once HSTS is in place, domains can be submitted to a ["preload list"](https://hstspreload.org) used by all major browsers to ensure the HSTS policy is in effect at all times.
 
-**Domain Name System Security (DNSSEC):** The new policy outlined in this Memorandum does not rescind or conflict with M-08-23, ["Securing the Federal Government's Domain Name System Infrastructure"](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2008/m08-23.pdf). Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP. HTTPS provides this additional security.
+**Domain Name System Security (DNSSEC):** The new policy outlined in this Memorandum does not rescind or conflict with M-08-23, ["Securing the Federal Government's Domain Name System Infrastructure"](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2008/m08-23.pdf). Once DNS resolution is complete, DNSSEC does not ensure the privacy or integrity of communication between a client and the destination IP. HTTPS provides this additional security.
 
 ## Cost Effective Implementation
 
